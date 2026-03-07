@@ -1,9 +1,10 @@
-import { briefData } from "@/data/briefData";
+import { useBriefContext } from "@/context/BriefDataContext";
 import OrnamentalDivider from "./OrnamentalDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const LaborSignals = () => {
   const { ref, isVisible } = useScrollReveal();
+  const briefData = useBriefContext();
   const { youthUnemployment, aiAdoption, techJobs } = briefData.laborSignals;
   const maxUnemp = Math.max(...youthUnemployment.map((d) => d.value));
 

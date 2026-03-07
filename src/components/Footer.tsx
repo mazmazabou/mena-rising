@@ -1,7 +1,34 @@
 import { useState } from "react";
+import { toast } from "sonner";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsLoading(true);
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        toast.error(data.error || "Subscription failed");
+        return;
+      }
+      toast.success("You're subscribed!");
+      setEmail("");
+    } catch {
+      toast.error("Network error — please try again");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <footer className="border-t border-primary/20 px-6 py-10 md:px-12 lg:px-24">
@@ -11,18 +38,24 @@ const Footer = () => {
         </p>
 
         {/* Email Subscription */}
-        <div className="mx-auto mt-6 flex max-w-md gap-2">
+        <form onSubmit={handleSubscribe} className="mx-auto mt-6 flex max-w-md gap-2">
           <input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 rounded border border-primary/30 bg-input px-4 py-2 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+            required
+            disabled={isLoading}
+            className="flex-1 rounded border border-primary/30 bg-input px-4 py-2 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
           />
-          <button className="rounded bg-primary px-5 py-2 font-display text-sm font-semibold text-primary-foreground transition-colors hover:bg-amber">
-            Subscribe
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="rounded bg-primary px-5 py-2 font-display text-sm font-semibold text-primary-foreground transition-colors hover:bg-amber disabled:opacity-50"
+          >
+            {isLoading ? "..." : "Subscribe"}
           </button>
-        </div>
+        </form>
 
         <p className="mt-6 font-mono-data text-xs text-muted-foreground/60">
           Built with Python · Claude API · GitHub Actions

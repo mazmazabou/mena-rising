@@ -1,9 +1,10 @@
-import { briefData } from "@/data/briefData";
+import { useBriefContext } from "@/context/BriefDataContext";
 import OrnamentalDivider from "./OrnamentalDivider";
 import Sparkline from "./Sparkline";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useCountUp } from "@/hooks/useCountUp";
 import { useRef, useEffect, useState } from "react";
+import { briefData } from "@/data/briefData";
 
 const MetricCard = ({ item, delay }: { item: typeof briefData.macroPulse[0]; delay: number }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -76,12 +77,13 @@ const MetricCard = ({ item, delay }: { item: typeof briefData.macroPulse[0]; del
 
 const MacroPulse = () => {
   const { ref, isVisible } = useScrollReveal();
+  const data = useBriefContext();
 
   return (
     <section ref={ref} className="px-6 py-4 md:px-12 lg:px-24">
       <OrnamentalDivider title="Macro Pulse" />
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {briefData.macroPulse.map((item, i) => (
+        {data.macroPulse.map((item, i) => (
           <MetricCard key={`${item.country}-${item.metric}`} item={item} delay={i * 80} />
         ))}
       </div>

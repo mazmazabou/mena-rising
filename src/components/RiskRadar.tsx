@@ -1,4 +1,4 @@
-import { briefData } from "@/data/briefData";
+import { useBriefContext } from "@/context/BriefDataContext";
 import OrnamentalDivider from "./OrnamentalDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -11,6 +11,7 @@ const riskColors: Record<string, { bg: string; text: string }> = {
 
 const RiskRadar = () => {
   const { ref, isVisible } = useScrollReveal();
+  const briefData = useBriefContext();
 
   return (
     <section ref={ref} className="bg-navy/50 px-6 py-8 md:px-12 lg:px-24">

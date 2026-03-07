@@ -1,3 +1,4 @@
+import { BriefDataProvider } from "@/context/BriefDataContext";
 import Masthead from "@/components/Masthead";
 import BottomLine from "@/components/BottomLine";
 import MacroPulse from "@/components/MacroPulse";
@@ -8,17 +9,19 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background zellige-bg">
-      <Masthead />
-      <main>
-        <BottomLine />
-        <MacroPulse />
-        <TradeCapital />
-        <LaborSignals />
-        <RiskRadar />
-      </main>
-      <Footer />
-    </div>
+    <BriefDataProvider>
+      <div className="min-h-screen bg-background zellige-bg">
+        <Masthead />
+        <main>
+          <BottomLine />
+          <MacroPulse />
+          <TradeCapital />
+          <LaborSignals />
+          <RiskRadar />
+        </main>
+        <Footer />
+      </div>
+    </BriefDataProvider>
   );
 };
 

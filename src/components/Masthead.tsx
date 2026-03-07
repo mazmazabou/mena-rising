@@ -1,6 +1,7 @@
-import { briefData } from "@/data/briefData";
+import { useBriefContext } from "@/context/BriefDataContext";
 
 const Masthead = () => {
+  const briefData = useBriefContext();
   return (
     <header className="relative zellige-bg">
       {/* Ticker Strip */}

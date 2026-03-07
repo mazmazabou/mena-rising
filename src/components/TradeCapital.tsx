@@ -1,9 +1,10 @@
-import { briefData } from "@/data/briefData";
+import { useBriefContext } from "@/context/BriefDataContext";
 import OrnamentalDivider from "./OrnamentalDivider";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const TradeCapital = () => {
   const { ref, isVisible } = useScrollReveal();
+  const briefData = useBriefContext();
 
   return (
     <section ref={ref} className="px-6 py-4 md:px-12 lg:px-24">

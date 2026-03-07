@@ -23,6 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# Pipeline
+# Environment
+.env
 pipeline/.env
+pipeline/logs/
+pipeline/data_payload.json
 __pycache__/
