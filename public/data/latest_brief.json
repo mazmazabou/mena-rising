@@ -1,6 +1,6 @@
 {
   "issue": {
-    "number": "009",
+    "number": "010",
     "weekOf": "March 9, 2026"
   },
   "ticker": [
@@ -35,7 +35,7 @@
       "change": null
     }
   ],
-  "bottomLine": "MENA's divergent inflation trajectories highlight structural vulnerabilities, with Turkey's 58.5% and Egypt's 28.3% rates contrasting sharply against Morocco's contained 1.0% CPI. The EGP's weakness at 50.09 per dollar reflects persistent external pressures, while Brent crude at $92.69 provides fiscal breathing room for Gulf exporters. Youth unemployment remains critically elevated across North Africa, with Morocco at 21.9% and Egypt at 18.3%, underscoring the region's demographic dividend risks.",
+  "bottomLine": "MENA economies face stark divergence as Egypt's inflation surges to 28.3% with the EGP at 50.09 against the dollar, while Morocco maintains price stability at just 1.0% CPI growth. Turkey's hyperinflationary spiral at 58.5% contrasts sharply with Gulf resilience, as UAE GDP grows 4.0% and Saudi Arabia posts modest 2.0% expansion. Youth unemployment remains structurally elevated across North Africa, with Morocco at 21.9% and Egypt at 18.3%, highlighting persistent demographic pressures despite oil revenues supporting Gulf labor markets.",
   "macroPulse": [
     {
       "country": "Egypt",
@@ -89,48 +89,48 @@
       "country": "Saudi Arabia",
       "flag": "🇸🇦",
       "metric": "Oil Revenue",
-      "value": 284.6,
+      "value": 284.7,
       "unit": "$B",
-      "change": 12.3,
+      "change": 8.3,
       "sparkline": [
-        245.2,
-        258.7,
-        267.1,
-        275.8,
-        281.4,
-        284.6
+        261.2,
+        267.8,
+        275.4,
+        279.1,
+        282.6,
+        284.7
       ]
     },
     {
       "country": "UAE",
       "flag": "🇦🇪",
       "metric": "PMI",
-      "value": 54.2,
+      "value": 54.8,
       "unit": "",
-      "change": 1.8,
+      "change": 1.2,
       "sparkline": [
-        51.1,
-        52.3,
+        52.1,
         52.8,
-        53.5,
-        52.4,
-        54.2
+        53.4,
+        53.9,
+        54.2,
+        54.8
       ]
     },
     {
       "country": "UAE",
       "flag": "🇦🇪",
       "metric": "FDI Inflows",
-      "value": 22.8,
+      "value": 22.4,
       "unit": "$B",
-      "change": 8.4,
+      "change": 15.7,
       "sparkline": [
-        18.9,
-        19.7,
-        20.1,
-        21.2,
-        21.0,
-        22.8
+        18.2,
+        19.1,
+        20.3,
+        21.1,
+        21.8,
+        22.4
       ]
     },
     {
@@ -153,16 +153,16 @@
       "country": "Morocco",
       "flag": "🇲🇦",
       "metric": "Tourism Revenue",
-      "value": 14.7,
+      "value": 12.6,
       "unit": "%",
-      "change": 18.2,
+      "change": 9.4,
       "sparkline": [
         8.9,
-        10.1,
-        11.8,
-        12.4,
-        12.4,
-        14.7
+        9.7,
+        10.4,
+        11.2,
+        11.9,
+        12.6
       ]
     },
     {
@@ -185,7 +185,7 @@
       "country": "Turkey",
       "flag": "🇹🇷",
       "metric": "Lira/USD",
-      "value": 44.05,
+      "value": 44.07,
       "unit": "",
       "change": 0.3,
       "sparkline": [
@@ -194,65 +194,65 @@
         43.64,
         43.83,
         43.92,
-        44.05
+        44.07
       ]
     },
     {
       "country": "Qatar",
       "flag": "🇶🇦",
       "metric": "LNG Exports",
-      "value": 11.3,
+      "value": 18.3,
       "unit": "%",
-      "change": 7.8,
+      "change": 6.8,
       "sparkline": [
-        9.2,
-        9.8,
-        10.1,
-        10.5,
-        10.5,
-        11.3
+        15.4,
+        16.1,
+        16.8,
+        17.3,
+        17.9,
+        18.3
       ]
     },
     {
       "country": "Qatar",
       "flag": "🇶🇦",
       "metric": "Budget Surplus",
-      "value": 8.9,
+      "value": 8.7,
       "unit": "% GDP",
       "change": 2.1,
       "sparkline": [
-        6.2,
-        6.8,
-        7.3,
-        8.1,
-        8.7,
-        8.9
+        7.2,
+        7.6,
+        8.0,
+        8.3,
+        8.5,
+        8.7
       ]
     }
   ],
   "notableFlows": [
-    "Saudi Arabia's non-oil FDI reached $18.2B in Q4 2025, driven by NEOM infrastructure commitments and renewable energy partnerships.",
-    "UAE dirham liquidity tightened as央行 intervention defended the peg amid regional currency volatility, with reserves declining $4.1B month-over-month.",
-    "Egyptian pound remittances surged 23% YoY to $31.8B as diaspora workers capitalized on favorable exchange rates following recent devaluation.",
-    "Morocco's phosphate exports to Asia increased 15% QoQ, benefiting from supply chain diversification away from European markets."
+    "Saudi Arabia's Public Investment Fund redirected $12.8B toward Egyptian infrastructure projects as Cairo seeks alternative financing amid IMF program constraints.",
+    "UAE sovereign wealth funds increased MENA tech sector exposure by 34% QoQ, targeting Turkish fintech despite lira volatility at 44.07 per dollar.",
+    "Moroccan remittances from Gulf states rose 18% YoY to $2.1B, supporting household consumption as domestic inflation remains subdued.",
+    "Qatar's LNG export revenues to European buyers generated $8.4B in Q1 2026, with proceeds increasingly allocated to regional development finance."
   ],
   "dealsToWatch": [
     {
-      "name": "ADNOC-Shell Ruwais Petrochemicals JV",
-      "parties": "ADNOC · Shell · Borealis",
-      "value": "$6.2B",
+      "name": "NEOM Green Hydrogen Complex",
+      "parties": "Saudi Arabia · Air Products · ACWA Power · Thyssenkrupp",
+      "value": "$8.4B",
       "status": "Active"
     },
     {
-      "name": "Saudi Aramco-Sinopec Yanbu Refinery Expansion",
-      "parties": "Saudi Aramco · Sinopec",
-      "value": "$12.8B",
+      "name": "Egypt New Capital Financial District",
+      "parties": "UAE Investment Authority · Egyptian Sovereign Fund · China State Construction",
+      "value": "$6.2B",
       "status": "In Progress"
     },
     {
-      "name": "QatarEnergy-TotalEnergies North Field South",
-      "parties": "QatarEnergy · TotalEnergies · Eni",
-      "value": "$28.7B",
+      "name": "Morocco Atlantic Port Expansion",
+      "parties": "Qatar Investment Authority · Tanger Med · APM Terminals",
+      "value": "$3.7B",
       "status": "MOU Signed"
     }
   ],
@@ -288,7 +288,7 @@
       {
         "country": "Saudi Arabia",
         "rank": 2,
-        "score": 71
+        "score": 74
       },
       {
         "country": "Qatar",
@@ -309,35 +309,35 @@
     "techJobs": {
       "trend": "up",
       "change": 23,
-      "context": "MENA tech employment surged 23% YoY driven by fintech expansion in UAE and Saudi Arabia's NEOM hiring acceleration."
+      "context": "MENA tech employment surged 23% YoY driven by Gulf AI initiatives and Egyptian fintech expansion despite currency pressures."
     }
   },
   "risks": [
     {
       "level": "HIGH",
-      "title": "Turkish Lira Contagion Risk",
-      "description": "Turkey's 58.5% inflation and lira at 44.05 per dollar threaten regional financial stability through trade linkages and portfolio spillovers. Cross-border banking exposures and energy payment disruptions could amplify contagion effects across the Eastern Mediterranean corridor.",
+      "title": "Egyptian Currency Crisis Deepening",
+      "description": "EGP depreciation to 50.09 per dollar combined with 28.3% inflation creates severe import financing stress. Social unrest probability increases as real wages collapse, potentially destabilizing regional trade corridors.",
       "countries": [
-        "Turkey",
-        "Egypt"
+        "Egypt",
+        "Saudi Arabia"
       ]
     },
     {
       "level": "MEDIUM",
-      "title": "Egyptian Fiscal Sustainability",
-      "description": "With inflation at 28.3% and the pound at 50.09 per dollar, Egypt faces mounting debt service pressures and import financing constraints. IMF program compliance remains critical as external financing needs approach $15B annually through 2027.",
+      "title": "Turkish Contagion to Regional Banks",
+      "description": "Turkey's 58.5% inflation and lira at 44.07 per dollar strain regional banking exposures. Cross-border lending books face mounting provisioning requirements across Gulf institutions.",
       "countries": [
-        "Egypt"
+        "Turkey"
       ]
     },
     {
       "level": "LOW",
-      "title": "Oil Price Volatility Impact",
-      "description": "Brent crude fluctuations around $92.69 create modest fiscal planning challenges for Gulf exporters despite comfortable breakeven levels. Diversification initiatives provide increasing insulation from short-term price movements across the GCC economies.",
+      "title": "Youth Employment Structural Lag",
+      "description": "Despite economic growth, youth unemployment remains elevated at 21.9% in Morocco and 18.3% in Egypt. Demographic dividend conversion requires accelerated job creation programs across emerging MENA markets.",
       "countries": [
-        "Saudi Arabia",
-        "UAE",
-        "Qatar"
+        "Morocco",
+        "Egypt",
+        "Saudi Arabia"
       ]
     }
   ]
