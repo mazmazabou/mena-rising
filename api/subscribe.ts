@@ -6,9 +6,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { email } = req.body ?? {};
+  const raw = (req.body ?? {}).email;
+  if (!raw || typeof raw !== "string") {
+    return res.status(400).json({ error: "Valid email is required" });
+  }
 
-  if (!email || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  const email = raw.trim().toLowerCase();
+  if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ error: "Valid email is required" });
   }
 
@@ -45,8 +49,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     return res.status(200).json({ success: true });
-  } catch (err: any) {
-    if (err?.statusCode === 409) {
+  } catch (err: unknown) {
+    if (err && typeof err === "object" && "statusCode" in err && (err as { statusCode: number }).statusCode === 409) {
       // Already subscribed — treat as success, no welcome email
       return res.status(200).json({ success: true, already: true });
     }

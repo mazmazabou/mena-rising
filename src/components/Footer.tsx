@@ -64,6 +64,15 @@ const Footer = () => {
 
         <p className="mt-6 font-mono-data text-xs text-muted-foreground/60">
           Built with Python · Claude API · GitHub Actions
+          {" · "}
+          <a
+            href="https://plausible.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-primary"
+          >
+            Privacy-friendly analytics by Plausible
+          </a>
         </p>
         <Link
           to="/archive"

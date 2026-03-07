@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { briefData } from "@/data/briefData";
 import { BriefDataProvider } from "@/context/BriefDataContext";
 import Masthead from "@/components/Masthead";
@@ -74,8 +75,21 @@ const ArchiveIssue = () => {
     );
   }
 
+  const headline = data.headline || "";
+  const description = (typeof data.bottomLine === "string" ? data.bottomLine : "").slice(0, 155);
+  const ogTitle = `MENA Rising Issue #${issueNumber} — ${headline}`;
+
   return (
     <BriefDataProvider data={data}>
+      <Helmet>
+        <title>{ogTitle}</title>
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={`https://mena-rising.com/archive/${issueNumber}`} />
+        <meta property="og:image" content="https://mena-rising.com/og-default.png" />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={description} />
+      </Helmet>
       <div className="min-h-screen bg-background zellige-bg">
         <div className="flex items-center justify-between border-b border-primary/20 bg-deep-teal/30 px-6 py-2">
           <Link

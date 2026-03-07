@@ -22,16 +22,23 @@ function apiDevPlugin(): Plugin {
         let body = "";
         for await (const chunk of req) body += chunk;
 
-        let email: string;
+        let raw: unknown;
         try {
-          email = JSON.parse(body).email;
+          raw = JSON.parse(body).email;
         } catch {
           res.writeHead(400, { "Content-Type": "application/json" });
           res.end(JSON.stringify({ error: "Invalid JSON" }));
           return;
         }
 
-        if (!email || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        if (!raw || typeof raw !== "string") {
+          res.writeHead(400, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ error: "Valid email is required" }));
+          return;
+        }
+
+        const email = raw.trim().toLowerCase();
+        if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
           res.writeHead(400, { "Content-Type": "application/json" });
           res.end(JSON.stringify({ error: "Valid email is required" }));
           return;
@@ -50,7 +57,7 @@ function apiDevPlugin(): Plugin {
                 if (m[1] === "RESEND_AUDIENCE_ID" && !audienceId) audienceId = m[2].trim();
               }
             }
-          } catch {}
+          } catch { /* .env file not found — ignore */ }
         }
 
         if (!apiKey || !audienceId) {
@@ -84,8 +91,8 @@ function apiDevPlugin(): Plugin {
 
           res.writeHead(200, { "Content-Type": "application/json" });
           res.end(JSON.stringify({ success: true }));
-        } catch (err: any) {
-          if (err?.statusCode === 409) {
+        } catch (err: unknown) {
+          if (err && typeof err === "object" && "statusCode" in err && (err as { statusCode: number }).statusCode === 409) {
             // Already subscribed — no welcome email
             res.writeHead(200, { "Content-Type": "application/json" });
             res.end(JSON.stringify({ success: true, already: true }));

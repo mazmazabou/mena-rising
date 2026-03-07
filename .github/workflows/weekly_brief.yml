@@ -49,11 +49,14 @@ jobs:
           path: pipeline/logs/
           retention-days: 14
 
+      - name: Generate sitemap
+        run: node scripts/generate-sitemap.js
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/latest_brief.json public/data/archive/
+          git add public/data/latest_brief.json public/data/archive/ public/sitemap.xml
           if git diff --cached --quiet; then
             echo "No changes to brief or archive"
           else
@@ -70,3 +73,11 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_AUDIENCE_ID: ${{ secrets.RESEND_AUDIENCE_ID }}
         run: python send_newsletter.py
+
+      - name: Notify on failure
+        if: failure()
+        working-directory: pipeline
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python send_failure_alert.py --run-url "$RUN_URL"
