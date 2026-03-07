@@ -69,7 +69,20 @@ function apiDevPlugin(): Plugin {
         try {
           const { Resend } = await import("resend");
           const resend = new Resend(apiKey);
-          await resend.contacts.create({ email, audienceId });
+          const { data, error } = await resend.contacts.create({ email, audienceId });
+
+          if (error) {
+            // Duplicate contact — Resend returns 409 or "already exists" message
+            if (error.message?.toLowerCase().includes("already") || ("statusCode" in error && (error as Record<string, unknown>).statusCode === 409)) {
+              res.writeHead(200, { "Content-Type": "application/json" });
+              res.end(JSON.stringify({ success: true, already: true }));
+              return;
+            }
+            console.error("Resend error:", error);
+            res.writeHead(500, { "Content-Type": "application/json" });
+            res.end(JSON.stringify({ error: "Failed to subscribe" }));
+            return;
+          }
 
           // Fire-and-forget welcome email for new subscribers
           try {
@@ -92,12 +105,6 @@ function apiDevPlugin(): Plugin {
           res.writeHead(200, { "Content-Type": "application/json" });
           res.end(JSON.stringify({ success: true }));
         } catch (err: unknown) {
-          if (err && typeof err === "object" && "statusCode" in err && (err as { statusCode: number }).statusCode === 409) {
-            // Already subscribed — no welcome email
-            res.writeHead(200, { "Content-Type": "application/json" });
-            res.end(JSON.stringify({ success: true, already: true }));
-            return;
-          }
           console.error("Resend error:", err);
           res.writeHead(500, { "Content-Type": "application/json" });
           res.end(JSON.stringify({ error: "Failed to subscribe" }));

@@ -25,10 +25,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     const resend = new Resend(apiKey);
-    await resend.contacts.create({
+    const { data, error } = await resend.contacts.create({
       email,
       audienceId,
     });
+
+    if (error) {
+      // Duplicate contact — Resend returns 409 or "already exists" message
+      if (error.message?.toLowerCase().includes("already") || ("statusCode" in error && (error as Record<string, unknown>).statusCode === 409)) {
+        return res.status(200).json({ success: true, already: true });
+      }
+      console.error("Resend error:", error);
+      return res.status(500).json({ error: "Failed to subscribe" });
+    }
 
     // Fire-and-forget welcome email for new subscribers
     try {
@@ -50,10 +59,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(200).json({ success: true });
   } catch (err: unknown) {
-    if (err && typeof err === "object" && "statusCode" in err && (err as { statusCode: number }).statusCode === 409) {
-      // Already subscribed — treat as success, no welcome email
-      return res.status(200).json({ success: true, already: true });
-    }
     console.error("Resend error:", err);
     return res.status(500).json({ error: "Failed to subscribe" });
   }
