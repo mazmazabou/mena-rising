@@ -5,12 +5,15 @@ Usage:
     python run_pipeline.py --fetch-only   # Only collect data (Phase 1)
     python run_pipeline.py --generate-only # Only run AI generation (Phase 2)
     python run_pipeline.py --dry-run      # Full pipeline but don't write final output
+    python run_pipeline.py --archive-only # Only archive current brief
 """
 
 import argparse
 import json
 import logging
+import shutil
 import sys
+from datetime import datetime
 from pathlib import Path
 
 import config  # config.py loads .env automatically
@@ -19,6 +22,63 @@ import generate_brief
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
+
+
+def archive_current():
+    """Archive the current latest_brief.json before generating a new one."""
+    if not config.OUTPUT_FILE.exists():
+        log.info("No existing brief to archive — skipping")
+        return
+
+    brief = json.loads(config.OUTPUT_FILE.read_text())
+    issue = brief.get("issue", {})
+    number = issue.get("number", "000")
+    week_of = issue.get("weekOf", "")
+
+    # Extract headline — use dedicated field or fall back to first sentence of bottomLine
+    headline = brief.get("headline", "")
+    if not headline:
+        bottom = brief.get("bottomLine", "")
+        headline = bottom.split(". ")[0] if bottom else f"Issue #{number}"
+
+    # Parse weekOf (e.g. "March 9, 2026") to YYYY-MM-DD
+    try:
+        dt = datetime.strptime(week_of, "%B %d, %Y")
+        date_str = dt.strftime("%Y-%m-%d")
+    except ValueError:
+        date_str = ""
+        log.warning("Could not parse weekOf '%s' — date will be empty", week_of)
+
+    filename = f"issue-{number}.json"
+
+    # Ensure archive directory exists
+    config.ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Read existing manifest or start fresh
+    if config.MANIFEST_FILE.exists():
+        manifest = json.loads(config.MANIFEST_FILE.read_text())
+    else:
+        manifest = []
+
+    # Skip if this issue is already archived
+    issue_num = int(number)
+    if any(entry.get("issue") == issue_num for entry in manifest):
+        log.info("Issue #%s already archived — skipping", number)
+        return
+
+    # Copy brief to archive
+    shutil.copy2(config.OUTPUT_FILE, config.ARCHIVE_DIR / filename)
+
+    # Prepend entry to manifest (newest first)
+    manifest.insert(0, {
+        "issue": issue_num,
+        "date": date_str,
+        "headline": headline,
+        "filename": filename,
+    })
+    config.MANIFEST_FILE.write_text(json.dumps(manifest, indent=2, ensure_ascii=False))
+
+    log.info("Archived Issue #%s → %s", number, config.ARCHIVE_DIR / filename)
 
 
 def validate_env(will_generate: bool) -> bool:
@@ -72,7 +132,13 @@ def main():
     parser.add_argument("--fetch-only", action="store_true", help="Only collect data (Phase 1)")
     parser.add_argument("--generate-only", action="store_true", help="Only run AI generation (Phase 2)")
     parser.add_argument("--dry-run", action="store_true", help="Full pipeline, don't write final output")
+    parser.add_argument("--archive-only", action="store_true", help="Only archive current brief")
     args = parser.parse_args()
+
+    # Archive-only mode
+    if args.archive_only:
+        archive_current()
+        sys.exit(0)
 
     will_generate = not args.fetch_only
     if not validate_env(will_generate):
@@ -81,6 +147,10 @@ def main():
     # Ensure directories exist
     config.OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     config.LOGS_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Archive the current brief before generating a new one
+    if not args.generate_only:
+        archive_current()
 
     brief = None
     exit_code = 0

@@ -8,6 +8,8 @@ export const briefData = {
     weekOf: "March 10, 2026",
   },
 
+  headline: "Gulf sovereign funds accelerate diversification as Egypt's currency reform attracts portfolio flows",
+
   ticker: [
     { label: "EGP/USD", value: "49.82", change: -0.3 },
     { label: "Brent Crude", value: "$81.40", change: 1.2 },

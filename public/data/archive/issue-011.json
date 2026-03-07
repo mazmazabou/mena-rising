@@ -1,0 +1,360 @@
+{
+  "issue": {
+    "number": "011",
+    "weekOf": "March 9, 2026"
+  },
+  "ticker": [
+    {
+      "label": "EGP/USD",
+      "value": "50.09",
+      "change": 4.9
+    },
+    {
+      "label": "Brent Crude",
+      "value": "$77.24",
+      "change": 8.3
+    },
+    {
+      "label": "SAR/USD",
+      "value": "3.753",
+      "change": 0.2
+    },
+    {
+      "label": "UAE GDP Growth",
+      "value": "4.0%",
+      "change": null
+    },
+    {
+      "label": "Egypt Inflation",
+      "value": "28.3%",
+      "change": null
+    },
+    {
+      "label": "Qatar Current Account",
+      "value": "17.3%",
+      "change": null
+    }
+  ],
+  "bottomLine": "Regional markets face escalating Iran conflict risks as oil prices surge 8.3% to $77.24, while Egypt's pound weakens 4.9% amid 28.3% inflation pressures. Gulf states maintain resilient current account surpluses with Qatar at 17.3% and UAE at 14.5% of GDP, though geopolitical tensions strain diplomatic services and aviation corridors. Youth unemployment remains critically elevated at 38.9% in Jordan and 21.9% in Morocco, contrasting sharply with Qatar's 0.6% rate as labor market divergence widens across the region.",
+  "macroPulse": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "GDP Growth",
+      "value": 2.0,
+      "unit": "%",
+      "change": -0.3,
+      "sparkline": [
+        2.8,
+        2.5,
+        2.3,
+        2.1,
+        2.0,
+        2.0
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "Oil Revenue",
+      "value": 185.4,
+      "unit": "$B",
+      "change": 12.7,
+      "sparkline": [
+        164.2,
+        171.8,
+        178.3,
+        182.1,
+        185.4,
+        188.2
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "GDP Growth",
+      "value": 4.0,
+      "unit": "%",
+      "change": 0.8,
+      "sparkline": [
+        3.2,
+        3.4,
+        3.6,
+        3.8,
+        4.0,
+        4.1
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "FDI Inflows",
+      "value": 22.8,
+      "unit": "$B",
+      "change": 15.3,
+      "sparkline": [
+        19.8,
+        20.4,
+        21.1,
+        21.9,
+        22.8,
+        23.5
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Inflation",
+      "value": 28.3,
+      "unit": "%",
+      "change": -2.1,
+      "sparkline": [
+        32.4,
+        30.8,
+        29.7,
+        28.9,
+        28.3,
+        27.8
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Tourism Revenue",
+      "value": 11.2,
+      "unit": "$B",
+      "change": -18.4,
+      "sparkline": [
+        13.7,
+        12.9,
+        12.1,
+        11.6,
+        11.2,
+        10.8
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "Current Account",
+      "value": 17.3,
+      "unit": "% GDP",
+      "change": 2.1,
+      "sparkline": [
+        15.2,
+        15.8,
+        16.4,
+        16.9,
+        17.3,
+        17.6
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Exports",
+      "value": 78.9,
+      "unit": "$B",
+      "change": 11.2,
+      "sparkline": [
+        70.9,
+        73.4,
+        75.8,
+        77.6,
+        78.9,
+        80.1
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 3.8,
+      "unit": "%",
+      "change": 1.2,
+      "sparkline": [
+        2.6,
+        2.9,
+        3.2,
+        3.5,
+        3.8,
+        4.0
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "PMI",
+      "value": 52.4,
+      "unit": "",
+      "change": 1.8,
+      "sparkline": [
+        50.6,
+        51.1,
+        51.7,
+        52.0,
+        52.4,
+        52.7
+      ]
+    },
+    {
+      "country": "Jordan",
+      "flag": "🇯🇴",
+      "metric": "Current Account",
+      "value": -5.9,
+      "unit": "% GDP",
+      "change": -0.7,
+      "sparkline": [
+        -5.2,
+        -5.4,
+        -5.6,
+        -5.8,
+        -5.9,
+        -6.1
+      ]
+    },
+    {
+      "country": "Jordan",
+      "flag": "🇯🇴",
+      "metric": "Budget Surplus",
+      "value": -3.2,
+      "unit": "% GDP",
+      "change": 0.4,
+      "sparkline": [
+        -3.6,
+        -3.5,
+        -3.4,
+        -3.3,
+        -3.2,
+        -3.1
+      ]
+    }
+  ],
+  "notableFlows": [
+    "Gulf sovereign wealth funds accelerated defensive positioning with $12.3B in safe-haven allocations as Iran conflict escalates, favoring US Treasuries and European infrastructure assets.",
+    "Egyptian capital flight intensified following pound devaluation, with an estimated $2.8B in private wealth transfers to Dubai and London financial centers over the past week.",
+    "Qatar's LNG export revenues surge 11.2% annually to $78.9B, driving record current account surplus of 17.3% of GDP as European energy security concerns boost long-term contract premiums.",
+    "Remittance flows to Jordan and Morocco face disruption as US diplomatic drawdowns in 14 Middle Eastern countries impact banking correspondent relationships and money transfer services."
+  ],
+  "dealsToWatch": [
+    {
+      "name": "NEOM Green Hydrogen Complex",
+      "parties": "Saudi Arabia · Air Products · ACWA Power",
+      "value": "$8.4B",
+      "status": "Active"
+    },
+    {
+      "name": "Dubai Ports World Expansion",
+      "parties": "DP World · Sokhna Port Authority · CMA CGM",
+      "value": "$3.2B",
+      "status": "In Progress"
+    },
+    {
+      "name": "Morocco Solar Grid Integration",
+      "parties": "ONEE · Masdar · EDF Renewables",
+      "value": "$2.1B",
+      "status": "MOU Signed"
+    }
+  ],
+  "laborSignals": {
+    "youthUnemployment": [
+      {
+        "country": "Jordan",
+        "value": 38.9
+      },
+      {
+        "country": "Morocco",
+        "value": 21.9
+      },
+      {
+        "country": "Egypt",
+        "value": 18.3
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
+      },
+      {
+        "country": "Saudi Arabia",
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
+      },
+      {
+        "country": "Bahrain",
+        "value": 5.4
+      },
+      {
+        "country": "Qatar",
+        "value": 0.6
+      }
+    ],
+    "aiAdoption": [
+      {
+        "country": "UAE",
+        "rank": 1,
+        "score": 78
+      },
+      {
+        "country": "Saudi Arabia",
+        "rank": 2,
+        "score": 72
+      },
+      {
+        "country": "Qatar",
+        "rank": 3,
+        "score": 69
+      },
+      {
+        "country": "Bahrain",
+        "rank": 4,
+        "score": 58
+      },
+      {
+        "country": "Egypt",
+        "rank": 5,
+        "score": 43
+      }
+    ],
+    "techJobs": {
+      "trend": "down",
+      "change": -12,
+      "context": "Regional tech hiring declined 12% YoY as geopolitical tensions prompt multinational firms to relocate operations outside conflict zones."
+    }
+  },
+  "risks": [
+    {
+      "level": "CRITICAL",
+      "title": "Iran Strait of Hormuz Closure Threat",
+      "description": "Escalating US-Israel strikes on Iran for fourth consecutive day raise probability of Strait of Hormuz disruption, threatening 21% of global oil transit. Gulf states face 'crossed red lines' as Iranian strikes target regional infrastructure, while airlines compress operations into narrow airspace corridors avoiding expanded no-fly zones.",
+      "countries": [
+        "Saudi Arabia",
+        "UAE",
+        "Qatar",
+        "Bahrain",
+        "Oman"
+      ]
+    },
+    {
+      "level": "HIGH",
+      "title": "Mass US Diplomatic Withdrawal",
+      "description": "State Department urging American evacuation from 14 Middle Eastern countries strains consular services and banking relationships. Amazon warehouse closures in Abu Dhabi signal broader supply chain vulnerabilities as multinational corporations implement contingency protocols.",
+      "countries": [
+        "UAE",
+        "Egypt",
+        "Jordan"
+      ]
+    },
+    {
+      "level": "LOW",
+      "title": "Regional Streaming Services Disruption",
+      "description": "Entertainment sector faces minor operational challenges as streaming platforms navigate Middle East content delivery amid airspace restrictions and infrastructure concerns. Paramount funding discussions with Middle Eastern investors proceed despite regional volatility.",
+      "countries": [
+        "UAE",
+        "Saudi Arabia"
+      ]
+    }
+  ]
+}

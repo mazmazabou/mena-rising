@@ -29,3 +29,4 @@ pipeline/.env
 pipeline/logs/
 pipeline/data_payload.json
 __pycache__/
+.vercel

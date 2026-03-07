@@ -155,6 +155,8 @@ Generate a JSON object with EXACTLY this structure:
     "weekOf": "{issue_metadata['weekOf']}"
   }},
 
+  "headline": "<concise 10-15 word summary of the week's key theme, max 100 characters, no period at end>",
+
   "ticker": [
     {{"label": "EGP/USD", "value": "<formatted string, e.g. 49.82>", "change": <weekly % change or null>}},
     {{"label": "Brent Crude", "value": "<formatted string with $, e.g. $81.40>", "change": <weekly % change or null>}},
@@ -229,7 +231,8 @@ CONSTRAINTS:
 8. "laborSignals.aiAdoption": 5 entries with AI-estimated scores (0-100).
 9. "laborSignals.techJobs": AI-estimated.
 10. All sparkline arrays must have exactly 6 numbers.
-11. Return ONLY the JSON object, nothing else."""
+11. "headline": a single sentence, max 100 characters, no period at the end. Captures the week's dominant theme.
+12. Return ONLY the JSON object, nothing else."""
 
 
 # ── Validation ───────────────────────────────────────────────────────────────
@@ -238,9 +241,12 @@ def validate_brief(brief: dict) -> list[str]:
     """Validate the completed brief against expected schema. Returns list of issues."""
     issues = []
 
-    for field in ["issue", "ticker", "bottomLine", "macroPulse", "notableFlows", "dealsToWatch", "laborSignals", "risks"]:
+    for field in ["issue", "headline", "ticker", "bottomLine", "macroPulse", "notableFlows", "dealsToWatch", "laborSignals", "risks"]:
         if field not in brief:
             issues.append(f"Missing top-level field: {field}")
+
+    if not isinstance(brief.get("headline"), str) or not brief.get("headline", "").strip():
+        issues.append("headline must be a non-empty string")
 
     if isinstance(brief.get("ticker"), list):
         if len(brief["ticker"]) != 6:

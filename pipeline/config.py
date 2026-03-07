@@ -13,6 +13,8 @@ PIPELINE_DIR = Path(__file__).resolve().parent
 load_dotenv(PIPELINE_DIR / ".env", override=False)
 PROJECT_ROOT = PIPELINE_DIR.parent
 OUTPUT_FILE = PROJECT_ROOT / "public" / "data" / "latest_brief.json"
+ARCHIVE_DIR = PROJECT_ROOT / "public" / "data" / "archive"
+MANIFEST_FILE = ARCHIVE_DIR / "manifest.json"
 DATA_PAYLOAD_FILE = PIPELINE_DIR / "data_payload.json"
 LOGS_DIR = PIPELINE_DIR / "logs"
 

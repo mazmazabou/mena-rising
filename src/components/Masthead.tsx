@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useBriefContext } from "@/context/BriefDataContext";
 
 const Masthead = () => {
@@ -47,6 +48,12 @@ const Masthead = () => {
         <p className="mt-3 font-mono-data text-xs tracking-widest text-primary/70">
           Issue #{briefData.issue.number} · Week of {briefData.issue.weekOf}
         </p>
+        <Link
+          to="/archive"
+          className="mt-2 inline-block font-mono-data text-xs text-primary/40 transition-colors hover:text-primary"
+        >
+          Past Issues &rarr;
+        </Link>
       </div>
 
       {/* Muqarnas Strip */}

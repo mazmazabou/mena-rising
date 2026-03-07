@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 const Footer = () => {
@@ -64,6 +65,12 @@ const Footer = () => {
         <p className="mt-6 font-mono-data text-xs text-muted-foreground/60">
           Built with Python · Claude API · GitHub Actions
         </p>
+        <Link
+          to="/archive"
+          className="mt-2 inline-block font-mono-data text-xs text-muted-foreground/40 transition-colors hover:text-primary"
+        >
+          Browse Past Issues
+        </Link>
       </div>
 
       {/* Geometric border strip */}

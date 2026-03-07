@@ -27,6 +27,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r pipeline/requirements.txt
 
+      - name: Archive current brief
+        working-directory: pipeline
+        run: python run_pipeline.py --archive-only
+
       - name: Run pipeline
         working-directory: pipeline
         env:
@@ -49,11 +53,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet public/data/latest_brief.json; then
-            echo "No changes to latest_brief.json"
+          git add public/data/latest_brief.json public/data/archive/
+          if git diff --cached --quiet; then
+            echo "No changes to brief or archive"
           else
             ISSUE=$(python3 -c "import json; print(json.load(open('public/data/latest_brief.json'))['issue']['number'])")
-            git add public/data/latest_brief.json
             git fetch origin main
             git reset --soft origin/main
             git commit -m "chore: weekly brief update — Issue #${ISSUE}"
