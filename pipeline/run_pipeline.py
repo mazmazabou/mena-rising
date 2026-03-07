@@ -203,11 +203,15 @@ def main():
         sys.exit(1)
 
     # Validate
-    issues = generate_brief.validate_brief(brief)
-    if issues:
-        log.warning("Validation issues:")
-        for issue in issues:
-            log.warning("  - %s", issue)
+    errors, warnings = generate_brief.validate_brief(brief)
+    if warnings:
+        log.warning("Validation warnings:")
+        for w in warnings:
+            log.warning("  - %s", w)
+    if errors:
+        log.error("Validation errors:")
+        for e in errors:
+            log.error("  - %s", e)
         if exit_code == 0:
             exit_code = 2
 

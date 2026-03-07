@@ -226,7 +226,7 @@ CONSTRAINTS:
 3. "bottomLine": Reference actual data values from above.
 4. "notableFlows": exactly 4 items.
 5. "dealsToWatch": exactly 3 items. "parties" uses " · " (space-middle dot-space) as separator.
-6. "risks": exactly 3 items — at least one HIGH, one MEDIUM, one LOW. Assess severity from GDELT events + news headlines.
+6. "risks": 3 items preferred — include a mix of severity levels (HIGH, MEDIUM, LOW, CRITICAL) based on actual risk assessment. Fewer is acceptable if warranted by the data.
 7. "laborSignals.youthUnemployment": Use REAL WDI data. Include all countries that have data, sorted descending by value.
 8. "laborSignals.aiAdoption": 5 entries with AI-estimated scores (0-100).
 9. "laborSignals.techJobs": AI-estimated.
@@ -237,55 +237,64 @@ CONSTRAINTS:
 
 # ── Validation ───────────────────────────────────────────────────────────────
 
-def validate_brief(brief: dict) -> list[str]:
-    """Validate the completed brief against expected schema. Returns list of issues."""
-    issues = []
+def validate_brief(brief: dict) -> tuple[list[str], list[str]]:
+    """Validate the completed brief against expected schema.
+
+    Returns (errors, warnings):
+      - errors: structural failures that break the frontend (exit code 2)
+      - warnings: content variation that doesn't break the frontend (logged, exit code 0)
+    """
+    errors = []
+    warnings = []
 
     for field in ["issue", "headline", "ticker", "bottomLine", "macroPulse", "notableFlows", "dealsToWatch", "laborSignals", "risks"]:
         if field not in brief:
-            issues.append(f"Missing top-level field: {field}")
+            errors.append(f"Missing top-level field: {field}")
 
     if not isinstance(brief.get("headline"), str) or not brief.get("headline", "").strip():
-        issues.append("headline must be a non-empty string")
+        errors.append("headline must be a non-empty string")
 
     if isinstance(brief.get("ticker"), list):
         if len(brief["ticker"]) != 6:
-            issues.append(f"ticker has {len(brief['ticker'])} items, expected 6")
+            errors.append(f"ticker has {len(brief['ticker'])} items, expected 6")
 
     if isinstance(brief.get("macroPulse"), list):
         if len(brief["macroPulse"]) != 12:
-            issues.append(f"macroPulse has {len(brief['macroPulse'])} items, expected 12")
+            errors.append(f"macroPulse has {len(brief['macroPulse'])} items, expected 12")
         for i, m in enumerate(brief["macroPulse"]):
             if m.get("value") is None:
-                issues.append(f"macroPulse[{i}] ({m.get('country')}/{m.get('metric')}) has null value")
+                errors.append(f"macroPulse[{i}] ({m.get('country')}/{m.get('metric')}) has null value")
             if not isinstance(m.get("sparkline"), list) or len(m.get("sparkline", [])) != 6:
-                issues.append(f"macroPulse[{i}] sparkline should have 6 points")
+                errors.append(f"macroPulse[{i}] sparkline should have 6 points")
 
     if isinstance(brief.get("notableFlows"), list):
         if len(brief["notableFlows"]) != 4:
-            issues.append(f"notableFlows has {len(brief['notableFlows'])} items, expected 4")
+            warnings.append(f"notableFlows has {len(brief['notableFlows'])} items, expected 4")
 
     if isinstance(brief.get("dealsToWatch"), list):
         if len(brief["dealsToWatch"]) != 3:
-            issues.append(f"dealsToWatch has {len(brief['dealsToWatch'])} items, expected 3")
+            warnings.append(f"dealsToWatch has {len(brief['dealsToWatch'])} items, expected 3")
 
     if isinstance(brief.get("risks"), list):
         if len(brief["risks"]) != 3:
-            issues.append(f"risks has {len(brief['risks'])} items, expected 3")
+            warnings.append(f"risks has {len(brief['risks'])} items, expected 3")
         levels = {r.get("level") for r in brief.get("risks", [])}
         for expected in ["HIGH", "MEDIUM", "LOW"]:
             if expected not in levels:
-                issues.append(f"risks missing level: {expected}")
+                warnings.append(f"risks missing level: {expected}")
+    else:
+        if "risks" in brief:
+            errors.append("risks must be a list")
 
     ls = brief.get("laborSignals", {})
     if not isinstance(ls.get("youthUnemployment"), list) or len(ls.get("youthUnemployment", [])) < 4:
-        issues.append("laborSignals.youthUnemployment should have at least 4 entries")
+        errors.append("laborSignals.youthUnemployment should have at least 4 entries")
     if not isinstance(ls.get("aiAdoption"), list) or len(ls.get("aiAdoption", [])) != 5:
-        issues.append("laborSignals.aiAdoption should have 5 entries")
+        errors.append("laborSignals.aiAdoption should have 5 entries")
     if not isinstance(ls.get("techJobs"), dict):
-        issues.append("laborSignals.techJobs should be an object")
+        errors.append("laborSignals.techJobs should be an object")
 
-    return issues
+    return errors, warnings
 
 
 # ── Claude API ───────────────────────────────────────────────────────────────
@@ -322,18 +331,20 @@ def call_claude_with_retry(system_prompt: str, user_prompt: str) -> dict:
         _log_claude_response(raw_text, attempt=1)
 
         # Validate
-        validation_issues = validate_brief(result)
-        if not validation_issues:
+        errors, warnings = validate_brief(result)
+        if not errors:
+            if warnings:
+                log.warning("Validation warnings (non-blocking): %s", warnings)
             log.info("Claude response validated successfully on first attempt")
             return result
 
-        # Retry with validation feedback
-        log.warning("Validation issues on first attempt: %s", validation_issues)
+        # Retry with validation feedback (only errors, not warnings)
+        log.warning("Validation errors on first attempt: %s", errors)
         log.info("Calling Claude (attempt 2/2 with validation feedback)...")
 
         feedback = (
-            "Your previous response had these validation issues:\n"
-            + "\n".join(f"- {issue}" for issue in validation_issues)
+            "Your previous response had these validation errors:\n"
+            + "\n".join(f"- {issue}" for issue in errors)
             + "\n\nPlease fix these issues and return the corrected JSON."
         )
         messages.append({"role": "assistant", "content": raw_text})
@@ -342,10 +353,12 @@ def call_claude_with_retry(system_prompt: str, user_prompt: str) -> dict:
         raw_text_2, result_2 = _call(messages)
         _log_claude_response(raw_text_2, attempt=2)
 
-        validation_issues_2 = validate_brief(result_2)
-        if validation_issues_2:
-            log.warning("Validation issues remain after retry: %s", validation_issues_2)
-        else:
+        errors_2, warnings_2 = validate_brief(result_2)
+        if errors_2:
+            log.warning("Validation errors remain after retry: %s", errors_2)
+        if warnings_2:
+            log.warning("Validation warnings (non-blocking): %s", warnings_2)
+        if not errors_2:
             log.info("Claude response validated successfully on retry")
 
         return result_2
@@ -389,12 +402,16 @@ def generate_brief(payload_path: str | None = None) -> dict:
     brief["issue"] = issue_metadata
 
     # Final validation
-    issues = validate_brief(brief)
-    if issues:
-        log.warning("Final validation issues:")
-        for issue in issues:
-            log.warning("  - %s", issue)
-    else:
+    errors, warnings = validate_brief(brief)
+    if errors:
+        log.warning("Final validation errors:")
+        for e in errors:
+            log.warning("  - %s", e)
+    if warnings:
+        log.warning("Final validation warnings (non-blocking):")
+        for w in warnings:
+            log.warning("  - %s", w)
+    if not errors and not warnings:
         log.info("Final validation passed")
 
     # Write output
