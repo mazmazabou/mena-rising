@@ -43,5 +43,6 @@ jobs:
             ISSUE=$(python3 -c "import json; print(json.load(open('public/data/latest_brief.json'))['issue']['number'])")
             git add public/data/latest_brief.json
             git commit -m "chore: weekly brief update — Issue #${ISSUE}"
+            git pull --rebase origin main
             git push
           fi
