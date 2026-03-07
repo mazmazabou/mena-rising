@@ -1,0 +1,42 @@
+name: Weekly Brief Update
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'        # Every Monday at 6:00 AM UTC
+  workflow_dispatch:             # Manual trigger
+
+jobs:
+  generate-brief:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Run pipeline
+        working-directory: pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python run_pipeline.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet public/data/latest_brief.json; then
+            echo "No changes to latest_brief.json"
+          else
+            ISSUE=$(python3 -c "import json; print(json.load(open('public/data/latest_brief.json'))['issue']['number'])")
+            git add public/data/latest_brief.json
+            git commit -m "chore: weekly brief update — Issue #${ISSUE}"
+            git push
+          fi
