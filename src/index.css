@@ -2,95 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --navy: 216 55% 10%;
+    --deep-teal: 200 57% 15%;
+    --gold: 43 50% 54%;
+    --amber: 42 78% 60%;
+    --terracotta: 18 63% 47%;
+    --ivory: 36 50% 88%;
+    --muted-text: 214 16% 61%;
+    --green-accent: 156 64% 49%;
+    --red-accent: 0 68% 62%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --background: 216 55% 10%;
+    --foreground: 36 50% 88%;
+    --card: 200 57% 15%;
+    --card-foreground: 36 50% 88%;
+    --popover: 200 57% 15%;
+    --popover-foreground: 36 50% 88%;
+    --primary: 43 50% 54%;
+    --primary-foreground: 216 55% 10%;
+    --secondary: 200 57% 15%;
+    --secondary-foreground: 36 50% 88%;
+    --muted: 200 40% 20%;
+    --muted-foreground: 214 16% 61%;
+    --accent: 42 78% 60%;
+    --accent-foreground: 216 55% 10%;
+    --destructive: 0 68% 62%;
+    --destructive-foreground: 36 50% 88%;
+    --border: 43 50% 54%;
+    --input: 200 40% 20%;
+    --ring: 43 50% 54%;
+    --radius: 0.25rem;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 216 55% 10%;
+    --sidebar-foreground: 36 50% 88%;
+    --sidebar-primary: 43 50% 54%;
+    --sidebar-primary-foreground: 216 55% 10%;
+    --sidebar-accent: 200 57% 15%;
+    --sidebar-accent-foreground: 36 50% 88%;
+    --sidebar-border: 43 50% 54%;
+    --sidebar-ring: 43 50% 54%;
   }
 }
 
@@ -98,8 +50,113 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
+    font-family: 'Crimson Pro', serif;
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .font-body {
+    font-family: 'Crimson Pro', serif;
+  }
+}
+
+/* Zellige pattern background */
+.zellige-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c9a84c' stroke-width='0.5' opacity='0.05'%3E%3Cpolygon points='40,0 54.14,10 54.14,30 40,40 25.86,30 25.86,10'/%3E%3Cpolygon points='40,40 54.14,50 54.14,70 40,80 25.86,70 25.86,50'/%3E%3Cpolygon points='0,20 14.14,30 14.14,50 0,60 -14.14,50 -14.14,30'/%3E%3Cpolygon points='80,20 94.14,30 94.14,50 80,60 65.86,50 65.86,30'/%3E%3Cline x1='40' y1='0' x2='54.14' y2='10'/%3E%3Cline x1='54.14' y1='10' x2='54.14' y2='30'/%3E%3Cline x1='54.14' y1='30' x2='40' y2='40'/%3E%3Cline x1='40' y1='40' x2='25.86' y2='30'/%3E%3Cline x1='25.86' y1='30' x2='25.86' y2='10'/%3E%3Cline x1='25.86' y1='10' x2='40' y2='0'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Ornamental divider */
+.ornamental-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ornamental-divider::before,
+.ornamental-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+}
+
+/* Ticker animation */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-animate {
+  animation: ticker-scroll 30s linear infinite;
+}
+
+/* Card gold glow hover */
+.card-ottoman {
+  border: 1px solid hsl(var(--gold) / 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+.card-ottoman:hover {
+  box-shadow: 0 0 20px hsl(var(--gold) / 0.15), 0 0 40px hsl(var(--gold) / 0.05);
+  transform: translateY(-2px);
+}
+
+/* Corner ornaments */
+.card-ottoman::before,
+.card-ottoman::after {
+  content: '◆';
+  position: absolute;
+  color: hsl(var(--gold));
+  font-size: 6px;
+  opacity: 0.6;
+}
+.card-ottoman::before {
+  top: 4px; left: 6px;
+}
+.card-ottoman::after {
+  top: 4px; right: 6px;
+}
+
+/* Muqarnas strip */
+.muqarnas-strip {
+  background: linear-gradient(180deg, hsl(var(--gold) / 0.15), transparent);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cpath d='M0,20 Q10,0 20,20 Q30,0 40,20' fill='none' stroke='%23c9a84c' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M0,15 Q10,5 20,15 Q30,5 40,15' fill='none' stroke='%23c9a84c' stroke-width='0.3' opacity='0.2'/%3E%3C/svg%3E");
+  height: 20px;
+}
+
+/* Parchment texture */
+.parchment {
+  background-color: hsl(var(--deep-teal));
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Staggered fade in */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* Counter animation */
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Geometric footer border */
+.geometric-border-bottom {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='8' viewBox='0 0 60 8'%3E%3Cpath d='M0,4 L15,0 L30,4 L45,0 L60,4 L45,8 L30,4 L15,8 Z' fill='none' stroke='%23c9a84c' stroke-width='0.5' opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  height: 8px;
 }
