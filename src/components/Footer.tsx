@@ -1,0 +1,38 @@
+import { useState } from "react";
+
+const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  return (
+    <footer className="border-t border-primary/20 px-6 py-10 md:px-12 lg:px-24">
+      <div className="mx-auto max-w-4xl text-center">
+        <p className="font-body text-sm leading-relaxed text-muted-foreground">
+          MENA Rising publishes every Monday. Data sourced from World Bank, FRED, IMF, and regional central banks.
+        </p>
+
+        {/* Email Subscription */}
+        <div className="mx-auto mt-6 flex max-w-md gap-2">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="flex-1 rounded border border-primary/30 bg-input px-4 py-2 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+          <button className="rounded bg-primary px-5 py-2 font-display text-sm font-semibold text-primary-foreground transition-colors hover:bg-amber">
+            Subscribe
+          </button>
+        </div>
+
+        <p className="mt-6 font-mono-data text-xs text-muted-foreground/60">
+          Built with Python · Claude API · GitHub Actions
+        </p>
+      </div>
+
+      {/* Geometric border strip */}
+      <div className="geometric-border-bottom mt-8" />
+    </footer>
+  );
+};
+
+export default Footer;
