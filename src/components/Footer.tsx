@@ -21,8 +21,12 @@ const Footer = () => {
         toast.error(data.error || "Subscription failed");
         return;
       }
-      toast.success("You're subscribed!");
-      setEmail("");
+      if (data.already) {
+        toast.info("You're already subscribed — see you Monday!");
+      } else {
+        toast.success("You're subscribed! Check your inbox for a welcome email.");
+        setEmail("");
+      }
     } catch {
       toast.error("Network error — please try again");
     } finally {

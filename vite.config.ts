@@ -88,7 +88,7 @@ function apiDevPlugin(): Plugin {
           if (err?.statusCode === 409) {
             // Already subscribed — no welcome email
             res.writeHead(200, { "Content-Type": "application/json" });
-            res.end(JSON.stringify({ success: true }));
+            res.end(JSON.stringify({ success: true, already: true }));
             return;
           }
           console.error("Resend error:", err);
