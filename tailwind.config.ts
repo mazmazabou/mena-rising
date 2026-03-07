@@ -19,6 +19,15 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        navy: "hsl(var(--navy))",
+        "deep-teal": "hsl(var(--deep-teal))",
+        gold: "hsl(var(--gold))",
+        amber: "hsl(var(--amber))",
+        terracotta: "hsl(var(--terracotta))",
+        ivory: "hsl(var(--ivory))",
+        "muted-text": "hsl(var(--muted-text))",
+        "green-accent": "hsl(var(--green-accent))",
+        "red-accent": "hsl(var(--red-accent))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -58,6 +67,11 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'serif'],
+        'mono-data': ['"JetBrains Mono"', 'monospace'],
+        body: ['"Crimson Pro"', 'serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -65,20 +79,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
