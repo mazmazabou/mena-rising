@@ -35,8 +35,8 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "mazmazabou"
+          git config user.email "abouelelamazen@gmail.com"
           if git diff --quiet public/data/latest_brief.json; then
             echo "No changes to latest_brief.json"
           else
