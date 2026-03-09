@@ -5,6 +5,7 @@ import MacroPulse from "@/components/MacroPulse";
 import TradeCapital from "@/components/TradeCapital";
 import LaborSignals from "@/components/LaborSignals";
 import RiskRadar from "@/components/RiskRadar";
+import SubscribeSection from "@/components/SubscribeSection";
 import Footer from "@/components/Footer";
 
 function BriefContent() {
@@ -40,6 +41,7 @@ function BriefContent() {
         <TradeCapital />
         <LaborSignals />
         <RiskRadar />
+        <SubscribeSection />
       </main>
       <Footer />
     </div>
