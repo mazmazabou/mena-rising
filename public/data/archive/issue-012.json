@@ -1,14 +1,14 @@
 {
   "issue": {
-    "number": "013",
+    "number": "012",
     "weekOf": "March 9, 2026"
   },
-  "headline": "Iran conflict disrupts MENA trade flows as oil prices surge 8.3% amid airspace restrictions",
+  "headline": "Iran conflict disrupts Gulf aviation as oil prices surge amid regional tensions",
   "ticker": [
     {
       "label": "EGP/USD",
-      "value": "52.10",
-      "change": 3.6
+      "value": "50.09",
+      "change": 4.9
     },
     {
       "label": "Brent Crude",
@@ -18,7 +18,7 @@
     {
       "label": "SAR/USD",
       "value": "3.753",
-      "change": -0.1
+      "change": 0.2
     },
     {
       "label": "Turkey Inflation",
@@ -31,12 +31,12 @@
       "change": null
     },
     {
-      "label": "UAE GDP Growth",
-      "value": "4.0%",
+      "label": "Qatar Current Account",
+      "value": "17.3%",
       "change": null
     }
   ],
-  "bottomLine": "Regional tensions escalate as Iran conflict triggers widespread airspace closures, pushing Brent crude up 8.3% to $77.24. Turkey's hyperinflation at 58.5% and Egypt's 28.3% rate highlight persistent monetary pressures, while the Egyptian pound weakened 3.6% against the dollar. UAE maintains robust 4.0% GDP growth despite regional headwinds, contrasting sharply with Jordan's 38.9% youth unemployment crisis.",
+  "bottomLine": "Regional tensions escalate as Iran conflict disrupts Gulf aviation corridors, driving Brent crude up 8.3% to $77.24. Egypt's pound weakens 4.9% against the dollar amid persistent 28.3% inflation, while Qatar maintains the strongest current account surplus at 17.3% of GDP. Turkey's hyperinflation at 58.5% contrasts sharply with Gulf monetary stability as geopolitical risks reshape regional trade flows.",
   "macroPulse": [
     {
       "country": "Saudi Arabia",
@@ -51,7 +51,7 @@
         2.3,
         2.1,
         2.0,
-        2.0
+        1.9
       ]
     },
     {
@@ -60,13 +60,13 @@
       "metric": "Oil Revenue",
       "value": 285,
       "unit": "$B",
-      "change": 12.5,
+      "change": 12.4,
       "sparkline": [
-        265,
+        245,
+        260,
         270,
         275,
         280,
-        285,
         285
       ]
     },
@@ -83,7 +83,7 @@
         3.7,
         3.8,
         4.0,
-        4.0
+        4.1
       ]
     },
     {
@@ -95,10 +95,10 @@
       "change": 2.1,
       "sparkline": [
         11.8,
-        12.5,
-        13.2,
-        14.0,
-        14.5,
+        12.4,
+        13.1,
+        13.8,
+        14.2,
         14.5
       ]
     },
@@ -110,11 +110,11 @@
       "unit": "%",
       "change": -5.2,
       "sparkline": [
-        35.2,
-        32.8,
-        30.5,
-        29.1,
-        28.3,
+        35.8,
+        32.1,
+        30.4,
+        29.7,
+        28.9,
         28.3
       ]
     },
@@ -124,13 +124,13 @@
       "metric": "Current Account",
       "value": -5.7,
       "unit": "% GDP",
-      "change": -1.3,
+      "change": -1.8,
       "sparkline": [
-        -4.2,
+        -3.2,
+        -4.1,
         -4.8,
-        -5.1,
+        -5.2,
         -5.5,
-        -5.7,
         -5.7
       ]
     },
@@ -138,16 +138,16 @@
       "country": "Qatar",
       "flag": "🇶🇦",
       "metric": "LNG Exports",
-      "value": 82,
+      "value": 125,
       "unit": "$B",
-      "change": 15.2,
+      "change": 8.7,
       "sparkline": [
-        68,
-        72,
-        76,
-        79,
-        82,
-        82
+        108,
+        115,
+        118,
+        121,
+        123,
+        125
       ]
     },
     {
@@ -156,14 +156,46 @@
       "metric": "Current Account",
       "value": 17.3,
       "unit": "% GDP",
-      "change": 3.8,
+      "change": 1.4,
       "sparkline": [
-        12.5,
-        14.2,
+        15.2,
         15.8,
-        16.5,
-        17.3,
+        16.3,
+        16.8,
+        17.0,
         17.3
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 3.8,
+      "unit": "%",
+      "change": 0.9,
+      "sparkline": [
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.6,
+        3.8
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Tourism Revenue",
+      "value": 14.2,
+      "unit": "$B",
+      "change": -6.8,
+      "sparkline": [
+        16.8,
+        15.9,
+        15.2,
+        14.8,
+        14.5,
+        14.2
       ]
     },
     {
@@ -172,13 +204,13 @@
       "metric": "Inflation",
       "value": 58.5,
       "unit": "%",
-      "change": -12.3,
+      "change": 12.3,
       "sparkline": [
-        75.2,
-        68.9,
-        64.1,
-        61.2,
-        58.5,
+        42.1,
+        48.7,
+        52.3,
+        55.8,
+        57.2,
         58.5
       ]
     },
@@ -194,67 +226,35 @@
         4.2,
         3.9,
         3.6,
-        3.3,
+        3.4,
         3.3
-      ]
-    },
-    {
-      "country": "Jordan",
-      "flag": "🇯🇴",
-      "metric": "Current Account",
-      "value": -5.9,
-      "unit": "% GDP",
-      "change": -0.8,
-      "sparkline": [
-        -4.8,
-        -5.2,
-        -5.5,
-        -5.7,
-        -5.9,
-        -5.9
-      ]
-    },
-    {
-      "country": "Jordan",
-      "flag": "🇯🇴",
-      "metric": "Tourism Revenue",
-      "value": 4.2,
-      "unit": "$B",
-      "change": -18.5,
-      "sparkline": [
-        5.8,
-        5.2,
-        4.8,
-        4.5,
-        4.2,
-        4.2
       ]
     }
   ],
   "notableFlows": [
-    "UAE absorbs $3.2B in safe-haven flows as regional tensions escalate, strengthening its position as Gulf financial hub.",
-    "Qatar's LNG exports surge 15.2% to $82B as European buyers diversify away from Russian energy supplies.",
-    "Egypt faces $1.8B capital outflow amid currency devaluation, straining foreign reserves to 18-month lows.",
-    "Saudi Arabia redirects $2.1B in planned investments from regional projects to domestic infrastructure amid security concerns."
+    "Gulf sovereign wealth funds accelerate diversification into Asian markets as regional tensions prompt capital reallocation away from traditional Western portfolios.",
+    "Egyptian remittances surge 18% as diaspora workers hedge against pound devaluation, providing critical foreign currency inflows amid tourism sector weakness.",
+    "Turkish corporate bond issuances collapse 67% as hyperinflation erodes investor confidence, forcing companies to rely on domestic lira financing at prohibitive rates.",
+    "Qatar's LNG contracts with European buyers extend through 2035, securing $125B in export revenues as European energy security concerns intensify."
   ],
   "dealsToWatch": [
     {
-      "name": "ADNOC Green Hydrogen Expansion",
-      "parties": "ADNOC · TotalEnergies · Masdar",
-      "value": "$15B",
+      "name": "NEOM Renewable Energy Complex",
+      "parties": "Saudi Arabia · ACWA Power · SoftBank",
+      "value": "$8.5B",
       "status": "Active"
     },
     {
-      "name": "Egypt Suez Canal Zone Development",
-      "parties": "Egyptian Government · China State Construction · UAE Sovereign Wealth",
-      "value": "$8B",
-      "status": "Under Review"
+      "name": "Abu Dhabi Ports Expansion",
+      "parties": "AD Ports · DP World · CMA CGM",
+      "value": "$3.2B",
+      "status": "In Progress"
     },
     {
-      "name": "Saudi NEOM Tech City Phase 2",
-      "parties": "PIF · SoftBank Vision Fund · Brookfield",
-      "value": "$12B",
-      "status": "In Progress"
+      "name": "Egypt Green Hydrogen Hub",
+      "parties": "Egypt · Scatec · Fertiglobe",
+      "value": "$4.0B",
+      "status": "MOU Signed"
     }
   ],
   "laborSignals": {
@@ -315,48 +315,46 @@
       {
         "country": "Turkey",
         "rank": 4,
-        "score": 58
+        "score": 45
       },
       {
         "country": "Egypt",
         "rank": 5,
-        "score": 45
+        "score": 32
       }
     ],
     "techJobs": {
-      "trend": "down",
-      "change": -12,
-      "context": "Regional conflict disrupts tech hiring as companies pause expansion plans amid security concerns."
+      "trend": "up",
+      "change": 23,
+      "context": "Gulf fintech and logistics sectors drive regional tech employment growth despite geopolitical headwinds."
     }
   },
   "risks": [
     {
       "level": "CRITICAL",
-      "title": "Iran Conflict Escalation",
-      "description": "US-Israel military operations against Iran enter fourth day, triggering mass evacuations from 14 Middle Eastern countries. Airspace closures disrupt trade routes and supply chains. Regional economies face severe disruption as diplomatic missions draw down operations.",
+      "title": "Strait of Hormuz Closure Risk",
+      "description": "Iranian threats to close the Strait of Hormuz could disrupt 21% of global petroleum liquids transit. Gulf states face immediate supply chain disruptions as airlines cancel flights and logistics operations suspend services. Oil prices already surged 8.3% this week on escalating tensions.",
       "countries": [
         "UAE",
         "Saudi Arabia",
         "Qatar",
-        "Bahrain",
-        "Oman",
-        "Jordan"
+        "Oman"
       ]
     },
     {
       "level": "HIGH",
-      "title": "Turkish Hyperinflation Crisis",
-      "description": "Turkey's inflation at 58.5% despite recent declines from 75% peaks creates severe purchasing power erosion. Youth unemployment at 16.0% compounds social pressures. Currency volatility threatens regional trade relationships and investment flows.",
+      "title": "Egyptian Currency Crisis",
+      "description": "The Egyptian pound's 4.9% weekly decline accelerates capital flight as inflation remains at 28.3%. Current account deficit of 5.7% of GDP strains foreign reserves while tourism revenues contract due to regional instability.",
       "countries": [
-        "Turkey"
+        "Egypt"
       ]
     },
     {
       "level": "MEDIUM",
-      "title": "Jordan Economic Fragility",
-      "description": "Youth unemployment reaches crisis levels at 38.9%, the highest in the region. Current account deficit of 5.9% of GDP strains external balances. Tourism revenues decline 18.5% amid regional instability, threatening key foreign currency earnings.",
+      "title": "Turkish Hyperinflation Spillover",
+      "description": "Turkey's 58.5% inflation rate creates regional trade disruptions as Turkish lira volatility affects bilateral commerce. Labor force participation at 54.4% signals economic stress that could trigger migration pressures on neighboring countries.",
       "countries": [
-        "Jordan"
+        "Turkey"
       ]
     }
   ]
