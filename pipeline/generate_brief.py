@@ -44,6 +44,17 @@ def compute_issue_metadata() -> dict:
             existing = json.loads(OUTPUT_FILE.read_text())
             prev = int(existing.get("issue", {}).get("number", "0"))
             number = f"{prev + 1:03d}"
+
+            # Ensure new weekOf is at least 7 days after previous
+            prev_week_of = existing.get("issue", {}).get("weekOf", "")
+            if prev_week_of:
+                prev_dt = datetime.strptime(prev_week_of, "%B %d, %Y")
+                if next_monday.replace(hour=0, minute=0, second=0, microsecond=0) <= prev_dt:
+                    next_monday = prev_dt + timedelta(days=7)
+                    week_of = next_monday.strftime("%B %d, %Y")
+                    parts = week_of.split(" ")
+                    parts[1] = str(int(parts[1].rstrip(","))) + ","
+                    week_of = " ".join(parts)
         except Exception:
             pass
 
