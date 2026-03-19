@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 interface ManifestEntry {
   issue: number;
@@ -32,6 +33,17 @@ const Archive = () => {
 
   return (
     <div className="min-h-screen bg-background zellige-bg">
+      <Helmet>
+        <title>Past Issues — MENA Rising</title>
+        <meta name="description" content="Browse past MENA Rising weekly economic intelligence briefs covering the Middle East & North Africa." />
+        <meta property="og:title" content="Past Issues — MENA Rising" />
+        <meta property="og:description" content="Browse past MENA Rising weekly economic intelligence briefs covering the Middle East & North Africa." />
+        <meta property="og:url" content="https://mena-rising.com/archive" />
+        <meta property="og:image" content="https://mena-rising.com/og-default.png" />
+        <meta name="twitter:title" content="Past Issues — MENA Rising" />
+        <meta name="twitter:description" content="Browse past MENA Rising weekly economic intelligence briefs covering the Middle East & North Africa." />
+        <meta name="twitter:image" content="https://mena-rising.com/og-default.png" />
+      </Helmet>
       <div className="mx-auto max-w-3xl px-6 py-12 md:px-12">
         <Link
           to="/"

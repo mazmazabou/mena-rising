@@ -89,6 +89,7 @@ const ArchiveIssue = () => {
         <meta property="og:image" content="https://mena-rising.com/og-default.png" />
         <meta name="twitter:title" content={ogTitle} />
         <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://mena-rising.com/og-default.png" />
       </Helmet>
       <div className="min-h-screen bg-background zellige-bg">
         <div className="flex items-center justify-between border-b border-primary/20 bg-deep-teal/30 px-6 py-2">
