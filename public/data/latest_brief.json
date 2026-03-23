@@ -1,29 +1,24 @@
 {
   "issue": {
-    "number": "014",
-    "weekOf": "March 16, 2026"
+    "number": "015",
+    "weekOf": "March 23, 2026"
   },
-  "headline": "Regional tensions disrupt Gulf shipping as Iran strikes escalate across Strait of Hormuz",
+  "headline": "Iran-Israel conflict escalates to Gulf energy infrastructure as regional tensions spike",
   "ticker": [
     {
       "label": "EGP/USD",
-      "value": "52.19",
-      "change": 3.8
+      "value": "51.74",
+      "change": -0.9
     },
     {
       "label": "Brent Crude",
-      "value": "$94.35",
-      "change": -1.5
+      "value": "$101.04",
+      "change": -2.1
     },
     {
       "label": "SAR/USD",
       "value": "3.75",
-      "change": -0.2
-    },
-    {
-      "label": "Egypt Inflation",
-      "value": "28.3%",
-      "change": null
+      "change": 0
     },
     {
       "label": "Turkey Inflation",
@@ -31,12 +26,17 @@
       "change": null
     },
     {
-      "label": "UAE GDP Growth",
-      "value": "4.0%",
+      "label": "Egypt Inflation",
+      "value": "28.3%",
+      "change": null
+    },
+    {
+      "label": "Qatar CAB",
+      "value": "17.3%",
       "change": null
     }
   ],
-  "bottomLine": "Regional tensions intensify as Iranian strikes disrupt Strait of Hormuz shipping lanes, while Egypt's pound weakens 3.8% amid 28.3% inflation. Turkey faces the region's highest inflation at 58.5%, contrasting with UAE's robust 4.0% GDP growth. Gulf states maintain current account surpluses despite Saudi Arabia's -1.3% deficit, as oil prices remain volatile with Brent down 1.5% to $94.35.",
+  "bottomLine": "Regional tensions escalated dramatically as Iran targeted Gulf energy infrastructure following Israeli strikes, rattling markets despite Brent crude declining 2.1% to $101.04. Turkey's hyperinflation at 58.5% and Egypt's 28.3% rate highlight persistent monetary pressures, while Qatar's robust 17.3% current account surplus and UAE's 14.5% balance underscore Gulf resilience. President Sisi's diplomatic tour of Gulf capitals signals coordinated regional crisis management as the Iran-Israel conflict enters its fourth week.",
   "macroPulse": [
     {
       "country": "Saudi Arabia",
@@ -44,30 +44,30 @@
       "metric": "GDP Growth",
       "value": 2.0,
       "unit": "%",
-      "change": -0.8,
+      "change": -0.3,
       "sparkline": [
-        3.2,
         2.8,
         2.5,
-        2.3,
+        2.2,
         2.1,
-        2.0
+        2.0,
+        1.9
       ]
     },
     {
       "country": "Saudi Arabia",
       "flag": "🇸🇦",
       "metric": "Oil Revenue",
-      "value": 245,
+      "value": 185,
       "unit": "$B",
-      "change": -12.5,
+      "change": -8.2,
       "sparkline": [
-        280,
-        275,
-        265,
-        258,
-        250,
-        245
+        220,
+        210,
+        195,
+        190,
+        185,
+        182
       ]
     },
     {
@@ -80,26 +80,26 @@
       "sparkline": [
         3.2,
         3.5,
-        3.7,
         3.8,
         3.9,
-        4.0
+        4.0,
+        4.1
       ]
     },
     {
       "country": "UAE",
       "flag": "🇦🇪",
-      "metric": "Tourism Revenue",
-      "value": 28.5,
+      "metric": "FDI Inflows",
+      "value": 22.8,
       "unit": "$B",
-      "change": 8.2,
+      "change": 12.5,
       "sparkline": [
-        22.1,
-        24.3,
-        25.8,
-        26.9,
-        27.7,
-        28.5
+        18.2,
+        19.5,
+        20.8,
+        21.5,
+        22.8,
+        23.2
       ]
     },
     {
@@ -108,46 +108,30 @@
       "metric": "Inflation",
       "value": 28.3,
       "unit": "%",
-      "change": 2.1,
+      "change": -2.1,
       "sparkline": [
-        24.8,
-        25.9,
-        26.7,
-        27.2,
-        27.8,
-        28.3
+        32.5,
+        31.2,
+        29.8,
+        28.9,
+        28.3,
+        27.8
       ]
     },
     {
       "country": "Egypt",
       "flag": "🇪🇬",
-      "metric": "FDI Inflows",
-      "value": 4.2,
-      "unit": "$B",
-      "change": -18.5,
+      "metric": "Current Account",
+      "value": -5.7,
+      "unit": "% GDP",
+      "change": -0.8,
       "sparkline": [
-        6.8,
-        6.1,
-        5.4,
-        4.9,
-        4.5,
-        4.2
-      ]
-    },
-    {
-      "country": "Qatar",
-      "flag": "🇶🇦",
-      "metric": "LNG Exports",
-      "value": 82.5,
-      "unit": "$B",
-      "change": 6.3,
-      "sparkline": [
-        72.8,
-        75.2,
-        77.9,
-        79.8,
-        81.1,
-        82.5
+        -4.2,
+        -4.8,
+        -5.1,
+        -5.5,
+        -5.7,
+        -5.9
       ]
     },
     {
@@ -158,44 +142,28 @@
       "unit": "% GDP",
       "change": 1.2,
       "sparkline": [
-        14.2,
-        15.1,
         15.8,
-        16.4,
-        16.9,
-        17.3
+        16.2,
+        16.8,
+        17.0,
+        17.3,
+        17.5
       ]
     },
     {
-      "country": "Morocco",
-      "flag": "🇲🇦",
-      "metric": "GDP Growth",
-      "value": 3.8,
-      "unit": "%",
-      "change": 1.1,
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Exports",
+      "value": 78.2,
+      "unit": "$B",
+      "change": 4.8,
       "sparkline": [
-        2.1,
-        2.5,
-        2.9,
-        3.2,
-        3.5,
-        3.8
-      ]
-    },
-    {
-      "country": "Morocco",
-      "flag": "🇲🇦",
-      "metric": "PMI Manufacturing",
-      "value": 52.1,
-      "unit": "",
-      "change": 2.3,
-      "sparkline": [
-        48.2,
-        49.1,
-        50.3,
-        51.2,
-        51.7,
-        52.1
+        72.1,
+        74.5,
+        76.2,
+        77.8,
+        78.2,
+        78.9
       ]
     },
     {
@@ -209,52 +177,84 @@
         65.8,
         63.2,
         61.1,
-        59.8,
-        59.1,
-        58.5
+        59.7,
+        58.5,
+        57.2
       ]
     },
     {
       "country": "Turkey",
       "flag": "🇹🇷",
-      "metric": "Budget Surplus",
-      "value": -2.8,
-      "unit": "% GDP",
-      "change": -0.4,
+      "metric": "GDP Growth",
+      "value": 3.3,
+      "unit": "%",
+      "change": -0.7,
       "sparkline": [
-        -1.8,
-        -2.1,
-        -2.3,
-        -2.5,
-        -2.7,
-        -2.8
+        4.2,
+        3.9,
+        3.6,
+        3.4,
+        3.3,
+        3.1
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 3.8,
+      "unit": "%",
+      "change": 0.9,
+      "sparkline": [
+        2.5,
+        2.9,
+        3.2,
+        3.6,
+        3.8,
+        4.0
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Tourism Revenue",
+      "value": 9.2,
+      "unit": "$B",
+      "change": 15.8,
+      "sparkline": [
+        6.8,
+        7.4,
+        8.1,
+        8.7,
+        9.2,
+        9.6
       ]
     }
   ],
   "notableFlows": [
-    "Maersk suspends all cargo bookings through March 21 as Strait of Hormuz shipping traffic plummets amid Iranian missile strikes.",
-    "Egyptian pound depreciation accelerates capital flight, with foreign reserves declining as current account deficit widens to -5.7% of GDP.",
-    "Gulf sovereign wealth funds pause regional infrastructure investments pending resolution of Iran-Israel escalation.",
-    "Qatar's LNG exports face potential disruption as energy buyers seek alternative routing around Persian Gulf conflict zones."
+    "Egyptian pound weakened 0.9% against the dollar to 51.74 as regional tensions and inflation concerns persist.",
+    "Gulf sovereign wealth funds reportedly increased defensive positioning amid Iran-Israel escalation targeting energy infrastructure.",
+    "Turkish portfolio outflows accelerated as 58.5% inflation and regional proximity to conflict zones deterred foreign investment.",
+    "Qatar's LNG export revenues surged on European energy security concerns following Iranian threats to Gulf facilities."
   ],
   "dealsToWatch": [
     {
-      "name": "NEOM Green Hydrogen Plant",
-      "parties": "Saudi Arabia · ACWA Power · Air Products",
+      "name": "NEOM Green Hydrogen Phase 2",
+      "parties": "Saudi Arabia · Air Products · ACWA Power",
       "value": "$8.4B",
       "status": "Active"
     },
     {
-      "name": "Emirates-Turkish Airlines Codeshare",
-      "parties": "Emirates · Turkish Airlines · Dubai Airports",
-      "value": "$2.1B",
-      "status": "Under Review"
+      "name": "Egypt-UAE Renewable Energy Corridor",
+      "parties": "Egypt · UAE · Masdar",
+      "value": "$6.2B",
+      "status": "MOU Signed"
     },
     {
-      "name": "Morocco Renewable Energy Grid",
-      "parties": "Morocco · Masdar · European Bank",
-      "value": "$3.7B",
-      "status": "MOU Signed"
+      "name": "Morocco Atlantic Port Expansion",
+      "parties": "Morocco · DP World · China Communications",
+      "value": "$3.1B",
+      "status": "Under Review"
     }
   ],
   "laborSignals": {
@@ -305,7 +305,7 @@
       {
         "country": "Saudi Arabia",
         "rank": 2,
-        "score": 72
+        "score": 71
       },
       {
         "country": "Qatar",
@@ -313,48 +313,48 @@
         "score": 65
       },
       {
-        "country": "Turkey",
+        "country": "Bahrain",
         "rank": 4,
         "score": 58
       },
       {
-        "country": "Egypt",
+        "country": "Turkey",
         "rank": 5,
-        "score": 41
+        "score": 52
       }
     ],
     "techJobs": {
-      "trend": "down",
-      "change": -8,
-      "context": "Regional tensions and shipping disruptions prompt tech firms to delay Gulf expansion plans."
+      "trend": "up",
+      "change": 12,
+      "context": "Gulf states drive regional tech hiring growth despite geopolitical tensions."
     }
   },
   "risks": [
     {
       "level": "CRITICAL",
-      "title": "Strait of Hormuz Shipping Disruption",
-      "description": "Iranian strikes have severely impacted shipping traffic through the Strait of Hormuz, with major carriers suspending operations. This threatens 20% of global oil transit and could spike energy prices regionally. Gulf economies face immediate supply chain disruptions.",
+      "title": "Energy Infrastructure Attacks",
+      "description": "Iran's targeting of Gulf energy facilities marks dangerous escalation in regional conflict. With Brent crude at $101.04 and Iranian threats continuing, energy security risks have intensified across the Gulf states. Further attacks could trigger supply disruptions and price volatility.",
       "countries": [
+        "Saudi Arabia",
         "UAE",
         "Qatar",
-        "Saudi Arabia"
+        "Bahrain",
+        "Oman"
       ]
     },
     {
       "level": "HIGH",
-      "title": "Egyptian Currency Crisis",
-      "description": "The Egyptian pound's 3.8% weekly decline reflects accelerating capital flight amid 28.3% inflation and a -5.7% current account deficit. Foreign reserves are under severe pressure as the IMF program faces implementation challenges.",
+      "title": "Turkish Hyperinflation Crisis",
+      "description": "Turkey's inflation at 58.5% represents a persistent monetary crisis threatening regional stability. Despite some moderation from previous peaks, the hyperinflationary environment undermines investor confidence and economic planning. Regional spillover effects remain significant.",
       "countries": [
-        "Egypt"
+        "Turkey"
       ]
     },
     {
       "level": "MEDIUM",
-      "title": "Regional Youth Employment Crisis",
-      "description": "Jordan's 38.9% youth unemployment and Morocco's 21.9% rate signal deepening social tensions. Limited job creation in traditional sectors and delayed diversification programs compound demographic pressures across North Africa.",
+      "title": "Egyptian Economic Pressures",
+      "description": "Egypt faces dual pressures from 28.3% inflation and -5.7% current account deficit amid regional tensions. The EGP's 0.9% weekly decline reflects ongoing currency pressures. President Sisi's Gulf diplomatic tour suggests urgent need for external support.",
       "countries": [
-        "Jordan",
-        "Morocco",
         "Egypt"
       ]
     }
