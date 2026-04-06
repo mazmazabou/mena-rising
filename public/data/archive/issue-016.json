@@ -1,0 +1,354 @@
+{
+  "issue": {
+    "number": "016",
+    "weekOf": "March 30, 2026"
+  },
+  "headline": "Oil plunge and Iran tensions reshape MENA markets amid diverging growth paths",
+  "ticker": [
+    {
+      "label": "EGP/USD",
+      "value": "52.62",
+      "change": 1.7
+    },
+    {
+      "label": "Brent Crude",
+      "value": "$103.79",
+      "change": -12.4
+    },
+    {
+      "label": "SAR/USD",
+      "value": "3.75",
+      "change": -0.1
+    },
+    {
+      "label": "Turkey Inflation",
+      "value": "58.5%",
+      "change": null
+    },
+    {
+      "label": "Egypt Inflation",
+      "value": "28.3%",
+      "change": null
+    },
+    {
+      "label": "UAE GDP Growth",
+      "value": "4.0%",
+      "change": null
+    }
+  ],
+  "bottomLine": "Oil markets face severe pressure with Brent crude falling 12.4% to $103.79 amid Iran war tensions disrupting Gulf shipping lanes. Turkey's hyperinflation at 58.5% and Egypt's 28.3% inflation underscore regional monetary stress, while the UAE's 4.0% GDP growth and Qatar's 17.3% current account surplus demonstrate GCC resilience. Youth unemployment remains critically high at 21.9% in Morocco and 18.3% in Egypt, signaling persistent structural challenges despite varying growth trajectories.",
+  "macroPulse": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "GDP Growth",
+      "value": 2.0,
+      "unit": "%",
+      "change": -0.8,
+      "sparkline": [
+        3.2,
+        2.8,
+        2.5,
+        2.3,
+        2.1,
+        2.0
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "Oil Revenue",
+      "value": 285,
+      "unit": "$B",
+      "change": -18.5,
+      "sparkline": [
+        350,
+        340,
+        320,
+        310,
+        295,
+        285
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "GDP Growth",
+      "value": 4.0,
+      "unit": "%",
+      "change": 0.5,
+      "sparkline": [
+        3.2,
+        3.4,
+        3.6,
+        3.8,
+        3.9,
+        4.0
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "Current Account",
+      "value": 14.5,
+      "unit": "% GDP",
+      "change": 2.1,
+      "sparkline": [
+        11.8,
+        12.3,
+        13.1,
+        13.8,
+        14.2,
+        14.5
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Inflation",
+      "value": 28.3,
+      "unit": "%",
+      "change": 3.2,
+      "sparkline": [
+        22.1,
+        24.5,
+        26.2,
+        27.1,
+        27.8,
+        28.3
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Current Account",
+      "value": -5.7,
+      "unit": "% GDP",
+      "change": -1.3,
+      "sparkline": [
+        -3.8,
+        -4.2,
+        -4.8,
+        -5.1,
+        -5.4,
+        -5.7
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "Current Account",
+      "value": 17.3,
+      "unit": "% GDP",
+      "change": 1.8,
+      "sparkline": [
+        14.2,
+        15.1,
+        15.8,
+        16.4,
+        16.9,
+        17.3
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Exports",
+      "value": 95,
+      "unit": "$B",
+      "change": 12.5,
+      "sparkline": [
+        78,
+        82,
+        86,
+        90,
+        92,
+        95
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "Inflation",
+      "value": 58.5,
+      "unit": "%",
+      "change": 4.7,
+      "sparkline": [
+        48.2,
+        51.3,
+        54.1,
+        56.2,
+        57.8,
+        58.5
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.3,
+      "unit": "%",
+      "change": -1.2,
+      "sparkline": [
+        4.8,
+        4.2,
+        3.9,
+        3.6,
+        3.4,
+        3.3
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 3.8,
+      "unit": "%",
+      "change": 0.9,
+      "sparkline": [
+        2.4,
+        2.8,
+        3.1,
+        3.4,
+        3.6,
+        3.8
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Tourism Revenue",
+      "value": 12.4,
+      "unit": "$B",
+      "change": 15.2,
+      "sparkline": [
+        9.8,
+        10.3,
+        10.9,
+        11.4,
+        11.9,
+        12.4
+      ]
+    }
+  ],
+  "notableFlows": [
+    "Gulf sovereign wealth funds accelerate diversification away from energy exposure, with PIF and ADIA deploying $45B into Asian tech and infrastructure assets.",
+    "Egyptian pound weakening drives $2.8B in remittance inflows from Gulf expatriate workers, providing critical forex relief amid IMF program implementation.",
+    "Turkey's lira volatility triggers $1.2B in capital outflows from Istanbul financial markets as investors seek UAE and Saudi alternatives.",
+    "Qatar's LNG contracts with European buyers generate $18B in Q1 revenues, offsetting regional oil price volatility through long-term pricing mechanisms."
+  ],
+  "dealsToWatch": [
+    {
+      "name": "NEOM Green Hydrogen Plant",
+      "parties": "Saudi Arabia · Air Products · ACWA Power",
+      "value": "$8.4B",
+      "status": "Active"
+    },
+    {
+      "name": "Egypt Suez Canal Expansion",
+      "parties": "Egypt · China State Construction · UAE Sovereign Fund",
+      "value": "$12.8B",
+      "status": "MOU Signed"
+    },
+    {
+      "name": "Morocco-Portugal Energy Cable",
+      "parties": "Morocco · Portugal · EIB",
+      "value": "$3.2B",
+      "status": "Under Review"
+    }
+  ],
+  "laborSignals": {
+    "youthUnemployment": [
+      {
+        "country": "Morocco",
+        "value": 21.9
+      },
+      {
+        "country": "Egypt",
+        "value": 18.3
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
+      },
+      {
+        "country": "Saudi Arabia",
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
+      },
+      {
+        "country": "Bahrain",
+        "value": 5.4
+      },
+      {
+        "country": "Qatar",
+        "value": 0.6
+      }
+    ],
+    "aiAdoption": [
+      {
+        "country": "UAE",
+        "rank": 1,
+        "score": 78
+      },
+      {
+        "country": "Saudi Arabia",
+        "rank": 2,
+        "score": 72
+      },
+      {
+        "country": "Qatar",
+        "rank": 3,
+        "score": 68
+      },
+      {
+        "country": "Bahrain",
+        "rank": 4,
+        "score": 61
+      },
+      {
+        "country": "Turkey",
+        "rank": 5,
+        "score": 54
+      }
+    ],
+    "techJobs": {
+      "trend": "down",
+      "change": -23,
+      "context": "Regional tech hiring slumps amid geopolitical uncertainty and reduced venture funding."
+    }
+  },
+  "risks": [
+    {
+      "level": "CRITICAL",
+      "title": "Strait of Hormuz Disruption",
+      "description": "Iran war escalation threatens 20% of global oil transit through Hormuz strait. Saudi-UAE-Iraq pipeline alternatives carry only 6.5M bpd versus strait's 21M bpd capacity. Oil price volatility with Brent down 12.4% reflects market uncertainty over supply security.",
+      "countries": [
+        "Saudi Arabia",
+        "UAE",
+        "Qatar",
+        "Oman"
+      ]
+    },
+    {
+      "level": "HIGH",
+      "title": "Turkish Hyperinflation Crisis",
+      "description": "Turkey's 58.5% inflation rate approaches hyperinflation threshold, triggering capital flight and regional contagion risks. Lira weakness pressures Turkish investments across MENA markets. Central bank reserves critically low at $45B versus $180B external debt.",
+      "countries": [
+        "Turkey"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Youth Employment Crisis",
+      "description": "Morocco's 21.9% and Egypt's 18.3% youth unemployment rates signal potential social instability. Combined with high inflation in Egypt (28.3%), demographic pressures threaten political stability. Limited job creation despite GDP growth compounds the challenge.",
+      "countries": [
+        "Morocco",
+        "Egypt"
+      ]
+    }
+  ]
+}
