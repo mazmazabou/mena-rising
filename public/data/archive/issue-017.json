@@ -1,0 +1,361 @@
+{
+  "issue": {
+    "number": "017",
+    "weekOf": "April 6, 2026"
+  },
+  "headline": "Iran cyberstrikes on Gulf tech infrastructure escalate amid oil price volatility",
+  "ticker": [
+    {
+      "label": "EGP/USD",
+      "value": "54.31",
+      "change": 3.2
+    },
+    {
+      "label": "Brent Crude",
+      "value": "$121.88",
+      "change": 0.3
+    },
+    {
+      "label": "SAR/USD",
+      "value": "3.75",
+      "change": 0.1
+    },
+    {
+      "label": "Turkey Inflation",
+      "value": "58.5%",
+      "change": null
+    },
+    {
+      "label": "Egypt Inflation",
+      "value": "28.3%",
+      "change": null
+    },
+    {
+      "label": "Qatar CA Balance",
+      "value": "17.3%",
+      "change": null
+    }
+  ],
+  "bottomLine": "Iranian cyberattacks on Gulf tech infrastructure highlight regional vulnerabilities as Egypt's pound weakens 3.2% amid 28.3% inflation pressures. Oil markets remain elevated with Brent at $121.88, supporting Gulf fiscal positions including Qatar's 17.3% current account surplus. Turkey's 58.5% inflation rate underscores persistent monetary challenges across emerging MENA economies.",
+  "macroPulse": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "GDP Growth",
+      "value": 2.0,
+      "unit": "%",
+      "change": -0.8,
+      "sparkline": [
+        3.2,
+        2.8,
+        2.4,
+        2.1,
+        1.8,
+        2.0
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "Oil Revenue",
+      "value": 285,
+      "unit": "$B",
+      "change": 12.5,
+      "sparkline": [
+        240,
+        255,
+        270,
+        275,
+        280,
+        285
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "GDP Growth",
+      "value": 4.0,
+      "unit": "%",
+      "change": 1.2,
+      "sparkline": [
+        2.8,
+        3.1,
+        3.5,
+        3.8,
+        3.9,
+        4.0
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "FDI Inflows",
+      "value": 22.8,
+      "unit": "$B",
+      "change": 8.3,
+      "sparkline": [
+        18.5,
+        19.2,
+        20.1,
+        21.5,
+        22.1,
+        22.8
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Inflation",
+      "value": 28.3,
+      "unit": "%",
+      "change": 15.8,
+      "sparkline": [
+        12.5,
+        18.2,
+        22.1,
+        25.4,
+        27.1,
+        28.3
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Current Account",
+      "value": -5.7,
+      "unit": "% GDP",
+      "change": -2.1,
+      "sparkline": [
+        -3.6,
+        -4.2,
+        -4.8,
+        -5.1,
+        -5.4,
+        -5.7
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "Current Account",
+      "value": 17.3,
+      "unit": "% GDP",
+      "change": 3.2,
+      "sparkline": [
+        14.1,
+        15.2,
+        16.1,
+        16.8,
+        17.0,
+        17.3
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Exports",
+      "value": 78.5,
+      "unit": "$B",
+      "change": 6.8,
+      "sparkline": [
+        68.2,
+        71.5,
+        74.1,
+        76.2,
+        77.8,
+        78.5
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 3.8,
+      "unit": "%",
+      "change": 2.5,
+      "sparkline": [
+        1.3,
+        2.1,
+        2.8,
+        3.2,
+        3.5,
+        3.8
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Tourism Revenue",
+      "value": 9.2,
+      "unit": "$B",
+      "change": 18.5,
+      "sparkline": [
+        6.8,
+        7.4,
+        8.1,
+        8.6,
+        8.9,
+        9.2
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "Inflation",
+      "value": 58.5,
+      "unit": "%",
+      "change": 22.1,
+      "sparkline": [
+        36.4,
+        42.8,
+        48.2,
+        52.6,
+        55.8,
+        58.5
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.3,
+      "unit": "%",
+      "change": -2.1,
+      "sparkline": [
+        5.4,
+        4.8,
+        4.1,
+        3.7,
+        3.5,
+        3.3
+      ]
+    }
+  ],
+  "notableFlows": [
+    "Gulf sovereign wealth funds accelerated tech sector diversification investments despite Iranian cyber threats targeting regional infrastructure.",
+    "Egyptian pound depreciation triggered $2.8B in portfolio outflows as foreign investors reassessed emerging market exposure amid inflation concerns.",
+    "Qatar's LNG export revenues reached $78.5B annually, supporting increased infrastructure investment flows into Southeast Asian markets.",
+    "Turkish corporate bond issuances declined 45% quarter-over-quarter as hyperinflation deterred international fixed-income investors."
+  ],
+  "dealsToWatch": [
+    {
+      "name": "NEOM Green Hydrogen",
+      "parties": "ACWA Power · Air Products · NEOM",
+      "value": "$8.4B",
+      "status": "Active"
+    },
+    {
+      "name": "UAE-Morocco Renewable Energy",
+      "parties": "Masdar · MASEN · EDF Renewables",
+      "value": "$3.2B",
+      "status": "MOU Signed"
+    },
+    {
+      "name": "Egypt LNG Terminal Expansion",
+      "parties": "ENI · TotalEnergies · EGAS",
+      "value": "$5.8B",
+      "status": "Under Review"
+    }
+  ],
+  "laborSignals": {
+    "youthUnemployment": [
+      {
+        "country": "Jordan",
+        "value": 38.9
+      },
+      {
+        "country": "Morocco",
+        "value": 21.9
+      },
+      {
+        "country": "Egypt",
+        "value": 18.3
+      },
+      {
+        "country": "Turkey",
+        "value": 16.0
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
+      },
+      {
+        "country": "Saudi Arabia",
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
+      },
+      {
+        "country": "Bahrain",
+        "value": 5.4
+      },
+      {
+        "country": "Qatar",
+        "value": 0.6
+      }
+    ],
+    "aiAdoption": [
+      {
+        "country": "UAE",
+        "rank": 1,
+        "score": 78
+      },
+      {
+        "country": "Saudi Arabia",
+        "rank": 2,
+        "score": 72
+      },
+      {
+        "country": "Qatar",
+        "rank": 3,
+        "score": 68
+      },
+      {
+        "country": "Bahrain",
+        "rank": 4,
+        "score": 58
+      },
+      {
+        "country": "Turkey",
+        "rank": 5,
+        "score": 52
+      }
+    ],
+    "techJobs": {
+      "trend": "down",
+      "change": -12,
+      "context": "Iranian cyber threats prompted temporary hiring freezes across Gulf tech hubs."
+    }
+  },
+  "risks": [
+    {
+      "level": "CRITICAL",
+      "title": "Iran Cyber Warfare Escalation",
+      "description": "Iranian strikes on Oracle, Amazon, and Dell facilities across UAE and Bahrain represent unprecedented escalation in regional cyber warfare. Tech infrastructure vulnerabilities expose Gulf diversification strategies to systematic disruption.",
+      "countries": [
+        "UAE",
+        "Bahrain",
+        "Saudi Arabia"
+      ]
+    },
+    {
+      "level": "HIGH",
+      "title": "Egyptian Currency Crisis",
+      "description": "Egyptian pound's 3.2% weekly decline amid 28.3% inflation signals potential balance of payments crisis. Current account deficit of 5.7% GDP strains foreign reserves and threatens regional stability.",
+      "countries": [
+        "Egypt"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Turkish Hyperinflation Spillover",
+      "description": "Turkey's 58.5% inflation rate creates regional contagion risks through trade linkages and refugee flows. Monetary policy credibility remains severely compromised despite recent growth of 3.3%.",
+      "countries": [
+        "Turkey",
+        "Jordan"
+      ]
+    }
+  ]
+}
