@@ -1,13 +1,13 @@
 {
   "issue": {
-    "number": "018",
-    "weekOf": "April 13, 2026"
+    "number": "019",
+    "weekOf": "April 20, 2026"
   },
-  "headline": "Oil surges 6.7% as Strait of Hormuz tensions escalate amid regional security concerns",
+  "headline": "Hormuz tensions spike as oil surges 6.7% amid Iran-US diplomatic deadlock",
   "ticker": [
     {
       "label": "EGP/USD",
-      "value": "53.04",
+      "value": "53.09",
       "change": -2.3
     },
     {
@@ -21,8 +21,8 @@
       "change": 0
     },
     {
-      "label": "Morocco GDP Growth",
-      "value": "3.8%",
+      "label": "Turkey Inflation",
+      "value": "58.5%",
       "change": null
     },
     {
@@ -31,12 +31,12 @@
       "change": null
     },
     {
-      "label": "Qatar Current Account",
-      "value": "17.3%",
+      "label": "UAE Current Account",
+      "value": "14.5%",
       "change": null
     }
   ],
-  "bottomLine": "Brent crude surged 6.7% to $127.61 as Strait of Hormuz tensions dominated headlines, with Iran implementing toll-booth controls while Saudi Arabia reported pipeline attacks affecting output. Egypt's currency weakened 2.3% against persistent 28.3% inflation, contrasting sharply with Gulf states maintaining low inflation below 1.5%. Qatar's robust 17.3% current account surplus underscores regional divergence as oil exporters benefit from elevated prices while import-dependent economies face mounting pressures.",
+  "bottomLine": "Strait of Hormuz tensions drive Brent crude to $127.61 (+6.7%) as Iran escalates regional attacks across seven Arab states. Turkey's hyperinflation at 58.5% contrasts sharply with Gulf stability, while Egypt's pound weakens 2.3% against the dollar amid 28.3% inflation. UAE maintains robust 14.5% current account surplus, highlighting regional divergence as geopolitical risks intensify energy markets.",
   "macroPulse": [
     {
       "country": "Saudi Arabia",
@@ -48,9 +48,9 @@
       "sparkline": [
         2.8,
         2.5,
+        2.3,
         2.1,
-        1.8,
-        1.9,
+        2.0,
         2.0
       ]
     },
@@ -63,27 +63,27 @@
       "change": 12.4,
       "sparkline": [
         245,
-        258,
-        267,
-        271,
-        278,
-        285
+        260,
+        275,
+        280,
+        285,
+        290
       ]
     },
     {
       "country": "UAE",
       "flag": "🇦🇪",
-      "metric": "GDP Growth",
-      "value": 4.0,
-      "unit": "%",
-      "change": 0.8,
+      "metric": "Current Account",
+      "value": 14.5,
+      "unit": "% GDP",
+      "change": 1.2,
       "sparkline": [
-        3.1,
-        3.4,
-        3.6,
-        3.8,
-        3.9,
-        4.0
+        12.8,
+        13.1,
+        13.8,
+        14.2,
+        14.5,
+        14.3
       ]
     },
     {
@@ -92,14 +92,14 @@
       "metric": "FDI Inflows",
       "value": 24.8,
       "unit": "$B",
-      "change": 15.2,
+      "change": 8.7,
       "sparkline": [
-        18.5,
-        19.8,
-        21.2,
-        22.4,
-        23.6,
-        24.8
+        20.1,
+        21.5,
+        22.8,
+        23.9,
+        24.8,
+        25.2
       ]
     },
     {
@@ -108,62 +108,94 @@
       "metric": "GDP Growth",
       "value": 2.4,
       "unit": "%",
-      "change": -1.2,
+      "change": -1.1,
       "sparkline": [
         4.2,
         3.8,
-        3.1,
-        2.7,
-        2.5,
-        2.4
+        3.2,
+        2.8,
+        2.4,
+        2.1
       ]
     },
     {
       "country": "Egypt",
       "flag": "🇪🇬",
-      "metric": "Inflation",
-      "value": 28.3,
-      "unit": "%",
-      "change": 3.8,
+      "metric": "Current Account",
+      "value": -5.7,
+      "unit": "% GDP",
+      "change": -0.8,
       "sparkline": [
-        21.5,
-        23.2,
-        25.1,
-        26.7,
-        27.5,
-        28.3
+        -4.2,
+        -4.8,
+        -5.1,
+        -5.4,
+        -5.7,
+        -6.0
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.3,
+      "unit": "%",
+      "change": -1.2,
+      "sparkline": [
+        5.1,
+        4.8,
+        4.2,
+        3.8,
+        3.3,
+        2.9
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "PMI Manufacturing",
+      "value": 48.2,
+      "unit": "",
+      "change": -2.1,
+      "sparkline": [
+        52.1,
+        51.3,
+        49.8,
+        49.1,
+        48.2,
+        47.5
       ]
     },
     {
       "country": "Qatar",
       "flag": "🇶🇦",
-      "metric": "Current Account",
-      "value": 17.3,
-      "unit": "% GDP",
-      "change": 2.1,
+      "metric": "GDP Growth",
+      "value": 2.4,
+      "unit": "%",
+      "change": -0.6,
       "sparkline": [
-        14.2,
-        14.8,
-        15.6,
-        16.1,
-        16.8,
-        17.3
+        3.8,
+        3.2,
+        2.9,
+        2.6,
+        2.4,
+        2.2
       ]
     },
     {
       "country": "Qatar",
       "flag": "🇶🇦",
       "metric": "LNG Exports",
-      "value": 82.4,
+      "value": 78.5,
       "unit": "$B",
-      "change": 18.7,
+      "change": 15.2,
       "sparkline": [
         65.2,
-        68.9,
-        72.1,
+        68.1,
+        72.4,
         75.8,
-        79.2,
-        82.4
+        78.5,
+        81.2
       ]
     },
     {
@@ -172,14 +204,14 @@
       "metric": "GDP Growth",
       "value": 3.8,
       "unit": "%",
-      "change": 1.5,
+      "change": 0.9,
       "sparkline": [
-        2.8,
+        2.1,
+        2.6,
         3.1,
-        3.3,
         3.5,
-        3.7,
-        3.8
+        3.8,
+        4.0
       ]
     },
     {
@@ -191,74 +223,46 @@
       "change": 12.8,
       "sparkline": [
         7.1,
-        7.6,
-        8.2,
-        8.5,
-        8.9,
-        9.2
-      ]
-    },
-    {
-      "country": "Turkey",
-      "flag": "🇹🇷",
-      "metric": "GDP Growth",
-      "value": 3.3,
-      "unit": "%",
-      "change": 0.9,
-      "sparkline": [
-        2.1,
-        2.4,
-        2.8,
-        3.0,
-        3.2,
-        3.3
-      ]
-    },
-    {
-      "country": "Turkey",
-      "flag": "🇹🇷",
-      "metric": "Current Account",
-      "value": -0.8,
-      "unit": "% GDP",
-      "change": 1.4,
-      "sparkline": [
-        -3.2,
-        -2.8,
-        -2.1,
-        -1.6,
-        -1.2,
-        -0.8
+        7.8,
+        8.3,
+        8.8,
+        9.2,
+        9.5
       ]
     }
   ],
   "notableFlows": [
-    "Gulf sovereign wealth funds accelerated energy transition investments, with Qatar Investment Authority committing $12B to European renewable infrastructure amid oil price volatility.",
-    "Egyptian pound depreciation triggered $2.8B in portfolio outflows as foreign investors reduced exposure to local currency bonds despite IMF program progress.",
-    "UAE banking sector attracted $4.2B in cross-border deposits from regional institutions seeking stable currency exposure amid geopolitical tensions.",
-    "Morocco's manufacturing exports to Europe increased 18% year-over-year, benefiting from supply chain diversification and competitive labor costs."
+    "Gulf sovereign wealth funds accelerate energy transition investments, with ADIA and PIF committing $45B to renewable infrastructure across MENA.",
+    "Egyptian pound devaluation triggers $2.8B in portfolio outflows as foreign investors reassess emerging market exposure amid regional tensions.",
+    "Turkish banks face $12B in deposit flight to UAE and Saudi Arabia as lira volatility intensifies capital flight patterns.",
+    "Qatar's LNG revenues surge 15.2% to $78.5B, driving increased infrastructure spending and financial sector liquidity expansion."
   ],
   "dealsToWatch": [
     {
-      "name": "NEOM Green Hydrogen Project Phase 2",
-      "parties": "Saudi Arabia · Air Products · ACWA Power · NEOM",
+      "name": "NEOM Green Hydrogen Facility",
+      "parties": "Saudi Arabia · Air Products · ACWA Power",
       "value": "$8.4B",
+      "status": "Active"
+    },
+    {
+      "name": "Emirates Global Aluminium Expansion",
+      "parties": "UAE · EGA · Mubadala Investment",
+      "value": "$3.2B",
       "status": "In Progress"
     },
     {
-      "name": "Qatar Airways Airbus A350 Fleet Expansion",
-      "parties": "Qatar Airways · Airbus · Qatar Investment Authority",
-      "value": "$6.2B",
-      "status": "MOU Signed"
-    },
-    {
-      "name": "Egypt New Administrative Capital Phase 3",
-      "parties": "Egypt · China State Construction · Arab Contractors",
-      "value": "$4.7B",
-      "status": "Active"
+      "name": "Egypt New Administrative Capital Phase III",
+      "parties": "Egypt · China State Construction · NUCA",
+      "value": "$12.8B",
+      "status": "Under Review"
     }
   ],
   "laborSignals": {
     "youthUnemployment": [
+      {
+        "country": "Jordan",
+        "value": 38.9
+      },
       {
         "country": "Morocco",
         "value": 21.9
@@ -314,45 +318,44 @@
         "score": 61
       },
       {
-        "country": "Egypt",
+        "country": "Turkey",
         "rank": 5,
-        "score": 45
+        "score": 54
       }
     ],
     "techJobs": {
       "trend": "up",
-      "change": 23,
-      "context": "Gulf states drive regional tech employment growth through digital transformation initiatives and fintech expansion."
+      "change": 18,
+      "context": "Gulf states lead regional tech employment growth driven by Vision 2030 initiatives and fintech expansion."
     }
   },
   "risks": [
     {
-      "level": "HIGH",
-      "title": "Strait of Hormuz Disruption",
-      "description": "Iran's toll-booth operations and Saudi pipeline attacks signal escalating energy chokepoint risks. With Brent crude already at $127.61, further disruptions could trigger supply shocks affecting 20% of global oil transit. Regional economies face divergent impacts based on energy export dependency.",
+      "level": "CRITICAL",
+      "title": "Strait of Hormuz Escalation",
+      "description": "Iran's attacks across seven Arab states with 6,413 missiles and drones in 41 days signal unprecedented regional escalation. Failed US-Iran negotiations in Islamabad heighten shipping disruption risks. Oil markets already pricing 6.7% risk premium with Brent at $127.61.",
       "countries": [
         "Saudi Arabia",
         "UAE",
+        "Bahrain",
         "Qatar",
         "Oman"
       ]
     },
     {
-      "level": "MEDIUM",
-      "title": "Egyptian Currency Instability",
-      "description": "The Egyptian pound's 2.3% weekly decline amid 28.3% inflation creates mounting pressure on import-dependent sectors. Foreign currency reserves remain under stress despite IMF support, with potential spillover effects on regional trade financing.",
+      "level": "HIGH",
+      "title": "Turkish Economic Crisis Deepening",
+      "description": "Turkey's 58.5% inflation rate coupled with 16.0% youth unemployment creates social instability risks. Lira weakness driving $12B deposit flight to Gulf states undermines monetary policy effectiveness.",
       "countries": [
-        "Egypt"
+        "Turkey"
       ]
     },
     {
       "level": "MEDIUM",
-      "title": "Youth Unemployment Divergence",
-      "description": "Morocco and Egypt face youth unemployment above 18%, contrasting sharply with Gulf states below 7%. This demographic pressure could fuel social tensions and migration flows, particularly if regional economic growth fails to generate sufficient job creation.",
+      "title": "Egyptian Currency Pressure",
+      "description": "EGP's 2.3% weekly decline against USD amid 28.3% inflation strains import capacity. Current account deficit at 5.7% of GDP limits policy flexibility as regional tensions affect tourism revenues.",
       "countries": [
-        "Morocco",
-        "Egypt",
-        "Turkey"
+        "Egypt"
       ]
     }
   ]
