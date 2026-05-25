@@ -1,42 +1,42 @@
 {
   "issue": {
-    "number": "024",
-    "weekOf": "May 18, 2026"
+    "number": "025",
+    "weekOf": "May 25, 2026"
   },
-  "headline": "Strait of Hormuz tensions escalate as UAE doubles bypass capacity amid regional discord",
+  "headline": "Oil surge lifts Gulf markets as regional tensions escalate amid Iran crisis",
   "ticker": [
     {
       "label": "EGP/USD",
-      "value": "52.81",
-      "change": 0.2
+      "value": "53.07",
+      "change": 0.5
     },
     {
       "label": "Brent Crude",
-      "value": "$106.11",
-      "change": 2.5
+      "value": "$116.73",
+      "change": 2.4
     },
     {
       "label": "SAR/USD",
-      "value": "3.77",
-      "change": 1.1
+      "value": "3.75",
+      "change": -0.4
     },
     {
-      "label": "Turkey Inflation",
-      "value": "58.5%",
+      "label": "Turkey GDP Growth",
+      "value": "3.3%",
+      "change": null
+    },
+    {
+      "label": "Morocco GDP Growth",
+      "value": "3.8%",
       "change": null
     },
     {
       "label": "Egypt Inflation",
       "value": "28.3%",
       "change": null
-    },
-    {
-      "label": "UAE GDP Growth",
-      "value": "4.0%",
-      "change": null
     }
   ],
-  "bottomLine": "Strait of Hormuz tensions drive oil prices above $106 as UAE accelerates bypass pipeline capacity doubling by 2027. Turkey's 58.5% inflation and Egypt's 28.3% rate highlight persistent monetary pressures, while Gulf states maintain relative stability with UAE posting 4.0% GDP growth. Regional youth unemployment remains critical, with Jordan at 38.9% and Morocco at 21.9%, underscoring structural labor market challenges.",
+  "bottomLine": "Oil prices surged to $116.73 for Brent crude amid escalating Iran tensions, benefiting Gulf producers while Egypt's 28.3% inflation continues to pressure the economy. Qatar and UAE maintain strong current account surpluses at 17.3% and 14.5% of GDP respectively, contrasting with Egypt's -5.7% deficit. Morocco leads regional growth at 3.8%, while youth unemployment remains critically high in Jordan at 38.9%.",
   "macroPulse": [
     {
       "country": "Saudi Arabia",
@@ -44,46 +44,30 @@
       "metric": "GDP Growth",
       "value": 2.0,
       "unit": "%",
-      "change": -0.3,
+      "change": 0.2,
       "sparkline": [
-        2.8,
-        2.5,
-        2.3,
-        2.1,
+        1.5,
+        1.7,
+        1.8,
+        1.9,
         2.0,
-        1.8
+        2.1
       ]
     },
     {
       "country": "Saudi Arabia",
       "flag": "🇸🇦",
       "metric": "Oil Revenue",
-      "value": 185,
+      "value": 285,
       "unit": "$B",
       "change": 12.5,
       "sparkline": [
-        160,
-        165,
-        172,
-        178,
-        185,
-        192
-      ]
-    },
-    {
-      "country": "UAE",
-      "flag": "🇦🇪",
-      "metric": "GDP Growth",
-      "value": 4.0,
-      "unit": "%",
-      "change": 0.2,
-      "sparkline": [
-        3.2,
-        3.5,
-        3.7,
-        3.9,
-        4.0,
-        4.1
+        245,
+        260,
+        270,
+        275,
+        280,
+        285
       ]
     },
     {
@@ -92,14 +76,30 @@
       "metric": "Current Account",
       "value": 14.5,
       "unit": "% GDP",
-      "change": 1.8,
+      "change": 1.2,
       "sparkline": [
-        11.2,
-        12.1,
-        13.0,
+        12.8,
+        13.2,
         13.8,
-        14.5,
-        15.2
+        14.0,
+        14.3,
+        14.5
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "FDI Inflows",
+      "value": 22.8,
+      "unit": "$B",
+      "change": 8.3,
+      "sparkline": [
+        18.5,
+        19.2,
+        20.1,
+        21.0,
+        22.0,
+        22.8
       ]
     },
     {
@@ -112,10 +112,10 @@
       "sparkline": [
         32.5,
         31.2,
-        29.8,
-        28.9,
-        28.3,
-        27.5
+        30.1,
+        29.5,
+        28.8,
+        28.3
       ]
     },
     {
@@ -129,41 +129,9 @@
         -4.2,
         -4.8,
         -5.1,
-        -5.4,
-        -5.7,
-        -6.0
-      ]
-    },
-    {
-      "country": "Turkey",
-      "flag": "🇹🇷",
-      "metric": "Inflation",
-      "value": 58.5,
-      "unit": "%",
-      "change": -3.2,
-      "sparkline": [
-        68.2,
-        64.8,
-        61.5,
-        59.8,
-        58.5,
-        56.9
-      ]
-    },
-    {
-      "country": "Turkey",
-      "flag": "🇹🇷",
-      "metric": "GDP Growth",
-      "value": 3.3,
-      "unit": "%",
-      "change": -0.5,
-      "sparkline": [
-        4.2,
-        3.9,
-        3.6,
-        3.4,
-        3.3,
-        3.1
+        -5.3,
+        -5.5,
+        -5.7
       ]
     },
     {
@@ -174,28 +142,28 @@
       "unit": "% GDP",
       "change": 2.1,
       "sparkline": [
-        14.5,
-        15.2,
-        16.0,
+        14.8,
+        15.5,
+        16.2,
         16.8,
-        17.3,
-        17.9
+        17.0,
+        17.3
       ]
     },
     {
       "country": "Qatar",
       "flag": "🇶🇦",
       "metric": "LNG Exports",
-      "value": 78,
+      "value": 82.5,
       "unit": "$B",
-      "change": 8.4,
+      "change": 15.2,
       "sparkline": [
-        68,
-        71,
-        74,
-        76,
-        78,
-        81
+        68.2,
+        72.1,
+        75.8,
+        78.5,
+        80.2,
+        82.5
       ]
     },
     {
@@ -204,56 +172,88 @@
       "metric": "GDP Growth",
       "value": 3.8,
       "unit": "%",
-      "change": 0.6,
+      "change": 0.5,
       "sparkline": [
         2.8,
         3.1,
-        3.4,
-        3.6,
-        3.8,
-        4.0
+        3.3,
+        3.5,
+        3.7,
+        3.8
       ]
     },
     {
       "country": "Morocco",
       "flag": "🇲🇦",
       "metric": "Tourism Revenue",
-      "value": 12.8,
+      "value": 9.2,
       "unit": "$B",
-      "change": 15.2,
+      "change": 18.5,
       "sparkline": [
-        9.5,
-        10.2,
-        11.1,
-        11.8,
-        12.8,
-        13.5
+        6.5,
+        7.2,
+        7.8,
+        8.3,
+        8.8,
+        9.2
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.3,
+      "unit": "%",
+      "change": 0.8,
+      "sparkline": [
+        2.1,
+        2.4,
+        2.7,
+        3.0,
+        3.2,
+        3.3
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "Youth Unemployment",
+      "value": 16.0,
+      "unit": "%",
+      "change": -1.2,
+      "sparkline": [
+        18.5,
+        17.8,
+        17.2,
+        16.8,
+        16.3,
+        16.0
       ]
     }
   ],
   "notableFlows": [
-    "UAE attracts $18.2B in FDI inflows as investors hedge against Strait of Hormuz disruption risks through diversified energy infrastructure.",
-    "Saudi Arabia diverts $12.5B in oil revenues toward NEOM project acceleration amid regional security concerns.",
-    "Egypt receives $3.8B in emergency IMF disbursement to support currency stability as EGP weakens 0.2% against dollar.",
-    "Qatar increases LNG spot sales to Europe by 22% as pipeline bypass projects gain strategic importance."
+    "Gulf sovereign wealth funds increased energy sector allocations by $18B amid oil price surge to three-year highs.",
+    "Egyptian pound weakened 0.5% against dollar as foreign reserves declined $2.1B following debt service payments.",
+    "UAE attracted record $4.2B in AI and tech venture capital in Q2 2026, driven by Dubai's digital transformation initiative.",
+    "Qatar's LNG export revenues surged 15% to $82.5B annually as European demand remains elevated amid geopolitical tensions."
   ],
   "dealsToWatch": [
     {
-      "name": "UAE Hormuz Bypass Pipeline Expansion",
-      "parties": "ADNOC · China National Petroleum · Total Energies",
-      "value": "$8.5B",
+      "name": "NEOM Green Hydrogen Plant",
+      "parties": "Saudi Arabia · Air Products · ACWA Power",
+      "value": "$8.4B",
       "status": "Active"
     },
     {
-      "name": "Saudi NEOM Green Hydrogen Plant",
-      "parties": "ACWA Power · Air Products · NEOM",
-      "value": "$5.0B",
-      "status": "In Progress"
+      "name": "Emirates-Etihad Merger Talks",
+      "parties": "Emirates · Etihad Airways · UAE Government",
+      "value": "$12.8B",
+      "status": "Under Review"
     },
     {
-      "name": "Egypt Suez Canal Economic Zone",
-      "parties": "Suez Canal Authority · DP World · Maersk",
-      "value": "$3.2B",
+      "name": "Egypt Suez Canal Expansion Phase III",
+      "parties": "Egypt · China State Construction · European Bank",
+      "value": "$6.2B",
       "status": "MOU Signed"
     }
   ],
@@ -262,14 +262,6 @@
       {
         "country": "Jordan",
         "value": 38.9
-      },
-      {
-        "country": "Morocco",
-        "value": 21.9
-      },
-      {
-        "country": "Egypt",
-        "value": 18.3
       },
       {
         "country": "Turkey",
@@ -325,38 +317,35 @@
     ],
     "techJobs": {
       "trend": "up",
-      "change": 12,
-      "context": "Gulf states drive regional tech hiring amid digital transformation initiatives and AI adoption."
+      "change": 23,
+      "context": "Gulf states lead regional tech hiring surge driven by AI infrastructure investments and digital transformation initiatives."
     }
   },
   "risks": [
     {
-      "level": "CRITICAL",
-      "title": "Strait of Hormuz Escalation",
-      "description": "Iranian seizure of vessels and sinking incidents threaten 20% of global oil transit. UAE's pipeline bypass capacity doubling reflects urgent infrastructure hedging. Regional shipping companies already diverting to overland routes.",
-      "countries": [
-        "UAE",
-        "Saudi Arabia",
-        "Qatar",
-        "Oman"
-      ]
-    },
-    {
       "level": "HIGH",
-      "title": "Turkish Monetary Crisis",
-      "description": "Inflation at 58.5% signals persistent monetary instability despite recent moderation. Youth unemployment at 16.0% compounds social pressures amid currency volatility.",
+      "title": "Iran Regional Escalation",
+      "description": "Fresh drone attacks and threats of war 'beyond the region' raise conflict probability. Gulf states condemned attacks while Trump paused potential strikes after regional intervention. Oil markets already pricing in geopolitical premium.",
       "countries": [
-        "Turkey"
+        "Saudi Arabia",
+        "UAE",
+        "Qatar"
       ]
     },
     {
       "level": "MEDIUM",
-      "title": "Regional Youth Employment Crisis",
-      "description": "Jordan's 38.9% youth unemployment and Morocco's 21.9% rate indicate structural labor market failures. Limited economic diversification constrains job creation across non-oil economies.",
+      "title": "Egypt Economic Pressure",
+      "description": "Inflation remains elevated at 28.3% while current account deficit widened to -5.7% of GDP. Foreign reserves under pressure from debt servicing requirements and currency weakness.",
       "countries": [
-        "Jordan",
-        "Morocco",
         "Egypt"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Jordan Youth Employment Crisis",
+      "description": "Youth unemployment reached 38.9%, creating social stability risks. Low labor force participation at 40.1% compounds economic challenges and limits growth potential.",
+      "countries": [
+        "Jordan"
       ]
     }
   ]
