@@ -1,0 +1,352 @@
+{
+  "issue": {
+    "number": "025",
+    "weekOf": "May 25, 2026"
+  },
+  "headline": "Oil surge lifts Gulf markets as regional tensions escalate amid Iran crisis",
+  "ticker": [
+    {
+      "label": "EGP/USD",
+      "value": "53.07",
+      "change": 0.5
+    },
+    {
+      "label": "Brent Crude",
+      "value": "$116.73",
+      "change": 2.4
+    },
+    {
+      "label": "SAR/USD",
+      "value": "3.75",
+      "change": -0.4
+    },
+    {
+      "label": "Turkey GDP Growth",
+      "value": "3.3%",
+      "change": null
+    },
+    {
+      "label": "Morocco GDP Growth",
+      "value": "3.8%",
+      "change": null
+    },
+    {
+      "label": "Egypt Inflation",
+      "value": "28.3%",
+      "change": null
+    }
+  ],
+  "bottomLine": "Oil prices surged to $116.73 for Brent crude amid escalating Iran tensions, benefiting Gulf producers while Egypt's 28.3% inflation continues to pressure the economy. Qatar and UAE maintain strong current account surpluses at 17.3% and 14.5% of GDP respectively, contrasting with Egypt's -5.7% deficit. Morocco leads regional growth at 3.8%, while youth unemployment remains critically high in Jordan at 38.9%.",
+  "macroPulse": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "GDP Growth",
+      "value": 2.0,
+      "unit": "%",
+      "change": 0.2,
+      "sparkline": [
+        1.5,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "Oil Revenue",
+      "value": 285,
+      "unit": "$B",
+      "change": 12.5,
+      "sparkline": [
+        245,
+        260,
+        270,
+        275,
+        280,
+        285
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "Current Account",
+      "value": 14.5,
+      "unit": "% GDP",
+      "change": 1.2,
+      "sparkline": [
+        12.8,
+        13.2,
+        13.8,
+        14.0,
+        14.3,
+        14.5
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "FDI Inflows",
+      "value": 22.8,
+      "unit": "$B",
+      "change": 8.3,
+      "sparkline": [
+        18.5,
+        19.2,
+        20.1,
+        21.0,
+        22.0,
+        22.8
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Inflation",
+      "value": 28.3,
+      "unit": "%",
+      "change": -2.1,
+      "sparkline": [
+        32.5,
+        31.2,
+        30.1,
+        29.5,
+        28.8,
+        28.3
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Current Account",
+      "value": -5.7,
+      "unit": "% GDP",
+      "change": -0.8,
+      "sparkline": [
+        -4.2,
+        -4.8,
+        -5.1,
+        -5.3,
+        -5.5,
+        -5.7
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "Current Account",
+      "value": 17.3,
+      "unit": "% GDP",
+      "change": 2.1,
+      "sparkline": [
+        14.8,
+        15.5,
+        16.2,
+        16.8,
+        17.0,
+        17.3
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Exports",
+      "value": 82.5,
+      "unit": "$B",
+      "change": 15.2,
+      "sparkline": [
+        68.2,
+        72.1,
+        75.8,
+        78.5,
+        80.2,
+        82.5
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 3.8,
+      "unit": "%",
+      "change": 0.5,
+      "sparkline": [
+        2.8,
+        3.1,
+        3.3,
+        3.5,
+        3.7,
+        3.8
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Tourism Revenue",
+      "value": 9.2,
+      "unit": "$B",
+      "change": 18.5,
+      "sparkline": [
+        6.5,
+        7.2,
+        7.8,
+        8.3,
+        8.8,
+        9.2
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.3,
+      "unit": "%",
+      "change": 0.8,
+      "sparkline": [
+        2.1,
+        2.4,
+        2.7,
+        3.0,
+        3.2,
+        3.3
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "Youth Unemployment",
+      "value": 16.0,
+      "unit": "%",
+      "change": -1.2,
+      "sparkline": [
+        18.5,
+        17.8,
+        17.2,
+        16.8,
+        16.3,
+        16.0
+      ]
+    }
+  ],
+  "notableFlows": [
+    "Gulf sovereign wealth funds increased energy sector allocations by $18B amid oil price surge to three-year highs.",
+    "Egyptian pound weakened 0.5% against dollar as foreign reserves declined $2.1B following debt service payments.",
+    "UAE attracted record $4.2B in AI and tech venture capital in Q2 2026, driven by Dubai's digital transformation initiative.",
+    "Qatar's LNG export revenues surged 15% to $82.5B annually as European demand remains elevated amid geopolitical tensions."
+  ],
+  "dealsToWatch": [
+    {
+      "name": "NEOM Green Hydrogen Plant",
+      "parties": "Saudi Arabia · Air Products · ACWA Power",
+      "value": "$8.4B",
+      "status": "Active"
+    },
+    {
+      "name": "Emirates-Etihad Merger Talks",
+      "parties": "Emirates · Etihad Airways · UAE Government",
+      "value": "$12.8B",
+      "status": "Under Review"
+    },
+    {
+      "name": "Egypt Suez Canal Expansion Phase III",
+      "parties": "Egypt · China State Construction · European Bank",
+      "value": "$6.2B",
+      "status": "MOU Signed"
+    }
+  ],
+  "laborSignals": {
+    "youthUnemployment": [
+      {
+        "country": "Jordan",
+        "value": 38.9
+      },
+      {
+        "country": "Turkey",
+        "value": 16.0
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
+      },
+      {
+        "country": "Saudi Arabia",
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
+      },
+      {
+        "country": "Bahrain",
+        "value": 5.4
+      },
+      {
+        "country": "Qatar",
+        "value": 0.6
+      }
+    ],
+    "aiAdoption": [
+      {
+        "country": "UAE",
+        "rank": 1,
+        "score": 78
+      },
+      {
+        "country": "Saudi Arabia",
+        "rank": 2,
+        "score": 72
+      },
+      {
+        "country": "Qatar",
+        "rank": 3,
+        "score": 68
+      },
+      {
+        "country": "Bahrain",
+        "rank": 4,
+        "score": 61
+      },
+      {
+        "country": "Turkey",
+        "rank": 5,
+        "score": 55
+      }
+    ],
+    "techJobs": {
+      "trend": "up",
+      "change": 23,
+      "context": "Gulf states lead regional tech hiring surge driven by AI infrastructure investments and digital transformation initiatives."
+    }
+  },
+  "risks": [
+    {
+      "level": "HIGH",
+      "title": "Iran Regional Escalation",
+      "description": "Fresh drone attacks and threats of war 'beyond the region' raise conflict probability. Gulf states condemned attacks while Trump paused potential strikes after regional intervention. Oil markets already pricing in geopolitical premium.",
+      "countries": [
+        "Saudi Arabia",
+        "UAE",
+        "Qatar"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Egypt Economic Pressure",
+      "description": "Inflation remains elevated at 28.3% while current account deficit widened to -5.7% of GDP. Foreign reserves under pressure from debt servicing requirements and currency weakness.",
+      "countries": [
+        "Egypt"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Jordan Youth Employment Crisis",
+      "description": "Youth unemployment reached 38.9%, creating social stability risks. Low labor force participation at 40.1% compounds economic challenges and limits growth potential.",
+      "countries": [
+        "Jordan"
+      ]
+    }
+  ]
+}
