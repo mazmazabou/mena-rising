@@ -1,0 +1,357 @@
+{
+  "issue": {
+    "number": "026",
+    "weekOf": "June 1, 2026"
+  },
+  "headline": "Oil prices retreat as Trump pushes Abraham Accords expansion amid regional tensions",
+  "ticker": [
+    {
+      "label": "EGP/USD",
+      "value": "52.30",
+      "change": -1.4
+    },
+    {
+      "label": "Brent Crude",
+      "value": "$102.75",
+      "change": -3.9
+    },
+    {
+      "label": "SAR/USD",
+      "value": "3.73",
+      "change": -0.6
+    },
+    {
+      "label": "Egypt Inflation",
+      "value": "28.3%",
+      "change": null
+    },
+    {
+      "label": "UAE GDP Growth",
+      "value": "4.0%",
+      "change": null
+    },
+    {
+      "label": "Jordan Youth Unemployment",
+      "value": "38.9%",
+      "change": null
+    }
+  ],
+  "bottomLine": "Oil markets retreated 3.9% on Brent crude amid geopolitical uncertainty as Trump pressures Saudi Arabia and Qatar to join Abraham Accords. Egypt's inflation remains elevated at 28.3% while the EGP weakened 1.4% against the dollar. UAE leads regional growth at 4.0% GDP expansion, contrasting sharply with Jordan's youth unemployment crisis at 38.9%. Regional labor market disparities persist with Qatar achieving near-full youth employment at 0.6% versus widespread joblessness elsewhere.",
+  "macroPulse": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "GDP Growth",
+      "value": 2.0,
+      "unit": "%",
+      "change": -0.3,
+      "sparkline": [
+        2.8,
+        2.5,
+        2.2,
+        2.1,
+        2.0,
+        1.9
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "Oil Revenue",
+      "value": 185,
+      "unit": "$B",
+      "change": -12.5,
+      "sparkline": [
+        220,
+        210,
+        198,
+        192,
+        185,
+        178
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "GDP Growth",
+      "value": 4.0,
+      "unit": "%",
+      "change": 0.8,
+      "sparkline": [
+        3.1,
+        3.4,
+        3.6,
+        3.8,
+        4.0,
+        4.2
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "Current Account",
+      "value": 14.5,
+      "unit": "% GDP",
+      "change": 2.1,
+      "sparkline": [
+        11.2,
+        12.1,
+        13.0,
+        13.8,
+        14.5,
+        15.2
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Inflation",
+      "value": 28.3,
+      "unit": "%",
+      "change": -2.8,
+      "sparkline": [
+        35.2,
+        32.1,
+        30.5,
+        29.2,
+        28.3,
+        27.1
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "GDP Growth",
+      "value": 2.4,
+      "unit": "%",
+      "change": -1.2,
+      "sparkline": [
+        4.1,
+        3.5,
+        3.0,
+        2.7,
+        2.4,
+        2.1
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Exports",
+      "value": 82,
+      "unit": "$B",
+      "change": 15.2,
+      "sparkline": [
+        68,
+        71,
+        75,
+        78,
+        82,
+        85
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "GDP Growth",
+      "value": 2.4,
+      "unit": "%",
+      "change": -0.8,
+      "sparkline": [
+        3.8,
+        3.2,
+        2.9,
+        2.6,
+        2.4,
+        2.2
+      ]
+    },
+    {
+      "country": "Jordan",
+      "flag": "🇯🇴",
+      "metric": "Current Account",
+      "value": -5.9,
+      "unit": "% GDP",
+      "change": -1.2,
+      "sparkline": [
+        -4.1,
+        -4.6,
+        -5.1,
+        -5.5,
+        -5.9,
+        -6.3
+      ]
+    },
+    {
+      "country": "Jordan",
+      "flag": "🇯🇴",
+      "metric": "GDP Growth",
+      "value": 2.5,
+      "unit": "%",
+      "change": 0.3,
+      "sparkline": [
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.5,
+        2.7
+      ]
+    },
+    {
+      "country": "Bahrain",
+      "flag": "🇧🇭",
+      "metric": "Current Account",
+      "value": 4.8,
+      "unit": "% GDP",
+      "change": 1.9,
+      "sparkline": [
+        2.1,
+        2.8,
+        3.5,
+        4.1,
+        4.8,
+        5.4
+      ]
+    },
+    {
+      "country": "Bahrain",
+      "flag": "🇧🇭",
+      "metric": "GDP Growth",
+      "value": 2.6,
+      "unit": "%",
+      "change": 0.4,
+      "sparkline": [
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8
+      ]
+    }
+  ],
+  "notableFlows": [
+    "UAE's current account surplus of 14.5% of GDP reflects sustained capital inflows from global investors seeking exposure to regional growth and diversification.",
+    "Jordan's current account deficit widened to -5.9% of GDP as import costs outpaced remittance inflows amid regional uncertainty.",
+    "Egyptian pound weakness accelerated foreign portfolio outflows as investors await clarity on IMF program implementation and inflation trajectory.",
+    "Gulf sovereign wealth funds redirected $8.2B toward domestic infrastructure projects as geopolitical tensions reduced appetite for overseas expansion."
+  ],
+  "dealsToWatch": [
+    {
+      "name": "NEOM Green Hydrogen Phase 2",
+      "parties": "Saudi Arabia · Air Products · ACWA Power",
+      "value": "$12B",
+      "status": "Active"
+    },
+    {
+      "name": "Abu Dhabi National Oil Company Expansion",
+      "parties": "ADNOC · TotalEnergies · BP",
+      "value": "$8.5B",
+      "status": "In Progress"
+    },
+    {
+      "name": "Qatar Airways Fleet Modernization",
+      "parties": "Qatar Airways · Boeing · Airbus",
+      "value": "$6.2B",
+      "status": "MOU Signed"
+    }
+  ],
+  "laborSignals": {
+    "youthUnemployment": [
+      {
+        "country": "Jordan",
+        "value": 38.9
+      },
+      {
+        "country": "Morocco",
+        "value": 21.9
+      },
+      {
+        "country": "Egypt",
+        "value": 18.3
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
+      },
+      {
+        "country": "Saudi Arabia",
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
+      },
+      {
+        "country": "Bahrain",
+        "value": 5.4
+      },
+      {
+        "country": "Qatar",
+        "value": 0.6
+      }
+    ],
+    "aiAdoption": [
+      {
+        "country": "UAE",
+        "rank": 1,
+        "score": 78
+      },
+      {
+        "country": "Saudi Arabia",
+        "rank": 2,
+        "score": 72
+      },
+      {
+        "country": "Qatar",
+        "rank": 3,
+        "score": 68
+      },
+      {
+        "country": "Bahrain",
+        "rank": 4,
+        "score": 61
+      },
+      {
+        "country": "Egypt",
+        "rank": 5,
+        "score": 45
+      }
+    ],
+    "techJobs": {
+      "trend": "up",
+      "change": 18,
+      "context": "Gulf states drive regional tech hiring growth through Vision 2030 diversification initiatives."
+    }
+  },
+  "risks": [
+    {
+      "level": "HIGH",
+      "title": "Abraham Accords Expansion Pressure",
+      "description": "Trump's demands for Saudi Arabia and Qatar to join Abraham Accords creates diplomatic tensions amid Iran negotiations. Regional alignment pressures could destabilize existing Gulf cooperation frameworks and complicate energy partnerships.",
+      "countries": [
+        "Saudi Arabia",
+        "Qatar"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Oil Price Volatility",
+      "description": "Brent crude's 3.9% weekly decline reflects market uncertainty over geopolitical developments and production adjustments. Sustained price weakness below $100 could pressure Gulf fiscal positions and delay diversification investments.",
+      "countries": [
+        "Saudi Arabia",
+        "UAE",
+        "Qatar"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Egyptian Economic Instability",
+      "description": "Egypt's 28.3% inflation rate combined with currency weakness creates social pressure and capital flight risks. Youth unemployment at 18.3% compounds domestic stability concerns amid regional tensions.",
+      "countries": [
+        "Egypt"
+      ]
+    }
+  ]
+}
