@@ -26,6 +26,9 @@ NEWS_API_KEY = os.environ.get("NEWS_API_KEY", "")
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 RESEND_AUDIENCE_ID = os.environ.get("RESEND_AUDIENCE_ID", "")
 
+# ── Claude ─────────────────────────────────────────────────────────────────────
+CLAUDE_MODEL = "claude-sonnet-5-5"
+
 # ── Country Map ────────────────────────────────────────────────────────────────
 COUNTRIES = {
     "Saudi Arabia": {"iso2": "SA", "flag": "\U0001f1f8\U0001f1e6"},

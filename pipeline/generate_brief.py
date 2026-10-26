@@ -11,7 +11,7 @@ from pathlib import Path
 
 import anthropic
 
-from config import ANTHROPIC_API_KEY, COUNTRIES, DATA_PAYLOAD_FILE, LOGS_DIR, OUTPUT_FILE
+from config import ANTHROPIC_API_KEY, CLAUDE_MODEL, COUNTRIES, DATA_PAYLOAD_FILE, LOGS_DIR, OUTPUT_FILE
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
@@ -317,14 +317,20 @@ def call_claude_with_retry(system_prompt: str, user_prompt: str) -> dict:
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
     def _call(messages: list[dict]) -> tuple[str, dict]:
+        # claude-sonnet-4-20250514 was retired (API returns 404 not_found_error).
+        # Sonnet 5.5 rejects non-default temperature and thinks by default, so
+        # content[0] may be a thinking block — read the text blocks instead.
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=8192,
-            temperature=0.7,
+            model=CLAUDE_MODEL,
+            max_tokens=16000,
             system=system_prompt,
             messages=messages,
         )
-        text = response.content[0].text.strip()
+        if response.stop_reason == "refusal":
+            raise RuntimeError(f"Claude declined the request: {response.stop_details}")
+        if response.stop_reason == "max_tokens":
+            log.warning("Claude response hit max_tokens — output may be truncated")
+        text = "".join(b.text for b in response.content if b.type == "text").strip()
 
         # Strip markdown code fences if present
         if text.startswith("```"):
