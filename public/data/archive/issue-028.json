@@ -1,0 +1,358 @@
+{
+  "issue": {
+    "number": "028",
+    "weekOf": "June 15, 2026"
+  },
+  "headline": "Gulf stability improves as Hormuz closure persists, Saudi-Lebanon ties thaw",
+  "ticker": [
+    {
+      "label": "EGP/USD",
+      "value": "51.83",
+      "change": -0.5
+    },
+    {
+      "label": "Brent Crude",
+      "value": "$97.46",
+      "change": 0.2
+    },
+    {
+      "label": "SAR/USD",
+      "value": "3.75",
+      "change": 1.5
+    },
+    {
+      "label": "Turkey Inflation",
+      "value": "58.5%",
+      "change": null
+    },
+    {
+      "label": "Egypt Inflation",
+      "value": "28.3%",
+      "change": null
+    },
+    {
+      "label": "Qatar Current Account",
+      "value": "17.3%",
+      "change": null
+    }
+  ],
+  "bottomLine": "Regional dynamics shift as Saudi Arabia lifts its 5-year Lebanese import ban while the Strait of Hormuz remains closed for 100 days, yet oil prices hold steady at $97.46. Turkey's 58.5% inflation and Egypt's 28.3% rate underscore persistent monetary pressures, while Qatar's 17.3% current account surplus and UAE's 14.5% surplus highlight Gulf resilience. Labor market disparities persist with Jordan's youth unemployment at 38.9% versus Qatar's 0.6%.",
+  "macroPulse": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "GDP Growth",
+      "value": 2.0,
+      "unit": "%",
+      "change": -0.3,
+      "sparkline": [
+        2.8,
+        2.5,
+        2.3,
+        2.1,
+        2.0,
+        1.9
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "Current Account",
+      "value": -1.3,
+      "unit": "% GDP",
+      "change": -2.1,
+      "sparkline": [
+        3.2,
+        1.8,
+        0.4,
+        -0.2,
+        -0.8,
+        -1.3
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "GDP Growth",
+      "value": 4.0,
+      "unit": "%",
+      "change": 0.2,
+      "sparkline": [
+        3.5,
+        3.6,
+        3.8,
+        3.9,
+        4.1,
+        4.0
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "Current Account",
+      "value": 14.5,
+      "unit": "% GDP",
+      "change": 1.2,
+      "sparkline": [
+        12.1,
+        12.8,
+        13.4,
+        13.9,
+        14.2,
+        14.5
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Inflation",
+      "value": 28.3,
+      "unit": "%",
+      "change": -2.1,
+      "sparkline": [
+        35.2,
+        32.8,
+        31.1,
+        29.7,
+        28.9,
+        28.3
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Current Account",
+      "value": -5.7,
+      "unit": "% GDP",
+      "change": 0.8,
+      "sparkline": [
+        -7.2,
+        -6.8,
+        -6.3,
+        -6.0,
+        -5.8,
+        -5.7
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "Current Account",
+      "value": 17.3,
+      "unit": "% GDP",
+      "change": -0.5,
+      "sparkline": [
+        18.9,
+        18.4,
+        17.9,
+        17.6,
+        17.4,
+        17.3
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Exports",
+      "value": 82.4,
+      "unit": "$B",
+      "change": 2.1,
+      "sparkline": [
+        76.8,
+        78.2,
+        79.6,
+        80.8,
+        81.5,
+        82.4
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 3.8,
+      "unit": "%",
+      "change": 0.4,
+      "sparkline": [
+        3.1,
+        3.3,
+        3.5,
+        3.6,
+        3.7,
+        3.8
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Tourism Revenue",
+      "value": 8.9,
+      "unit": "$B",
+      "change": 1.8,
+      "sparkline": [
+        7.8,
+        8.1,
+        8.3,
+        8.5,
+        8.7,
+        8.9
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "Inflation",
+      "value": 58.5,
+      "unit": "%",
+      "change": -3.2,
+      "sparkline": [
+        68.2,
+        64.8,
+        62.1,
+        60.3,
+        59.1,
+        58.5
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.3,
+      "unit": "%",
+      "change": -0.7,
+      "sparkline": [
+        4.2,
+        3.9,
+        3.7,
+        3.5,
+        3.4,
+        3.3
+      ]
+    }
+  ],
+  "notableFlows": [
+    "Saudi Arabia's decision to lift the Lebanese import ban signals $2.1B in potential trade restoration over 12 months.",
+    "UAE maintains its position as regional financial hub with $14.5B quarterly FDI inflows despite Hormuz disruptions.",
+    "Egypt's foreign reserves stabilize at $34.2B following IMF disbursement and reduced import pressures.",
+    "Qatar's LNG exports to Europe increase 18% quarter-over-quarter, reaching $82.4B annually amid supply chain diversification."
+  ],
+  "dealsToWatch": [
+    {
+      "name": "NEOM Green Hydrogen Phase II",
+      "parties": "Saudi Arabia · Air Products · ACWA Power",
+      "value": "$8.4B",
+      "status": "Active"
+    },
+    {
+      "name": "Egypt New Administrative Capital PPP",
+      "parties": "Egypt · China State Construction · UAE Sovereign Fund",
+      "value": "$12.0B",
+      "status": "In Progress"
+    },
+    {
+      "name": "Morocco-Portugal Energy Interconnector",
+      "parties": "Morocco · Portugal · European Investment Bank",
+      "value": "$3.2B",
+      "status": "MOU Signed"
+    }
+  ],
+  "laborSignals": {
+    "youthUnemployment": [
+      {
+        "country": "Jordan",
+        "value": 38.9
+      },
+      {
+        "country": "Morocco",
+        "value": 21.9
+      },
+      {
+        "country": "Egypt",
+        "value": 18.3
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
+      },
+      {
+        "country": "Saudi Arabia",
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
+      },
+      {
+        "country": "Bahrain",
+        "value": 5.4
+      },
+      {
+        "country": "Qatar",
+        "value": 0.6
+      }
+    ],
+    "aiAdoption": [
+      {
+        "country": "UAE",
+        "rank": 1,
+        "score": 78
+      },
+      {
+        "country": "Saudi Arabia",
+        "rank": 2,
+        "score": 72
+      },
+      {
+        "country": "Qatar",
+        "rank": 3,
+        "score": 68
+      },
+      {
+        "country": "Bahrain",
+        "rank": 4,
+        "score": 61
+      },
+      {
+        "country": "Turkey",
+        "rank": 5,
+        "score": 54
+      }
+    ],
+    "techJobs": {
+      "trend": "up",
+      "change": 14,
+      "context": "Gulf states lead regional tech hiring with fintech and renewable energy sectors driving demand."
+    }
+  },
+  "risks": [
+    {
+      "level": "HIGH",
+      "title": "Hormuz Closure Economic Impact",
+      "description": "The 100-day closure of the Strait of Hormuz continues to disrupt 20% of global oil transit despite stable prices at $97.46. Regional economies face mounting supply chain pressures and insurance costs, with Qatar's LNG exports particularly vulnerable to further escalation.",
+      "countries": [
+        "UAE",
+        "Qatar",
+        "Oman"
+      ]
+    },
+    {
+      "level": "CRITICAL",
+      "title": "Turkey Hyperinflation Risk",
+      "description": "Turkey's 58.5% inflation rate approaches hyperinflation territory, threatening regional financial stability. The lira's continued weakness could trigger capital flight from neighboring economies and disrupt trade flows across the Eastern Mediterranean.",
+      "countries": [
+        "Turkey"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Youth Employment Crisis",
+      "description": "Jordan's 38.9% youth unemployment and Morocco's 21.9% rate signal potential social instability. Egypt's 18.3% youth joblessness, combined with 28.3% inflation, creates a volatile economic environment requiring immediate policy intervention.",
+      "countries": [
+        "Jordan",
+        "Morocco",
+        "Egypt"
+      ]
+    }
+  ]
+}

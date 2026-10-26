@@ -1,73 +1,73 @@
 {
   "issue": {
-    "number": "028",
-    "weekOf": "June 15, 2026"
+    "number": "029",
+    "weekOf": "October 26, 2026"
   },
-  "headline": "Gulf stability improves as Hormuz closure persists, Saudi-Lebanon ties thaw",
+  "headline": "Houthi attacks and Hormuz tanker strikes push Brent above $115 and rattle Gulf investor confidence",
   "ticker": [
     {
       "label": "EGP/USD",
-      "value": "51.83",
-      "change": -0.5
+      "value": "56.22",
+      "change": 2.1
     },
     {
       "label": "Brent Crude",
-      "value": "$97.46",
-      "change": 0.2
+      "value": "$115.22",
+      "change": -3.0
     },
     {
       "label": "SAR/USD",
       "value": "3.75",
-      "change": 1.5
+      "change": 0
     },
     {
       "label": "Turkey Inflation",
-      "value": "58.5%",
+      "value": "34.9%",
       "change": null
     },
     {
       "label": "Egypt Inflation",
-      "value": "28.3%",
+      "value": "14.1%",
       "change": null
     },
     {
       "label": "Qatar Current Account",
-      "value": "17.3%",
+      "value": "14.8%",
       "change": null
     }
   ],
-  "bottomLine": "Regional dynamics shift as Saudi Arabia lifts its 5-year Lebanese import ban while the Strait of Hormuz remains closed for 100 days, yet oil prices hold steady at $97.46. Turkey's 58.5% inflation and Egypt's 28.3% rate underscore persistent monetary pressures, while Qatar's 17.3% current account surplus and UAE's 14.5% surplus highlight Gulf resilience. Labor market disparities persist with Jordan's youth unemployment at 38.9% versus Qatar's 0.6%.",
+  "bottomLine": "Security shocks, not fundamentals, set the week's agenda. Washington ordered embassy staff out of Saudi Arabia after near-daily Houthi attacks, Riyadh postponed a major investment conference, and Iran reported seven tankers attacked in the Strait of Hormuz. Brent at $115.22 (down 3.0% on the week after a six-month high) is a windfall for current-account surplus states such as the UAE (15.7% of GDP) and Qatar (14.8%). It is a growing burden for importers such as Egypt (14.1% inflation, EGP down 2.1% to 56.22) and Turkey (34.9% inflation). The divergence between hydrocarbon exporters and energy-importing, high-inflation economies is widening, and Gulf risk premia now matter more than headline growth of 4.5% in Saudi Arabia.",
   "macroPulse": [
     {
       "country": "Saudi Arabia",
       "flag": "🇸🇦",
       "metric": "GDP Growth",
-      "value": 2.0,
+      "value": 4.5,
       "unit": "%",
-      "change": -0.3,
+      "change": 0.4,
       "sparkline": [
         2.8,
-        2.5,
-        2.3,
-        2.1,
-        2.0,
-        1.9
+        3.1,
+        3.6,
+        4.0,
+        4.1,
+        4.5
       ]
     },
     {
       "country": "Saudi Arabia",
       "flag": "🇸🇦",
-      "metric": "Current Account",
-      "value": -1.3,
-      "unit": "% GDP",
-      "change": -2.1,
+      "metric": "Oil Revenue (monthly, est.)",
+      "value": 26.4,
+      "unit": "$B",
+      "change": 3.1,
       "sparkline": [
-        3.2,
-        1.8,
-        0.4,
-        -0.2,
-        -0.8,
-        -1.3
+        18.2,
+        19.5,
+        21.0,
+        22.8,
+        24.7,
+        26.4
       ]
     },
     {
@@ -76,184 +76,184 @@
       "metric": "GDP Growth",
       "value": 4.0,
       "unit": "%",
-      "change": 0.2,
+      "change": 0.3,
       "sparkline": [
+        3.4,
         3.5,
         3.6,
         3.8,
         3.9,
-        4.1,
         4.0
       ]
     },
     {
       "country": "UAE",
       "flag": "🇦🇪",
-      "metric": "Current Account",
-      "value": 14.5,
-      "unit": "% GDP",
-      "change": 1.2,
+      "metric": "Non-Oil PMI (est.)",
+      "value": 54.2,
+      "unit": "",
+      "change": -0.6,
       "sparkline": [
-        12.1,
-        12.8,
-        13.4,
-        13.9,
-        14.2,
-        14.5
+        55.8,
+        55.2,
+        54.9,
+        55.0,
+        54.8,
+        54.2
       ]
     },
     {
       "country": "Egypt",
       "flag": "🇪🇬",
       "metric": "Inflation",
-      "value": 28.3,
+      "value": 14.1,
       "unit": "%",
-      "change": -2.1,
+      "change": -1.2,
       "sparkline": [
-        35.2,
-        32.8,
-        31.1,
-        29.7,
-        28.9,
-        28.3
+        28.5,
+        24.0,
+        19.8,
+        16.9,
+        15.3,
+        14.1
       ]
     },
     {
       "country": "Egypt",
       "flag": "🇪🇬",
-      "metric": "Current Account",
-      "value": -5.7,
-      "unit": "% GDP",
-      "change": 0.8,
-      "sparkline": [
-        -7.2,
-        -6.8,
-        -6.3,
-        -6.0,
-        -5.8,
-        -5.7
-      ]
-    },
-    {
-      "country": "Qatar",
-      "flag": "🇶🇦",
-      "metric": "Current Account",
-      "value": 17.3,
-      "unit": "% GDP",
-      "change": -0.5,
-      "sparkline": [
-        18.9,
-        18.4,
-        17.9,
-        17.6,
-        17.4,
-        17.3
-      ]
-    },
-    {
-      "country": "Qatar",
-      "flag": "🇶🇦",
-      "metric": "LNG Exports",
-      "value": 82.4,
+      "metric": "FDI Inflows (est.)",
+      "value": 11.5,
       "unit": "$B",
-      "change": 2.1,
+      "change": -0.8,
       "sparkline": [
-        76.8,
-        78.2,
-        79.6,
-        80.8,
-        81.5,
-        82.4
+        9.8,
+        10.9,
+        12.4,
+        12.9,
+        12.3,
+        11.5
       ]
     },
     {
-      "country": "Morocco",
-      "flag": "🇲🇦",
-      "metric": "GDP Growth",
-      "value": 3.8,
-      "unit": "%",
-      "change": 0.4,
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "Current Account Balance",
+      "value": 14.8,
+      "unit": "% GDP",
+      "change": 1.1,
       "sparkline": [
-        3.1,
-        3.3,
-        3.5,
-        3.6,
-        3.7,
-        3.8
+        9.6,
+        10.8,
+        12.1,
+        13.0,
+        13.7,
+        14.8
       ]
     },
     {
-      "country": "Morocco",
-      "flag": "🇲🇦",
-      "metric": "Tourism Revenue",
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Exports (est.)",
       "value": 8.9,
       "unit": "$B",
-      "change": 1.8,
+      "change": 0.5,
       "sparkline": [
-        7.8,
+        6.8,
+        7.2,
+        7.7,
         8.1,
-        8.3,
-        8.5,
-        8.7,
+        8.4,
         8.9
       ]
     },
     {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 4.6,
+      "unit": "%",
+      "change": 0.5,
+      "sparkline": [
+        3.0,
+        3.3,
+        3.7,
+        4.0,
+        4.1,
+        4.6
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Tourism Revenue (est.)",
+      "value": 1.2,
+      "unit": "$B",
+      "change": 0.1,
+      "sparkline": [
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.1,
+        1.2
+      ]
+    },
+    {
       "country": "Turkey",
       "flag": "🇹🇷",
       "metric": "Inflation",
-      "value": 58.5,
+      "value": 34.9,
       "unit": "%",
-      "change": -3.2,
+      "change": -3.5,
       "sparkline": [
-        68.2,
         64.8,
-        62.1,
-        60.3,
-        59.1,
-        58.5
+        58.5,
+        49.0,
+        43.2,
+        38.4,
+        34.9
       ]
     },
     {
       "country": "Turkey",
       "flag": "🇹🇷",
       "metric": "GDP Growth",
-      "value": 3.3,
+      "value": 3.6,
       "unit": "%",
-      "change": -0.7,
+      "change": 0.4,
       "sparkline": [
-        4.2,
-        3.9,
-        3.7,
-        3.5,
-        3.4,
-        3.3
+        3.0,
+        2.7,
+        3.1,
+        3.3,
+        3.2,
+        3.6
       ]
     }
   ],
   "notableFlows": [
-    "Saudi Arabia's decision to lift the Lebanese import ban signals $2.1B in potential trade restoration over 12 months.",
-    "UAE maintains its position as regional financial hub with $14.5B quarterly FDI inflows despite Hormuz disruptions.",
-    "Egypt's foreign reserves stabilize at $34.2B following IMF disbursement and reduced import pressures.",
-    "Qatar's LNG exports to Europe increase 18% quarter-over-quarter, reaching $82.4B annually amid supply chain diversification."
+    "Saudi Arabia's postponement of a major investment conference is likely to delay announcements of foreign direct investment commitments and slow the deal-signing calendar that underpins Vision 2030 financing.",
+    "Brent at $115.22 is widening hydrocarbon surpluses in the UAE (15.7% of GDP) and Qatar (14.8%), adding to the sovereign wealth fund liquidity that is likely to chase safer Gulf and global assets.",
+    "Egypt's pound slid 2.1% to 56.22 per dollar as higher energy import costs and regional risk aversion pressure portfolio inflows into local-currency debt.",
+    "Seven reported tanker attacks near the Strait of Hormuz are raising war-risk insurance premia and freight costs, and could divert cargoes toward Red Sea and overland export routes."
   ],
   "dealsToWatch": [
     {
-      "name": "NEOM Green Hydrogen Phase II",
-      "parties": "Saudi Arabia · Air Products · ACWA Power",
-      "value": "$8.4B",
-      "status": "Active"
+      "name": "Saudi Investment Conference Pipeline (postponed)",
+      "parties": "PIF · Global asset managers · Saudi Ministry of Investment",
+      "value": "$20B",
+      "status": "Under Review"
     },
     {
-      "name": "Egypt New Administrative Capital PPP",
-      "parties": "Egypt · China State Construction · UAE Sovereign Fund",
-      "value": "$12.0B",
+      "name": "Egypt Strategic Asset Sale Programme",
+      "parties": "Government of Egypt · ADQ · QIA",
+      "value": "$10B",
       "status": "In Progress"
     },
     {
-      "name": "Morocco-Portugal Energy Interconnector",
-      "parties": "Morocco · Portugal · European Investment Bank",
-      "value": "$3.2B",
+      "name": "Hormuz Bypass Energy Logistics Upgrade",
+      "parties": "Saudi Aramco · ADNOC · Oman Government",
+      "value": "$5B",
       "status": "MOU Signed"
     }
   ],
@@ -270,6 +270,10 @@
       {
         "country": "Egypt",
         "value": 18.3
+      },
+      {
+        "country": "Turkey",
+        "value": 16.0
       },
       {
         "country": "Oman",
@@ -296,62 +300,65 @@
       {
         "country": "UAE",
         "rank": 1,
-        "score": 78
+        "score": 82
       },
       {
         "country": "Saudi Arabia",
         "rank": 2,
-        "score": 72
+        "score": 76
       },
       {
         "country": "Qatar",
         "rank": 3,
-        "score": 68
+        "score": 69
       },
       {
         "country": "Bahrain",
         "rank": 4,
-        "score": 61
+        "score": 57
       },
       {
         "country": "Turkey",
         "rank": 5,
-        "score": 54
+        "score": 53
       }
     ],
     "techJobs": {
       "trend": "up",
-      "change": 14,
-      "context": "Gulf states lead regional tech hiring with fintech and renewable energy sectors driving demand."
+      "change": 11,
+      "context": "Tech hiring in the Gulf continues to grow on government-led digital and AI programmes, though security-driven investment delays threaten the pace of new project hiring."
     }
   },
   "risks": [
     {
-      "level": "HIGH",
-      "title": "Hormuz Closure Economic Impact",
-      "description": "The 100-day closure of the Strait of Hormuz continues to disrupt 20% of global oil transit despite stable prices at $97.46. Regional economies face mounting supply chain pressures and insurance costs, with Qatar's LNG exports particularly vulnerable to further escalation.",
+      "level": "CRITICAL",
+      "title": "Houthi attacks on Saudi Arabia",
+      "description": "Near-daily Houthi attacks have led the US to order embassy staff out of Saudi Arabia, and the UK is deploying jets to defend the kingdom. Riyadh has postponed a major investment conference, signalling direct damage to investor confidence in an economy that grew 4.5% in 2025.",
       "countries": [
+        "Saudi Arabia",
         "UAE",
-        "Qatar",
-        "Oman"
+        "Bahrain"
       ]
     },
     {
-      "level": "CRITICAL",
-      "title": "Turkey Hyperinflation Risk",
-      "description": "Turkey's 58.5% inflation rate approaches hyperinflation territory, threatening regional financial stability. The lira's continued weakness could trigger capital flight from neighboring economies and disrupt trade flows across the Eastern Mediterranean.",
+      "level": "HIGH",
+      "title": "Hormuz shipping and oil price shock",
+      "description": "Iran says seven oil tankers were attacked near the Strait of Hormuz amid fears of a return to war. Brent is at $115.22, down 3.0% on the week but near a six-month high, and any further disruption to Gulf flows would hit Qatar, the UAE and Oman's export routes and raise import bills across the region.",
       "countries": [
-        "Turkey"
+        "Qatar",
+        "UAE",
+        "Oman",
+        "Saudi Arabia"
       ]
     },
     {
       "level": "MEDIUM",
-      "title": "Youth Employment Crisis",
-      "description": "Jordan's 38.9% youth unemployment and Morocco's 21.9% rate signal potential social instability. Egypt's 18.3% youth joblessness, combined with 28.3% inflation, creates a volatile economic environment requiring immediate policy intervention.",
+      "title": "Energy-importer inflation and currency stress",
+      "description": "Egypt's pound weakened 2.1% to 56.22 per dollar with inflation at 14.1% and a current account deficit of 3.8% of GDP. Turkey's 34.9% inflation leaves little buffer against higher fuel costs, and Jordan's 5.3% of GDP deficit (2024) and 38.9% youth unemployment compound the social risks.",
       "countries": [
-        "Jordan",
-        "Morocco",
-        "Egypt"
+        "Egypt",
+        "Turkey",
+        "Jordan"
       ]
     }
   ]
