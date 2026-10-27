@@ -223,38 +223,53 @@ def fetch_finnhub() -> dict:
 # ── News API (headlines) ─────────────────────────────────────────────────────
 
 def fetch_news() -> list[dict]:
-    """Fetch top 10 MENA headlines from past 7 days via News API.
+    """Fetch MENA headlines from past 7 days via News API.
 
-    Returns: [{"title", "source", "url", "published_at"}, ...]
+    Runs a general query plus a business-only query, so conflict coverage
+    can't crowd economy and deal stories out of the top 10.
+
+    Returns: [{"title", "source", "url", "published_at", "category"}, ...]
     """
     if not NEWS_API_KEY:
         log.warning("NEWS_API_KEY not set, skipping news fetch")
         return []
 
     seven_days_ago = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
-    query = "Saudi OR UAE OR Egypt OR Turkey OR MENA OR Gulf OR OPEC"
-    url = (
-        f"https://newsapi.org/v2/everything"
-        f"?q={query}&from={seven_days_ago}&sortBy=relevance"
-        f"&pageSize=10&language=en&apiKey={NEWS_API_KEY}"
-    )
-    try:
-        resp = requests.get(url, timeout=15)
-        resp.raise_for_status()
-        data = resp.json()
-        articles = data.get("articles", [])
-        return [
-            {
-                "title": a.get("title", ""),
-                "source": a.get("source", {}).get("name", ""),
-                "url": a.get("url", ""),
-                "published_at": a.get("publishedAt", ""),
-            }
-            for a in articles
-        ]
-    except Exception as e:
-        log.warning("News API fetch failed: %s", e)
-        return []
+    # (query, fields searched) — the business query matches titles only to keep it on-topic
+    queries = {
+        "general": ("Saudi OR UAE OR Egypt OR Turkey OR MENA OR Gulf OR OPEC", "title,description,content"),
+        "business": (
+            '(Saudi OR UAE OR Qatar OR Gulf OR "Abu Dhabi" OR Dubai OR Riyadh OR Egypt) AND '
+            '(IPO OR listing OR "central bank" OR bank OR fund OR "sovereign wealth" OR PIF OR Mubadala '
+            'OR investment OR "data center" OR AI OR deal OR megaproject)',
+            "title",
+        ),
+    }
+    headlines, seen = [], set()
+    for category, (query, search_in) in queries.items():
+        url = (
+            f"https://newsapi.org/v2/everything"
+            f"?q={requests.utils.quote(query)}&searchIn={search_in}&from={seven_days_ago}"
+            f"&sortBy=relevance&pageSize=10&language=en&apiKey={NEWS_API_KEY}"
+        )
+        try:
+            resp = requests.get(url, timeout=15)
+            resp.raise_for_status()
+            for a in resp.json().get("articles", []):
+                title = a.get("title", "")
+                if not title or title in seen:
+                    continue
+                seen.add(title)
+                headlines.append({
+                    "title": title,
+                    "source": a.get("source", {}).get("name", ""),
+                    "url": a.get("url", ""),
+                    "published_at": a.get("publishedAt", ""),
+                    "category": category,
+                })
+        except Exception as e:
+            log.warning("News API fetch failed (%s): %s", category, e)
+    return headlines
 
 
 # ── ILO / World Bank (labor indicators) ──────────────────────────────────────

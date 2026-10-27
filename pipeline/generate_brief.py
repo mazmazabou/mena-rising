@@ -63,11 +63,41 @@ def compute_issue_metadata() -> dict:
     return {"number": number, "weekOf": week_of}
 
 
+def load_previous_brief() -> dict | None:
+    """Return the brief currently on disk (last week's issue), read before it is overwritten."""
+    if not OUTPUT_FILE.exists():
+        return None
+    try:
+        return json.loads(OUTPUT_FILE.read_text())
+    except Exception:
+        log.warning("Could not read previous brief from %s", OUTPUT_FILE)
+        return None
+
+
+def format_previous_brief(previous: dict | None) -> str:
+    if not previous:
+        return "  (no previous issue available)"
+    lines = [
+        f"  issue: #{previous.get('issue', {}).get('number', '?')} ({previous.get('issue', {}).get('weekOf', '?')})",
+        f"  headline: {previous.get('headline', '')}",
+        f"  bottomLine: {previous.get('bottomLine', '')}",
+        "  notableFlows:",
+        *(f"    - {f}" for f in previous.get("notableFlows", [])),
+        "  dealsToWatch:",
+        *(f"    - {d.get('name', '')} ({d.get('status', '')})" for d in previous.get("dealsToWatch", [])),
+        "  risks:",
+        *(f"    - [{r.get('level', '')}] {r.get('title', '')}: {r.get('description', '')}" for r in previous.get("risks", [])),
+    ]
+    return "\n".join(lines)
+
+
 # ── Prompts ──────────────────────────────────────────────────────────────────
 
 def build_system_prompt() -> str:
     return f"""You are a senior MENA economic analyst producing a weekly intelligence briefing.
 Your tone matches the Financial Times and The Economist — authoritative, concise, data-driven.
+This is an economic and business briefing first. Ongoing conflict should not be the default lead
+(a brief that opens on the same security story every week is useless), but it still belongs in the risk section.
 Today's date: {datetime.now().strftime("%B %d, %Y")}.
 
 You will receive raw economic data from multiple sources. Your job is to produce the COMPLETE
@@ -76,7 +106,7 @@ weekly brief as a single JSON object matching the exact schema specified.
 You MUST respond with valid JSON only. No markdown, no commentary, no code fences."""
 
 
-def build_user_prompt(data_payload: dict, issue_metadata: dict) -> str:
+def build_user_prompt(data_payload: dict, issue_metadata: dict, previous: dict | None = None) -> str:
     # Format macro data
     macro = data_payload.get("macro", {})
     macro_lines = []
@@ -103,9 +133,14 @@ def build_user_prompt(data_payload: dict, issue_metadata: dict) -> str:
 
     # Format news headlines
     news = data_payload.get("news_headlines", [])
-    news_lines = []
-    for n in news[:10]:
-        news_lines.append(f"  - {n.get('title', '')} ({n.get('source', '')})")
+    news_lines = [
+        f"  - {n.get('title', '')} ({n.get('source', '')})"
+        for n in [n for n in news if n.get("category") != "business"][:10]
+    ]
+    business_lines = [
+        f"  - {n.get('title', '')} ({n.get('source', '')})"
+        for n in [n for n in news if n.get("category") == "business"][:10]
+    ]
 
     # Format labor data
     labor = data_payload.get("labor", {})
@@ -148,11 +183,17 @@ FX RATES:
 NEWS HEADLINES (past 7 days):
 {chr(10).join(news_lines) if news_lines else "  (no headlines available)"}
 
+BUSINESS & MARKETS HEADLINES (past 7 days — IPOs, central banks, sovereign funds, megaprojects, AI/tech deals):
+{chr(10).join(business_lines) if business_lines else "  (no headlines available)"}
+
 LABOR INDICATORS (World Bank WDI):
 {chr(10).join(labor_lines)}
 
 RISK/CONFLICT EVENTS (GDELT):
 {chr(10).join(risk_lines) if risk_lines else "  (no events available)"}
+
+PREVIOUS ISSUE (last week — compare against it before writing):
+{format_previous_brief(previous)}
 
 SOURCE METADATA:
   succeeded: {data_payload.get("metadata", {}).get("sources_succeeded", [])}
@@ -245,7 +286,30 @@ CONSTRAINTS:
 9. "laborSignals.techJobs": AI-estimated.
 10. All sparkline arrays must have exactly 6 numbers.
 11. "headline": a single sentence, max 100 characters, no period at the end. Captures the week's dominant theme.
-12. Return ONLY the JSON object, nothing else."""
+12. Return ONLY the JSON object, nothing else.
+
+EDITORIAL RULES (these override any instinct to lead with the most dramatic headline):
+A. THE LEAD ("headline" and the first sentence of "bottomLine"): Do NOT lead with a security/conflict story
+   (Houthi attacks, Red Sea or Hormuz shipping strikes, Gaza, Iran, militant activity, etc.) unless it genuinely
+   escalated THIS WEEK in a specific, nameable way compared with the previous issue: a new front or new target
+   country, a major oil-price move it caused, or a concrete policy change (sanctions, ceasefire, OPEC+ decision).
+   "Attacks continued" or "tensions remain elevated" is not an escalation. If there is no such escalation, lead
+   with the biggest economy or business story of the week. Never reuse the previous issue's headline theme
+   unless it meets the escalation test.
+B. NON-SECURITY SLOT: "notableFlows" item 1 MUST be the single biggest non-security story of the week —
+   an IPO, central bank decision, megaproject milestone, sovereign wealth fund move (PIF, Mubadala, ADIA, QIA),
+   or Gulf AI/tech deal — drawn from the BUSINESS & MARKETS HEADLINES where possible. This applies every issue,
+   even when the lead is a qualifying security story.
+C. NO STALE REPEATS: Compare against PREVIOUS ISSUE. A risk may cover the same topic as a previous-issue risk
+   only if something concrete changed since last week; its "description" must then begin with
+   "Since last week:" followed by what actually changed (a new event, a data move, a policy step). If nothing
+   changed, drop it and use a different risk. But if a previous-issue risk materially escalated this week,
+   it MUST stay in "risks" with that "Since last week:" update — the goal is to avoid stale repeats, not to
+   omit the region's biggest live risk. "risks" must always include the most severe live risk in the region:
+   if the headlines show a security situation escalating this week (evacuations, new military deployments,
+   attacks on new targets or shipping), it appears as a HIGH or CRITICAL risk even when it is not the lead.
+   Likewise, do not repeat last week's notableFlows or bottomLine
+   points unless there is new information."""
 
 
 # ── Validation ───────────────────────────────────────────────────────────────
@@ -308,6 +372,19 @@ def validate_brief(brief: dict) -> tuple[list[str], list[str]]:
         errors.append("laborSignals.techJobs should be an object")
 
     return errors, warnings
+
+
+def check_repeated_risks(brief: dict, previous: dict | None) -> list[str]:
+    """Soft check: a risk whose title repeats last week's must say what changed."""
+    if not previous:
+        return []
+    prev_titles = {r.get("title", "").strip().lower() for r in previous.get("risks", [])}
+    return [
+        f"risk '{r.get('title')}' repeats last week without a 'Since last week:' update"
+        for r in brief.get("risks", []) if isinstance(r, dict)
+        and r.get("title", "").strip().lower() in prev_titles
+        and not r.get("description", "").startswith("Since last week:")
+    ]
 
 
 # ── Claude API ───────────────────────────────────────────────────────────────
@@ -411,9 +488,10 @@ def generate_brief(payload_path: str | None = None) -> dict:
 
     data_payload = json.loads(path.read_text())
     issue_metadata = compute_issue_metadata()
+    previous = load_previous_brief()
 
     system_prompt = build_system_prompt()
-    user_prompt = build_user_prompt(data_payload, issue_metadata)
+    user_prompt = build_user_prompt(data_payload, issue_metadata, previous)
 
     brief = call_claude_with_retry(system_prompt, user_prompt)
 
@@ -422,6 +500,7 @@ def generate_brief(payload_path: str | None = None) -> dict:
 
     # Final validation
     errors, warnings = validate_brief(brief)
+    warnings += check_repeated_risks(brief, previous)
     if errors:
         log.warning("Final validation errors:")
         for e in errors:
