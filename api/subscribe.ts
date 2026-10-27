@@ -12,7 +12,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const email = raw.trim().toLowerCase();
-  if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  // Reject example.com: Resend refuses to send a broadcast to an audience containing one.
+  if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || /@(?:[^@]+\.)?example\.com$/.test(email)) {
     return res.status(400).json({ error: "Valid email is required" });
   }
 

@@ -38,7 +38,8 @@ function apiDevPlugin(): Plugin {
         }
 
         const email = raw.trim().toLowerCase();
-        if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        // Reject example.com: Resend refuses to send a broadcast to an audience containing one.
+        if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || /@(?:[^@]+\.)?example\.com$/.test(email)) {
           res.writeHead(400, { "Content-Type": "application/json" });
           res.end(JSON.stringify({ error: "Valid email is required" }));
           return;
