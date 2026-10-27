@@ -1,21 +1,22 @@
 import { useBriefContext } from "@/context/BriefDataContext";
 import OrnamentalDivider from "./OrnamentalDivider";
 import Sparkline from "./Sparkline";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { useCountUp } from "@/hooks/useCountUp";
 import { useRef, useEffect, useState } from "react";
 import { briefData } from "@/data/briefData";
 
-const MetricCard = ({ item, delay }: { item: typeof briefData.macroPulse[0]; delay: number }) => {
+const MetricCard = ({ item }: { item: typeof briefData.macroPulse[0] }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-  const [displayValue, setDisplayValue] = useState(0);
+  const reduceMotion = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const [displayValue, setDisplayValue] = useState(reduceMotion ? item.value : 0);
 
   useEffect(() => {
+    if (reduceMotion) {
+      setDisplayValue(item.value);
+      return;
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true);
           observer.disconnect();
           const start = performance.now();
           const animate = (now: number) => {
@@ -31,7 +32,7 @@ const MetricCard = ({ item, delay }: { item: typeof briefData.macroPulse[0]; del
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [item.value]);
+  }, [item.value, reduceMotion]);
 
   const formatValue = (v: number) => {
     if (item.unit === "$B") return `$${v.toFixed(1)}B`;
@@ -43,18 +44,13 @@ const MetricCard = ({ item, delay }: { item: typeof briefData.macroPulse[0]; del
   return (
     <div
       ref={ref}
-      className="card-ottoman rounded bg-card p-5 transition-opacity duration-500"
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(16px)",
-        transitionDelay: `${delay}ms`,
-      }}
+      className="card-ottoman rounded-sm bg-card p-5"
     >
       <div className="mb-1 flex items-center gap-2">
         <span className="text-lg">{item.flag}</span>
-        <span className="font-body text-xs text-muted-foreground">{item.country}</span>
+        <span className="font-body text-sm text-muted-foreground">{item.country}</span>
       </div>
-      <p className="mb-1 font-body text-sm text-muted-foreground">{item.metric}</p>
+      <p className="mb-2 font-display text-lg font-semibold leading-snug text-foreground">{item.metric}</p>
       <div className="flex items-end justify-between">
         <div>
           <span className="font-mono-data text-2xl font-bold text-foreground">
@@ -76,15 +72,14 @@ const MetricCard = ({ item, delay }: { item: typeof briefData.macroPulse[0]; del
 };
 
 const MacroPulse = () => {
-  const { ref, isVisible } = useScrollReveal();
   const data = useBriefContext();
 
   return (
-    <section ref={ref} className="px-6 py-4 md:px-12 lg:px-24">
-      <OrnamentalDivider title="Macro Pulse" />
+    <section id="macro-pulse" className="scroll-mt-6 px-5 md:px-10">
+      <OrnamentalDivider title="Macro pulse" />
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {data.macroPulse.map((item, i) => (
-          <MetricCard key={`${item.country}-${item.metric}`} item={item} delay={i * 80} />
+        {data.macroPulse.map((item) => (
+          <MetricCard key={`${item.country}-${item.metric}`} item={item} />
         ))}
       </div>
     </section>

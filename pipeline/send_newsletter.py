@@ -28,108 +28,178 @@ def load_brief() -> dict:
     return json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
 
 
-def build_html(brief: dict) -> str:
-    """Build a clean HTML email from brief data."""
+# Resend swaps this placeholder for each contact's one-click unsubscribe link.
+UNSUBSCRIBE_URL = "{{{RESEND_UNSUBSCRIBE_URL}}}"
+
+NAVY = "#0b1628"
+PANEL = "#10303f"
+GOLD = "#c9a84c"
+IVORY = "#eadfcb"
+SLATE = "#8b9aaf"
+RULE = "#2b3f4c"
+RISK_COLORS = {"LOW": "#3dcf8e", "MEDIUM": "#f0c04c", "HIGH": "#c75b2f", "CRITICAL": "#e06666"}
+SERIF = "'Cormorant Garamond',Georgia,'Times New Roman',serif"
+BODY = "'Crimson Pro',Georgia,'Times New Roman',serif"
+
+
+def _format_metric(m: dict) -> str:
+    value, unit = m.get("value", ""), m.get("unit", "")
+    if unit == "$B":
+        return f"${value}B"
+    if unit in ("%", "% GDP"):
+        return f"{value}%"
+    return str(value)
+
+
+def build_html(brief: dict, asset_base: str = SITE_URL) -> str:
+    """Build the newsletter HTML from brief data.
+
+    Table layout with inline styles so Outlook renders it. Motion comes from the
+    masthead GIF (frame 1 is the finished static design, which is all Outlook
+    shows) plus a CSS fade on the lead for clients that support it, behind
+    prefers-reduced-motion.
+    """
     issue = brief.get("issue", {})
     issue_num = escape(str(issue.get("number", "?")))
     week_of = escape(str(issue.get("weekOf", "")))
     bottom_line = escape(brief.get("bottomLine", ""))
+    lead = escape(brief.get("headline", "")) or bottom_line.split(". ")[0]
+    drop, rest = (bottom_line[:1], bottom_line[1:]) if bottom_line else ("", "")
 
-    # Macro highlights — pick top 6 metrics
     macro_rows = ""
     for m in brief.get("macroPulse", [])[:6]:
-        country = escape(str(m.get("country", "")))
-        metric = escape(str(m.get("metric", "")))
-        value = m.get("value", "")
-        unit = m.get("unit", "")
-        change = m.get("change", 0)
-
-        if unit == "$B":
-            formatted = f"${value}B"
-        elif unit in ("%", "% GDP"):
-            formatted = f"{value}%"
-        else:
-            formatted = str(value)
-
-        if change and change != 0:
+        change = m.get("change", 0) or 0
+        change_html = ""
+        if change:
+            color = RISK_COLORS["LOW"] if change > 0 else RISK_COLORS["CRITICAL"]
             arrow = "&#9650;" if change > 0 else "&#9660;"
-            color = "#22c55e" if change > 0 else "#ef4444"
-            change_html = f' <span style="color:{color}">{arrow}{abs(change)}%</span>'
-        else:
-            change_html = ""
-
+            change_html = f'<br><span style="color:{color};font-size:12px">{arrow} {abs(change)}%</span>'
         macro_rows += f"""
-        <tr>
-          <td style="padding:6px 12px;border-bottom:1px solid #2a3a4a;color:#c8b88a;font-size:13px">{country}</td>
-          <td style="padding:6px 12px;border-bottom:1px solid #2a3a4a;color:#94a3b8;font-size:13px">{metric}</td>
-          <td style="padding:6px 12px;border-bottom:1px solid #2a3a4a;color:#f1f5f9;font-family:monospace;font-size:13px">{formatted}{change_html}</td>
-        </tr>"""
+            <tr>
+              <td style="padding:10px 0;border-bottom:1px solid {RULE};font-family:{BODY};font-size:16px;line-height:1.35;color:{IVORY}">
+                {escape(str(m.get("country", "")))}<br><span style="color:{SLATE};font-size:14px">{escape(str(m.get("metric", "")))}</span>
+              </td>
+              <td align="right" style="padding:10px 0;border-bottom:1px solid {RULE};font-family:'JetBrains Mono',Menlo,Consolas,monospace;font-size:17px;color:{IVORY};white-space:nowrap">
+                {escape(_format_metric(m))}{change_html}
+              </td>
+            </tr>"""
 
-    # Risk highlights
-    risk_items = ""
+    risk_rows = ""
     for r in brief.get("risks", [])[:3]:
-        level = escape(str(r.get("level", "MEDIUM")))
-        title = escape(str(r.get("title", "")))
-        desc = escape(str(r.get("description", "")))
-        level_colors = {
-            "LOW": "#22c55e",
-            "MEDIUM": "#f59e0b",
-            "HIGH": "#f97316",
-            "CRITICAL": "#ef4444",
-        }
-        color = level_colors.get(level, "#f59e0b")
-        risk_items += f"""
-        <div style="margin-bottom:16px;padding:12px 16px;background:#0f1a2e;border-radius:6px;border-left:3px solid {color}">
-          <span style="color:{color};font-size:11px;font-weight:700;letter-spacing:1px">{level}</span>
-          <div style="color:#f1f5f9;font-size:15px;font-weight:600;margin-top:4px">{title}</div>
-          <div style="color:#94a3b8;font-size:13px;margin-top:4px;line-height:1.5">{desc}</div>
-        </div>"""
+        level = str(r.get("level", "MEDIUM"))
+        color = RISK_COLORS.get(level, RISK_COLORS["MEDIUM"])
+        risk_rows += f"""
+            <tr>
+              <td style="padding:0 0 18px">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td width="3" bgcolor="{color}" style="background:{color};font-size:0;line-height:0">&nbsp;</td>
+                    <td bgcolor="{PANEL}" style="background:{PANEL};padding:14px 18px">
+                      <p style="margin:0;font-family:{SERIF};font-style:italic;font-weight:600;font-size:15px;color:{color}">{escape(level.capitalize())} risk</p>
+                      <p style="margin:4px 0 0;font-family:{SERIF};font-weight:600;font-size:20px;line-height:1.25;color:{IVORY}">{escape(str(r.get("title", "")))}</p>
+                      <p style="margin:6px 0 0;font-family:{BODY};font-size:15px;line-height:1.55;color:{SLATE}">{escape(str(r.get("description", "")))}</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>"""
+
+    section_head = (
+        f'<p style="margin:0 0 6px;font-family:{SERIF};font-style:italic;font-size:24px;font-weight:500;color:{GOLD}">{{}}</p>'
+        f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
+        f'<td height="1" bgcolor="{GOLD}" style="background:{GOLD};font-size:0;line-height:0;opacity:.5">&nbsp;</td></tr></table>'
+    )
 
     return f"""\
 <!DOCTYPE html>
-<html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#0a0f1a;font-family:Georgia,'Times New Roman',serif">
-<div style="max-width:600px;margin:0 auto;background:#111827;border:1px solid #1e293b">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="supported-color-schemes" content="dark">
+<title>MENA Rising No. {issue_num}</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Crimson+Pro:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+  @media (prefers-reduced-motion: no-preference) {{
+    .mr-lead {{ animation: mr-rise 1.1s cubic-bezier(.22,1,.36,1) .3s both; }}
+    @keyframes mr-rise {{ from {{ opacity: 0; transform: translateY(10px); }} to {{ opacity: 1; transform: none; }} }}
+  }}
+  @media (max-width: 620px) {{
+    .mr-pad {{ padding-left: 20px !important; padding-right: 20px !important; }}
+    .mr-lead {{ font-size: 30px !important; }}
+  }}
+</style>
+</head>
+<body style="margin:0;padding:0;background:{NAVY}" bgcolor="{NAVY}">
+<div style="display:none;max-height:0;overflow:hidden">{lead}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="{NAVY}" style="background:{NAVY}">
+<tr><td align="center" style="padding:24px 8px">
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px">
 
-  <!-- Header -->
-  <div style="padding:32px 24px;text-align:center;border-bottom:2px solid #c8b88a">
-    <h1 style="margin:0;color:#c8b88a;font-size:28px;letter-spacing:4px;font-weight:700">MENA RISING</h1>
-    <p style="margin:8px 0 0;color:#94a3b8;font-size:14px">Economic Intelligence for the Middle East &amp; North Africa</p>
-    <p style="margin:8px 0 0;color:#c8b88a;font-size:12px;letter-spacing:2px;font-family:monospace">Issue #{issue_num} &middot; Week of {week_of}</p>
-  </div>
+    <!-- Dateline -->
+    <tr><td class="mr-pad" style="padding:0 32px">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td style="font-family:{BODY};font-size:14px;color:{SLATE}">No. {issue_num}</td>
+        <td align="right" style="font-family:{BODY};font-size:14px;color:{SLATE}">Week of {week_of}</td>
+      </tr></table>
+    </td></tr>
 
-  <!-- Bottom Line -->
-  <div style="padding:24px;border-bottom:1px solid #1e293b">
-    <p style="margin:0 0 8px;color:#c8b88a;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:600">This Week's Analysis</p>
-    <p style="margin:0;color:#e2e8f0;font-size:15px;line-height:1.6;font-style:italic">{bottom_line}</p>
-  </div>
+    <!-- Ornament band: animated GIF, frame 1 is the finished static design -->
+    <tr><td style="padding:10px 0 0">
+      <img src="{asset_base}/email/masthead.gif" width="600" height="80" alt="" style="display:block;width:100%;max-width:600px;height:auto;border:0">
+    </td></tr>
 
-  <!-- Macro Pulse -->
-  <div style="padding:24px;border-bottom:1px solid #1e293b">
-    <p style="margin:0 0 12px;color:#c8b88a;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:600">Macro Pulse</p>
-    <table style="width:100%;border-collapse:collapse">
-      {macro_rows}
-    </table>
-  </div>
+    <!-- Nameplate -->
+    <tr><td align="center" style="padding:6px 32px 4px">
+      <h1 style="margin:0;font-family:{SERIF};font-weight:600;font-size:52px;line-height:1;color:{GOLD}">MENA Rising</h1>
+      <p style="margin:10px 0 0;font-family:{BODY};font-style:italic;font-size:16px;color:{SLATE}">Economic intelligence for the Middle East &amp; North Africa</p>
+    </td></tr>
 
-  <!-- Risk Radar -->
-  <div style="padding:24px;border-bottom:1px solid #1e293b">
-    <p style="margin:0 0 12px;color:#c8b88a;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:600">Risk Radar</p>
-    {risk_items}
-  </div>
+    <!-- Lead -->
+    <tr><td class="mr-pad" style="padding:28px 32px 8px;border-top:1px solid {RULE}">
+      <h2 class="mr-lead" style="margin:0;font-family:{SERIF};font-weight:500;font-size:36px;line-height:1.1;color:{IVORY}">{lead}</h2>
+    </td></tr>
 
-  <!-- CTA -->
-  <div style="padding:32px 24px;text-align:center">
-    <a href="{SITE_URL}" style="display:inline-block;background:#c8b88a;color:#0a0f1a;padding:12px 32px;border-radius:4px;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:1px">Read the Full Brief</a>
-  </div>
+    <!-- Bottom line, with a drop cap -->
+    <tr><td class="mr-pad" style="padding:18px 32px 8px">
+      <p style="margin:0;font-family:{BODY};font-size:18px;line-height:1.65;color:{IVORY}"><span style="float:left;font-family:{SERIF};font-weight:600;font-size:62px;line-height:52px;padding:4px 8px 0 0;color:{GOLD}">{drop}</span>{rest}</p>
+    </td></tr>
 
-  <!-- Footer -->
-  <div style="padding:16px 24px;text-align:center;border-top:1px solid #1e293b">
-    <p style="margin:0;color:#64748b;font-size:11px">MENA Rising &middot; Weekly Economic Intelligence</p>
-  </div>
+    <!-- Macro pulse -->
+    <tr><td class="mr-pad" style="padding:30px 32px 8px">
+      {section_head.format("Macro pulse")}
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{macro_rows}
+      </table>
+    </td></tr>
 
-</div>
+    <!-- Risk radar -->
+    <tr><td class="mr-pad" style="padding:30px 32px 0">
+      {section_head.format("Risk radar")}
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px">{risk_rows}
+      </table>
+    </td></tr>
+
+    <!-- CTA: bulletproof button -->
+    <tr><td align="center" style="padding:16px 32px 36px">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td bgcolor="{GOLD}" style="background:{GOLD};border-radius:2px">
+          <a href="{SITE_URL}" style="display:inline-block;padding:14px 34px;font-family:{SERIF};font-weight:600;font-size:18px;color:{NAVY};text-decoration:none">Read the full issue</a>
+        </td>
+      </tr></table>
+    </td></tr>
+
+    <!-- Footer -->
+    <tr><td align="center" class="mr-pad" style="padding:20px 32px;border-top:1px solid {RULE}">
+      <p style="margin:0;font-family:{BODY};font-size:13px;line-height:1.6;color:{SLATE}">
+        You subscribed to MENA Rising at mena-rising.com. It arrives every Monday.<br>
+        <a href="{SITE_URL}/archive" style="color:{GOLD}">Past issues</a> &nbsp;&nbsp; <a href="{UNSUBSCRIBE_URL}" style="color:{GOLD}">Unsubscribe</a>
+      </p>
+    </td></tr>
+
+  </table>
+</td></tr>
+</table>
 </body>
 </html>"""
 

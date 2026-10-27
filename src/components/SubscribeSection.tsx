@@ -1,19 +1,10 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import OrnamentalDivider from "./OrnamentalDivider";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useBriefContext } from "@/context/BriefDataContext";
-
-const features = [
-  { name: "Macro Pulse", desc: "key indicators across 8 MENA economies" },
-  { name: "Risk Radar", desc: "geopolitical and economic threat signals" },
-  { name: "Trade & Capital", desc: "notable flows and deals to watch" },
-];
 
 const SubscribeSection = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { ref, isVisible } = useScrollReveal();
   const briefData = useBriefContext();
 
   const handleSubscribe = async (e: React.FormEvent) => {
@@ -46,55 +37,43 @@ const SubscribeSection = () => {
   };
 
   return (
-    <section className="bg-navy/50 px-6 py-12 md:px-12 lg:px-24">
-      <OrnamentalDivider title="Stay Informed" />
-
-      <div
-        ref={ref}
-        className={`mx-auto max-w-3xl text-center transition-all duration-700 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-        }`}
-      >
-        <h2 className="font-display text-2xl text-foreground md:text-3xl">
-          Weekly economic intelligence. Straight from the data.
-        </h2>
-
-        <p className="mx-auto mt-4 max-w-2xl font-body text-sm leading-relaxed text-muted-foreground md:text-base">
-          Every Monday, MENA Rising distills macro data, risk signals, and capital flows across the
-          region into one concise briefing — so you start the week informed.
-        </p>
-
-        <div className="mx-auto mt-6 grid max-w-lg gap-2 text-left sm:grid-cols-3 sm:text-center">
-          {features.map((f) => (
-            <div key={f.name} className="font-body text-sm text-muted-foreground">
-              <span className="text-primary">&#10022;</span>{" "}
-              <span className="font-semibold text-foreground">{f.name}</span> — {f.desc}
-            </div>
-          ))}
+    <section id="subscribe" className="mt-16 border-y border-primary/25 bg-deep-teal/40 px-5 py-14 md:px-10">
+      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-end">
+        <div>
+          <h2 className="font-display text-3xl font-medium leading-tight text-foreground md:text-4xl [text-wrap:balance]">
+            Get the brief in your inbox every Monday
+          </h2>
+          <p className="mt-4 max-w-[60ch] font-body text-lg leading-relaxed text-muted-foreground">
+            Macro data, capital flows and risk signals across the region, distilled into one read
+            before the week starts.
+          </p>
         </div>
 
-        <form onSubmit={handleSubscribe} className="mx-auto mt-8 flex max-w-md gap-2">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            disabled={isLoading}
-            className="flex-1 rounded border border-primary/30 bg-input px-4 py-2 font-body text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
-          />
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="rounded bg-primary px-5 py-2 font-display text-sm font-semibold text-primary-foreground transition-colors hover:bg-amber disabled:opacity-50"
-          >
-            {isLoading ? "..." : "Subscribe"}
-          </button>
-        </form>
+        <div>
+          <form onSubmit={handleSubscribe} className="flex gap-2">
+            <input
+              type="email"
+              placeholder="you@company.com"
+              aria-label="Email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={isLoading}
+              className="min-w-0 flex-1 rounded-sm border border-primary/40 bg-navy px-4 py-2.5 font-body text-base text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
+            />
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="rounded-sm bg-primary px-5 py-2.5 font-display text-base font-semibold text-primary-foreground transition-colors hover:bg-amber disabled:opacity-50"
+            >
+              {isLoading ? "Subscribing…" : "Subscribe"}
+            </button>
+          </form>
 
-        <p className="mt-6 font-mono-data text-xs text-muted-foreground/60">
-          Join readers of Issue #{briefData.issue.number} and counting.
-        </p>
+          <p className="mt-3 font-body text-sm text-muted-foreground">
+            Issue {briefData.issue.number} is out now. The next one lands Monday.
+          </p>
+        </div>
       </div>
     </section>
   );

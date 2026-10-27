@@ -5,12 +5,10 @@ const Footer = () => {
     <footer className="border-t border-primary/20 px-6 py-10 md:px-12 lg:px-24">
       <div className="mx-auto max-w-4xl text-center">
         <p className="font-body text-sm leading-relaxed text-muted-foreground">
-          Data sourced from World Bank, FRED, IMF, and regional central banks.
+          Compiled every Monday from World Bank, FRED, Finnhub, NewsAPI and GDELT data. The analysis is written by Claude.
         </p>
 
-        <p className="mt-6 font-mono-data text-xs text-muted-foreground/60">
-          Built with Python · Claude API · GitHub Actions
-          {" · "}
+        <p className="mt-4 font-body text-sm text-muted-foreground/70">
           <a
             href="https://plausible.io/"
             target="_blank"
@@ -22,9 +20,9 @@ const Footer = () => {
         </p>
         <Link
           to="/archive"
-          className="mt-2 inline-block font-mono-data text-xs text-muted-foreground/40 transition-colors hover:text-primary"
+          className="mt-3 inline-block font-body text-sm text-primary/70 transition-colors hover:text-primary"
         >
-          Browse Past Issues
+          Browse past issues
         </Link>
       </div>
 

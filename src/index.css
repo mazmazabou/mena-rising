@@ -99,15 +99,10 @@
   animation: ticker-scroll 30s linear infinite;
 }
 
-/* Card gold glow hover */
+/* Ottoman card: a gold hairline frame, no hover theatrics */
 .card-ottoman {
-  border: 1px solid hsl(var(--gold) / 0.3);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid hsl(var(--gold) / 0.28);
   position: relative;
-}
-.card-ottoman:hover {
-  box-shadow: 0 0 20px hsl(var(--gold) / 0.15), 0 0 40px hsl(var(--gold) / 0.05);
-  transform: translateY(-2px);
 }
 
 /* Corner ornaments */
@@ -152,6 +147,103 @@
 @keyframes count-up {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
+}
+
+/* ── Front page load sequence ────────────────────────────────────────────
+   The one orchestrated moment: the khatam rosette draws itself, the rules
+   open out from the centre, then the lead headline settles in. */
+.rosette rect,
+.rosette circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.rosette .rosette-ring {
+  stroke-width: 0.6;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rosette rect,
+  .rosette circle {
+    animation: stroke-draw 1.4s cubic-bezier(0.65, 0, 0.35, 1) both;
+  }
+  .rosette rect:nth-of-type(2) { animation-delay: 0.25s; }
+  .rosette circle { animation-delay: 0.5s; }
+  .rosette .rosette-ring { animation-delay: 0.7s; }
+
+  .rule-draw {
+    transform-origin: center;
+    animation: rule-open 1.1s cubic-bezier(0.65, 0, 0.35, 1) 0.3s both;
+  }
+  .nameplate {
+    animation: ink-in 1.2s ease-out 0.2s both;
+  }
+  .lead-headline {
+    animation: lead-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.1s both;
+  }
+  .lead-contents {
+    animation: ink-in 0.8s ease-out 1.5s both;
+  }
+}
+
+@keyframes stroke-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes rule-open {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+@keyframes ink-in {
+  from { opacity: 0; letter-spacing: 0.04em; }
+  to { opacity: 1; letter-spacing: normal; }
+}
+@keyframes lead-rise {
+  from { opacity: 0; transform: translateY(0.4em); clip-path: inset(0 0 100% 0); }
+  to { opacity: 1; transform: none; clip-path: inset(0 0 0 0); }
+}
+
+/* Ticker: no endless scroll for readers who opt out of motion */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-animate {
+    animation: none;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+  .ticker-animate > [aria-hidden] { display: none; }
+}
+
+/* Lede with a gold drop cap */
+.lede::first-letter {
+  float: left;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 4.4em;
+  line-height: 0.8;
+  padding: 0.08em 0.1em 0 0;
+  color: hsl(var(--gold));
+}
+
+/* Section heads: italic title on a hairline that runs to the margin */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+.section-head::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: hsl(var(--gold) / 0.35);
+  transform: translateY(-0.3em);
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--gold));
+  outline-offset: 3px;
 }
 
 /* Geometric footer border */

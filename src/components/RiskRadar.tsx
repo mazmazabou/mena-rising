@@ -1,42 +1,33 @@
 import { useBriefContext } from "@/context/BriefDataContext";
 import OrnamentalDivider from "./OrnamentalDivider";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const riskColors: Record<string, { bg: string; text: string }> = {
-  LOW: { bg: "bg-green-accent/20", text: "text-green-accent" },
-  MEDIUM: { bg: "bg-amber/20", text: "text-amber" },
-  HIGH: { bg: "bg-terracotta/20", text: "text-terracotta" },
-  CRITICAL: { bg: "bg-red-accent/20", text: "text-red-accent" },
+const riskColors: Record<string, { rule: string; text: string }> = {
+  LOW: { rule: "border-l-green-accent", text: "text-green-accent" },
+  MEDIUM: { rule: "border-l-amber", text: "text-amber" },
+  HIGH: { rule: "border-l-terracotta", text: "text-terracotta" },
+  CRITICAL: { rule: "border-l-red-accent", text: "text-red-accent" },
 };
 
 const RiskRadar = () => {
-  const { ref, isVisible } = useScrollReveal();
   const briefData = useBriefContext();
 
   return (
-    <section ref={ref} className="bg-navy/50 px-6 py-8 md:px-12 lg:px-24">
-      <OrnamentalDivider title="Risk Radar" />
+    <section id="risk-radar" className="scroll-mt-6 px-5 pb-6 md:px-10">
+      <OrnamentalDivider title="Risk radar" />
       <div
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-4 transition-all duration-700 md:grid-cols-3"
-        style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? "none" : "translateY(20px)" }}
+        className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-3"
       >
         {briefData.risks.map((risk, i) => {
           const colors = riskColors[risk.level] || riskColors.MEDIUM;
           return (
-            <div key={i} className="card-ottoman rounded bg-card p-5">
-              <span className={`inline-block rounded-sm px-2 py-0.5 font-mono-data text-xs font-bold ${colors.bg} ${colors.text}`}>
-                {risk.level}
-              </span>
-              <h4 className="mt-3 font-display text-lg font-semibold text-foreground">{risk.title}</h4>
-              <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">{risk.description}</p>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {risk.countries.map((c) => (
-                  <span key={c} className="rounded-sm border border-primary/20 px-2 py-0.5 font-mono-data text-xs text-primary/70">
-                    {c}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <article key={i} className={`border-l-[3px] bg-card/70 p-5 ${colors.rule}`}>
+              <p className={`font-display text-base font-semibold italic ${colors.text}`}>
+                {risk.level.charAt(0) + risk.level.slice(1).toLowerCase()} risk
+              </p>
+              <h3 className="mt-1 font-display text-xl font-semibold leading-snug text-foreground">{risk.title}</h3>
+              <p className="mt-2 font-body text-base leading-relaxed text-muted-foreground">{risk.description}</p>
+              <p className="mt-3 font-body text-sm text-primary/80">{risk.countries.join(", ")}</p>
+            </article>
           );
         })}
       </div>

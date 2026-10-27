@@ -1,24 +1,21 @@
 import { useBriefContext } from "@/context/BriefDataContext";
 import OrnamentalDivider from "./OrnamentalDivider";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const LaborSignals = () => {
-  const { ref, isVisible } = useScrollReveal();
   const briefData = useBriefContext();
   const { youthUnemployment, aiAdoption, techJobs } = briefData.laborSignals;
   const maxUnemp = Math.max(...youthUnemployment.map((d) => d.value));
 
   return (
-    <section ref={ref} className="px-6 py-4 md:px-12 lg:px-24">
-      <OrnamentalDivider title="Labor & AI Signals" />
+    <section id="labor-signals" className="scroll-mt-6 px-5 md:px-10">
+      <OrnamentalDivider title="Labor & AI signals" />
       <div
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-4 transition-all duration-700 md:grid-cols-3"
-        style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? "none" : "translateY(20px)" }}
+        className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-3"
       >
         {/* Youth Unemployment */}
-        <div className="card-ottoman rounded bg-card p-5">
-          <p className="mb-4 font-display text-sm font-semibold uppercase tracking-widest text-primary">
-            Youth Unemployment
+        <div className="card-ottoman rounded-sm bg-card p-5">
+          <p className="mb-4 font-display text-xl font-semibold text-primary">
+            Youth unemployment
           </p>
           <div className="space-y-2">
             {youthUnemployment.map((d) => (
@@ -37,9 +34,9 @@ const LaborSignals = () => {
         </div>
 
         {/* AI Adoption */}
-        <div className="card-ottoman rounded bg-card p-5">
-          <p className="mb-4 font-display text-sm font-semibold uppercase tracking-widest text-primary">
-            AI Adoption Index
+        <div className="card-ottoman rounded-sm bg-card p-5">
+          <p className="mb-4 font-display text-xl font-semibold text-primary">
+            AI adoption index
           </p>
           <div className="space-y-2">
             {aiAdoption.map((d) => (
@@ -55,9 +52,9 @@ const LaborSignals = () => {
         </div>
 
         {/* Tech Jobs */}
-        <div className="card-ottoman rounded bg-card p-5">
-          <p className="mb-4 font-display text-sm font-semibold uppercase tracking-widest text-primary">
-            Tech Sector Postings
+        <div className="card-ottoman rounded-sm bg-card p-5">
+          <p className="mb-4 font-display text-xl font-semibold text-primary">
+            Tech sector postings
           </p>
           <div className="mb-3 flex items-center gap-2">
             <span className="text-3xl text-green-accent">▲</span>

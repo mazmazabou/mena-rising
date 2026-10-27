@@ -1,52 +1,39 @@
 import { useBriefContext } from "@/context/BriefDataContext";
 import OrnamentalDivider from "./OrnamentalDivider";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const TradeCapital = () => {
-  const { ref, isVisible } = useScrollReveal();
   const briefData = useBriefContext();
 
   return (
-    <section ref={ref} className="px-6 py-4 md:px-12 lg:px-24">
-      <OrnamentalDivider title="Trade & Capital" />
-      <div
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-8 transition-all duration-700 lg:grid-cols-2"
-        style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? "none" : "translateY(20px)" }}
-      >
-        {/* Notable Flows */}
+    <section id="trade-capital" className="scroll-mt-6 px-5 md:px-10">
+      <OrnamentalDivider title="Trade & capital" />
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-14">
         <div>
-          <h3 className="mb-4 font-display text-xl font-semibold text-primary">Notable Flows</h3>
-          <ul className="space-y-3">
+          <h3 className="mb-3 font-display text-xl font-semibold text-primary">Notable flows</h3>
+          <ul className="divide-y divide-primary/15">
             {briefData.notableFlows.map((flow, i) => (
-              <li key={i} className="flex items-start gap-3 font-body text-base text-foreground/90">
-                <span className="mt-2 block h-2 w-2 shrink-0 rotate-45 bg-primary" />
+              <li key={i} className="flex items-start gap-3 py-3 font-body text-lg leading-relaxed text-foreground/90">
+                <span className="mt-[0.7em] block h-1.5 w-1.5 shrink-0 rotate-45 bg-primary" aria-hidden="true" />
                 {flow}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Deals to Watch */}
         <div>
-          <h3 className="mb-4 font-display text-xl font-semibold text-primary">Deals to Watch</h3>
-          <div className="space-y-3">
+          <h3 className="mb-3 font-display text-xl font-semibold text-primary">Deals to watch</h3>
+          <ul className="border-t border-primary/40">
             {briefData.dealsToWatch.map((deal, i) => (
-              <div key={i} className="rounded border border-terracotta/40 bg-card p-4">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="font-display text-base font-semibold text-foreground">{deal.name}</p>
-                    <p className="font-body text-sm text-muted-foreground">{deal.parties}</p>
-                  </div>
-                  <span className="font-mono-data text-sm font-bold text-primary">{deal.value}</span>
-                </div>
-                <div className="mt-2">
-                  <span className="rounded-sm bg-terracotta/20 px-2 py-0.5 font-mono-data text-xs text-terracotta">
-                    {deal.status}
-                  </span>
-                </div>
-              </div>
+              <li key={i} className="grid grid-cols-[minmax(0,1fr)_auto] gap-x-4 border-b border-primary/20 py-4">
+                <p className="font-display text-lg font-semibold leading-snug text-foreground">{deal.name}</p>
+                <p className="row-span-2 self-start font-mono-data text-xl text-primary">{deal.value}</p>
+                <p className="font-body text-base text-muted-foreground">
+                  {deal.parties.split(" · ").join(", ")}
+                  <span className="italic text-terracotta"> ({deal.status})</span>
+                </p>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

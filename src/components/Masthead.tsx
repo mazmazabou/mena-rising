@@ -1,63 +1,108 @@
 import { Link } from "react-router-dom";
 import { useBriefContext } from "@/context/BriefDataContext";
 
+// Eight-point khatam star: two squares turned 45° against each other, ringed.
+// pathLength=1 lets the CSS draw each stroke in from 0 to 1.
+const Rosette = () => (
+  <svg viewBox="0 0 48 48" className="rosette h-12 w-12 text-primary md:h-14 md:w-14" aria-hidden="true">
+    <rect x="10" y="10" width="28" height="28" pathLength={1} />
+    <rect x="10" y="10" width="28" height="28" pathLength={1} transform="rotate(45 24 24)" />
+    <circle cx="24" cy="24" r="7" pathLength={1} />
+    <circle cx="24" cy="24" r="22" pathLength={1} className="rosette-ring" />
+  </svg>
+);
+
+const firstSentence = (text: string) => {
+  const match = text.match(/^.+?[.!?](\s|$)/);
+  return (match ? match[0] : text).trim();
+};
+
 const Masthead = () => {
   const briefData = useBriefContext();
+  const { issue, ticker, risks, dealsToWatch, macroPulse } = briefData;
+  const lead = briefData.headline?.trim() || firstSentence(briefData.bottomLine);
+  const topRisk = [...risks].sort(
+    (a, b) => ["CRITICAL", "HIGH", "MEDIUM", "LOW"].indexOf(a.level) - ["CRITICAL", "HIGH", "MEDIUM", "LOW"].indexOf(b.level),
+  )[0];
+  const countries = new Set(macroPulse.map((m) => m.country)).size;
+
+  const contents = [
+    { href: "#bottom-line", name: "The bottom line", teaser: "This week's analysis" },
+    { href: "#macro-pulse", name: "Macro pulse", teaser: `${macroPulse.length} indicators across ${countries} economies` },
+    dealsToWatch[0] && { href: "#trade-capital", name: "Trade & capital", teaser: dealsToWatch[0].name },
+    { href: "#labor-signals", name: "Labor & AI", teaser: "Youth jobs, AI adoption, tech hiring" },
+    topRisk && { href: "#risk-radar", name: "Risk radar", teaser: `${topRisk.title} (${topRisk.level.toLowerCase()})` },
+  ].filter(Boolean) as { href: string; name: string; teaser: string }[];
+
   return (
-    <header className="relative zellige-bg">
-      {/* Ticker Strip */}
-      <div className="overflow-hidden border-b border-primary/20 bg-deep-teal/50">
-        <div className="ticker-animate flex whitespace-nowrap py-1.5">
-          {[...briefData.ticker, ...briefData.ticker].map((item, i) => (
-            <span key={i} className="mx-6 font-mono-data text-xs">
-              <span className="text-muted-foreground">{item.label}:</span>{" "}
-              <span className="text-foreground">{item.value}</span>{" "}
+    <header className="relative">
+      {/* Ticker strip */}
+      <div className="ticker group overflow-hidden border-b border-primary/20 bg-deep-teal/60">
+        <div className="ticker-animate flex whitespace-nowrap py-1.5 group-hover:[animation-play-state:paused]">
+          {[...ticker, ...ticker].map((item, i) => (
+            <span key={i} className="mx-6 text-sm" aria-hidden={i >= ticker.length || undefined}>
+              <span className="font-body text-muted-foreground">{item.label}</span>{" "}
+              <span className="font-mono-data text-xs text-foreground">{item.value}</span>{" "}
               {item.change !== null && item.change !== 0 && (
-                <span className={item.change > 0 ? "text-green-accent" : "text-red-accent"}>
+                <span className={`font-mono-data text-xs ${item.change > 0 ? "text-green-accent" : "text-red-accent"}`}>
                   {item.change > 0 ? "▲" : "▼"}
                   {Math.abs(item.change)}%
                 </span>
               )}
-              {item.change === 0 && <span className="text-muted-foreground">—</span>}
-              <span className="ml-6 text-primary/30">·</span>
             </span>
           ))}
         </div>
       </div>
 
-      {/* Main Masthead */}
-      <div className="px-6 py-12 text-center md:py-16">
-        {/* Calligraphic flourishes */}
-        <div className="mb-4 flex items-center justify-center gap-4">
-          <svg width="60" height="20" viewBox="0 0 60 20" className="text-primary opacity-50">
-            <path d="M0,10 Q15,0 30,10 Q45,20 60,10" fill="none" stroke="currentColor" strokeWidth="1"/>
-            <path d="M5,10 Q15,3 25,10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-          </svg>
-          <h1 className="font-display text-5xl font-bold tracking-[0.15em] text-primary md:text-7xl">
-            MENA RISING
-          </h1>
-          <svg width="60" height="20" viewBox="0 0 60 20" className="text-primary opacity-50">
-            <path d="M0,10 Q15,20 30,10 Q45,0 60,10" fill="none" stroke="currentColor" strokeWidth="1"/>
-            <path d="M35,10 Q45,17 55,10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-          </svg>
+      <div className="mx-auto max-w-6xl px-5 pt-8 md:px-10 md:pt-10">
+        {/* Dateline */}
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 font-body text-sm text-muted-foreground md:text-base">
+          <span>No. {issue.number}</span>
+          <Rosette />
+          <span className="text-right">
+            <span className="hidden sm:inline">Week of </span>
+            {issue.weekOf}
+          </span>
         </div>
 
-        <p className="font-body text-lg tracking-wide text-muted-foreground md:text-xl">
-          Economic Intelligence for the Middle East &amp; North Africa
-        </p>
-        <p className="mt-3 font-mono-data text-xs tracking-widest text-primary/70">
-          Issue #{briefData.issue.number} · Week of {briefData.issue.weekOf}
-        </p>
-        <Link
-          to="/archive"
-          className="mt-2 inline-block font-mono-data text-xs text-primary/40 transition-colors hover:text-primary"
-        >
-          Past Issues &rarr;
-        </Link>
-      </div>
+        <div className="rule-draw mt-4 border-t-[3px] border-double border-primary/70" />
 
-      {/* Muqarnas Strip */}
-      <div className="muqarnas-strip" />
+        {/* Nameplate */}
+        <h1 className="nameplate py-4 text-center font-display text-[clamp(3rem,11vw,7.5rem)] font-semibold leading-none text-primary md:py-5">
+          MENA Rising
+        </h1>
+
+        <div className="rule-draw geometric-border-bottom" />
+        <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 font-body text-sm text-muted-foreground md:text-base">
+          <span className="italic">Economic intelligence for the Middle East &amp; North Africa, every Monday</span>
+          <Link to="/archive" className="text-primary/80 underline-offset-4 hover:text-primary hover:underline">
+            Past issues
+          </Link>
+        </div>
+
+        {/* Front page: lead story + contents */}
+        <div className="mt-10 grid gap-10 border-t border-primary/25 pt-8 pb-4 md:mt-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-14">
+          <h2 className="lead-headline font-display text-[clamp(2.1rem,5.2vw,4.1rem)] font-medium leading-[1.05] text-foreground [text-wrap:balance]">
+            {lead}
+          </h2>
+
+          <nav aria-label="In this issue" className="lead-contents border-primary/25 lg:border-l lg:pl-8">
+            <p className="font-display text-lg italic text-primary">In this issue</p>
+            <ol className="mt-3 divide-y divide-primary/15">
+              {contents.map((c) => (
+                <li key={c.href}>
+                  <a href={c.href} className="group block py-2.5 focus-visible:outline-none">
+                    <span className="font-display text-lg font-semibold text-foreground group-hover:text-primary group-focus-visible:text-primary group-focus-visible:underline">
+                      {c.name}
+                    </span>
+                    <span className="block font-body text-sm leading-snug text-muted-foreground">{c.teaser}</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 };
