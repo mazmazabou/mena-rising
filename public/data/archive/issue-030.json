@@ -1,0 +1,363 @@
+{
+  "issue": {
+    "number": "030",
+    "weekOf": "November 2, 2026"
+  },
+  "headline": "Apollo's Mubadala Capital stake and Dubai's AI push anchor Gulf dealmaking as Brent tops $120",
+  "ticker": [
+    {
+      "label": "EGP/USD",
+      "value": "55.29",
+      "change": -0.8
+    },
+    {
+      "label": "Brent Crude",
+      "value": "$123.10",
+      "change": -3.9
+    },
+    {
+      "label": "SAR/USD",
+      "value": "3.75",
+      "change": 0
+    },
+    {
+      "label": "Saudi GDP Growth",
+      "value": "4.5%",
+      "change": null
+    },
+    {
+      "label": "Turkey Inflation",
+      "value": "34.9%",
+      "change": null
+    },
+    {
+      "label": "Qatar Current Account",
+      "value": "14.8%",
+      "change": null
+    }
+  ],
+  "bottomLine": "Gulf capital is increasingly looking outward. Apollo is buying nearly 10% of Abu Dhabi-backed Mubadala Capital, Canada has signed a trade deal with the UAE, and Dubai is hosting a run of AI forums. All of this is happening with Brent at $123.10 and WTI at $103.37. High oil prices flatter the surplus states, the UAE (current account 15.7% of GDP) and Qatar (14.8%), while Saudi Arabia ran a 2.6% deficit in 2025 despite 4.5% growth. Importers are under more strain: Turkey's inflation is 34.9% and Egypt's is 14.1%, though the Egyptian pound firmed to 55.29 per dollar from 56.22 a week ago. The security backdrop is a pricing risk rather than the lead. Egypt's parliament has authorised military aid for Saudi Arabia, and Trump's midterm deadline has the region bracing for another round of war, even as Qatar pushes a US-Iran deal.",
+  "macroPulse": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "GDP Growth",
+      "value": 4.5,
+      "unit": "%",
+      "change": 0.5,
+      "sparkline": [
+        1.1,
+        2.0,
+        2.8,
+        3.3,
+        4.0,
+        4.5
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "Current Account Balance",
+      "value": -2.6,
+      "unit": "% GDP",
+      "change": -0.5,
+      "sparkline": [
+        4.0,
+        2.0,
+        -0.5,
+        -1.5,
+        -2.1,
+        -2.6
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "GDP Growth",
+      "value": 4.0,
+      "unit": "%",
+      "change": 0.3,
+      "sparkline": [
+        3.6,
+        3.4,
+        3.8,
+        3.5,
+        3.7,
+        4.0
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "Current Account Balance",
+      "value": 15.7,
+      "unit": "% GDP",
+      "change": 1.0,
+      "sparkline": [
+        9.0,
+        12.5,
+        14.0,
+        13.8,
+        14.7,
+        15.7
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Inflation",
+      "value": 14.1,
+      "unit": "%",
+      "change": -3.4,
+      "sparkline": [
+        35.7,
+        32.5,
+        28.3,
+        22.0,
+        17.5,
+        14.1
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "GDP Growth",
+      "value": 4.4,
+      "unit": "%",
+      "change": 0.4,
+      "sparkline": [
+        3.8,
+        3.0,
+        2.4,
+        3.5,
+        4.0,
+        4.4
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "Current Account Balance",
+      "value": 14.8,
+      "unit": "% GDP",
+      "change": -0.8,
+      "sparkline": [
+        26.0,
+        20.0,
+        17.0,
+        16.5,
+        15.6,
+        14.8
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "GDP Growth",
+      "value": 2.9,
+      "unit": "%",
+      "change": 0.3,
+      "sparkline": [
+        1.2,
+        1.5,
+        2.0,
+        2.4,
+        2.6,
+        2.9
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "Inflation",
+      "value": 34.9,
+      "unit": "%",
+      "change": -3.6,
+      "sparkline": [
+        64.8,
+        53.9,
+        58.5,
+        44.0,
+        38.5,
+        34.9
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.6,
+      "unit": "%",
+      "change": 0.3,
+      "sparkline": [
+        5.1,
+        4.0,
+        3.2,
+        3.0,
+        3.3,
+        3.6
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 4.6,
+      "unit": "%",
+      "change": 0.5,
+      "sparkline": [
+        3.4,
+        3.0,
+        3.7,
+        3.2,
+        4.1,
+        4.6
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Current Account Balance",
+      "value": -2.5,
+      "unit": "% GDP",
+      "change": -0.3,
+      "sparkline": [
+        -0.6,
+        -1.2,
+        -1.0,
+        -1.8,
+        -2.2,
+        -2.5
+      ]
+    }
+  ],
+  "notableFlows": [
+    "Apollo's purchase of nearly 10% of Abu Dhabi-backed Mubadala Capital brings a major US alternatives manager into a sovereign-linked platform. It is likely to deepen co-investment ties between Gulf wealth and Western private capital.",
+    "Canada's trade deal with the UAE is part of a push for non-US markets. It reflects a wider search for diversified trade partners and gives Abu Dhabi and Dubai another route into North American commerce.",
+    "Dubai's AI Future Forum and Abu Dhabi's industrial-AI events show the UAE continuing to court global AI capital and talent. They are likely to feed a pipeline of data-centre, enterprise-AI and industrial-automation announcements.",
+    "Egypt's pound firmed to 55.29 per dollar from 56.22 a week earlier, easing some pressure on local-currency debt. With Brent at $123.10 and Türkiye saying it is ready to sign a maritime deal with Egypt, investors will watch whether the recovery holds."
+  ],
+  "dealsToWatch": [
+    {
+      "name": "Apollo Stake in Mubadala Capital",
+      "parties": "Apollo · Mubadala Capital · Mubadala",
+      "value": "Undisclosed",
+      "status": "In Progress"
+    },
+    {
+      "name": "Canada-UAE Trade Agreement",
+      "parties": "Canada · UAE",
+      "value": "Undisclosed",
+      "status": "Active"
+    },
+    {
+      "name": "Türkiye-Egypt Maritime Deal",
+      "parties": "Türkiye · Egypt",
+      "value": "Undisclosed",
+      "status": "In Progress"
+    }
+  ],
+  "laborSignals": {
+    "youthUnemployment": [
+      {
+        "country": "Jordan",
+        "value": 38.9
+      },
+      {
+        "country": "Morocco",
+        "value": 21.9
+      },
+      {
+        "country": "Egypt",
+        "value": 18.3
+      },
+      {
+        "country": "Turkey",
+        "value": 16.0
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
+      },
+      {
+        "country": "Saudi Arabia",
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
+      },
+      {
+        "country": "Bahrain",
+        "value": 5.4
+      },
+      {
+        "country": "Qatar",
+        "value": 0.6
+      }
+    ],
+    "aiAdoption": [
+      {
+        "country": "UAE",
+        "rank": 1,
+        "score": 84
+      },
+      {
+        "country": "Saudi Arabia",
+        "rank": 2,
+        "score": 76
+      },
+      {
+        "country": "Qatar",
+        "rank": 3,
+        "score": 68
+      },
+      {
+        "country": "Turkey",
+        "rank": 4,
+        "score": 57
+      },
+      {
+        "country": "Egypt",
+        "rank": 5,
+        "score": 46
+      }
+    ],
+    "techJobs": {
+      "trend": "up",
+      "change": 11,
+      "context": "Dubai's AI forums and Abu Dhabi's industrial-AI events point to rising Gulf demand for data, engineering and AI talent (AI-estimated)."
+    }
+  },
+  "risks": [
+    {
+      "level": "CRITICAL",
+      "title": "Regional war risk widens to Egypt's parliament and US midterm deadline",
+      "description": "Since last week: Egypt's parliament has authorised military aid for Saudi Arabia, a new regional actor, while new satellite images of damage at US bases are shaping views of Iran's strategy. Trump's midterm deadline has the Middle East bracing for another round of war, even as Qatar pushes a US-Iran deal. With Brent at $123.10, a breakdown in talks would hit Gulf investor confidence and energy-importing economies.",
+      "countries": [
+        "Saudi Arabia",
+        "Egypt",
+        "Qatar",
+        "UAE"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Energy-importer currency and inflation stress",
+      "description": "Since last week: Egypt's pound firmed to 55.29 per dollar from 56.22, but with inflation at 14.1% and a current account deficit of 3.8% of GDP, the recovery looks fragile against Brent at $123.10. Turkey's 34.9% inflation and 1.9% of GDP deficit leave little room for a prolonged energy shock.",
+      "countries": [
+        "Egypt",
+        "Turkey"
+      ]
+    },
+    {
+      "level": "LOW",
+      "title": "Eastern Mediterranean maritime deal uncertainty",
+      "description": "Türkiye says it is ready to sign a maritime deal with Egypt, a possible step towards closer energy and maritime cooperation. Terms remain unclear, and any agreement could draw objections from other Eastern Mediterranean claimants. The risk is mainly diplomatic for now.",
+      "countries": [
+        "Turkey",
+        "Egypt"
+      ]
+    }
+  ]
+}
