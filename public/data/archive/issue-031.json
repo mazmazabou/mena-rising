@@ -1,0 +1,363 @@
+{
+  "issue": {
+    "number": "031",
+    "weekOf": "November 9, 2026"
+  },
+  "headline": "Gulf wealth funds press on with big tech deals as Brent slides to $107",
+  "ticker": [
+    {
+      "label": "EGP/USD",
+      "value": "53.88",
+      "change": -2.6
+    },
+    {
+      "label": "Brent Crude",
+      "value": "$107.03",
+      "change": -13.1
+    },
+    {
+      "label": "SAR/USD",
+      "value": "3.75",
+      "change": 0
+    },
+    {
+      "label": "Morocco GDP Growth",
+      "value": "4.6%",
+      "change": null
+    },
+    {
+      "label": "Egypt Inflation",
+      "value": "14.1%",
+      "change": null
+    },
+    {
+      "label": "Jordan Youth Unemployment",
+      "value": "38.9%",
+      "change": null
+    }
+  ],
+  "bottomLine": "Gulf sovereign capital is still moving into technology even as Brent fell about 13% in a week to $107.03 from $123.10. Saudi Arabia's PIF is reported to be in $21.5 billion buyout talks with Unity, OpenAI is widening its Abu Dhabi partnerships, and Qatar's sovereign fund is backing a large UK data centre alongside Brookfield. Cheaper crude eases pressure on importers, and the Egyptian pound strengthened to 53.88 per dollar from 55.29. But Egypt's 14.1% inflation and Turkey's 34.9% leave little margin, and Saudi Arabia's 2.6% of GDP current-account deficit contrasts with surpluses of 15.7% in the UAE and 14.8% in Qatar. The security backdrop darkened this week: US embassies are warning citizens of sudden escalation, a US carrier is heading to the region and most Gulf bourses fell.",
+  "macroPulse": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "GDP Growth",
+      "value": 4.5,
+      "unit": "%",
+      "change": 1.0,
+      "sparkline": [
+        2.8,
+        3.4,
+        2.0,
+        2.8,
+        3.6,
+        4.5
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "metric": "Current Account Balance",
+      "value": -2.6,
+      "unit": "% GDP",
+      "change": -1.1,
+      "sparkline": [
+        13.6,
+        2.6,
+        -1.4,
+        -0.5,
+        -1.5,
+        -2.6
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "GDP Growth",
+      "value": 4.0,
+      "unit": "%",
+      "change": 0.4,
+      "sparkline": [
+        7.5,
+        3.6,
+        4.3,
+        3.6,
+        3.7,
+        4.0
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "Non-Oil PMI",
+      "value": 54.2,
+      "unit": "",
+      "change": 0.3,
+      "sparkline": [
+        54.8,
+        55.1,
+        54.4,
+        53.9,
+        53.9,
+        54.2
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "Inflation",
+      "value": 14.1,
+      "unit": "%",
+      "change": -14.2,
+      "sparkline": [
+        8.5,
+        13.9,
+        24.4,
+        28.3,
+        20.5,
+        14.1
+      ]
+    },
+    {
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "GDP Growth",
+      "value": 4.4,
+      "unit": "%",
+      "change": 1.2,
+      "sparkline": [
+        6.6,
+        3.8,
+        3.8,
+        2.4,
+        3.4,
+        4.4
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "Current Account Balance",
+      "value": 14.8,
+      "unit": "% GDP",
+      "change": -2.1,
+      "sparkline": [
+        26.7,
+        26.2,
+        17.0,
+        16.9,
+        16.9,
+        14.8
+      ]
+    },
+    {
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Export Revenue",
+      "value": 52,
+      "unit": "$B",
+      "change": -3.0,
+      "sparkline": [
+        90,
+        70,
+        58,
+        55,
+        55,
+        52
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "GDP Growth",
+      "value": 4.6,
+      "unit": "%",
+      "change": 1.4,
+      "sparkline": [
+        8.0,
+        1.3,
+        3.4,
+        3.2,
+        3.2,
+        4.6
+      ]
+    },
+    {
+      "country": "Morocco",
+      "flag": "🇲🇦",
+      "metric": "Inflation",
+      "value": 0.7,
+      "unit": "%",
+      "change": -0.2,
+      "sparkline": [
+        1.4,
+        6.6,
+        6.1,
+        0.9,
+        0.9,
+        0.7
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "Inflation",
+      "value": 34.9,
+      "unit": "%",
+      "change": -23.6,
+      "sparkline": [
+        72.3,
+        53.9,
+        58.5,
+        58.5,
+        45.0,
+        34.9
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.6,
+      "unit": "%",
+      "change": 0.4,
+      "sparkline": [
+        11.4,
+        5.5,
+        5.1,
+        3.2,
+        3.0,
+        3.6
+      ]
+    }
+  ],
+  "notableFlows": [
+    "Saudi Arabia's PIF is reported to be in $21.5 billion buyout talks with Unity, which would be one of the largest sovereign-backed purchases in global gaming and interactive software. If it goes ahead it would deepen the fund's push into technology assets abroad, though no terms have been confirmed.",
+    "OpenAI has expanded its Abu Dhabi partnerships across energy, government and investment, extending the UAE's strategy of anchoring frontier AI inside its own economy. Separately, Animoca Brands has cleared the final hurdle to operate fund management in Abu Dhabi, adding to the emirate's digital-assets cluster.",
+    "Qatar's sovereign wealth fund and Brookfield are backing a supersized UK data centre, showing Gulf capital funding the physical infrastructure behind AI in Western markets. It also gives Doha a stake in a segment where demand for power and compute keeps rising.",
+    "Saudi Arabia and Syria signed a defence cooperation deal in Riyadh and agreed $403 million in loans. The package ties Riyadh's financing to Damascus's reintegration and gives Saudi lenders and contractors a possible route into reconstruction."
+  ],
+  "dealsToWatch": [
+    {
+      "name": "PIF Buyout of Unity",
+      "parties": "PIF · Unity",
+      "value": "$21.5B",
+      "status": "In Progress"
+    },
+    {
+      "name": "UK Supersized Data Centre",
+      "parties": "Qatar Investment Authority · Brookfield",
+      "value": "Undisclosed",
+      "status": "Active"
+    },
+    {
+      "name": "Saudi-Syria Defence Pact and Loans",
+      "parties": "Saudi Arabia · Syria",
+      "value": "$0.4B",
+      "status": "MOU Signed"
+    }
+  ],
+  "laborSignals": {
+    "youthUnemployment": [
+      {
+        "country": "Jordan",
+        "value": 38.9
+      },
+      {
+        "country": "Morocco",
+        "value": 21.9
+      },
+      {
+        "country": "Egypt",
+        "value": 18.3
+      },
+      {
+        "country": "Turkey",
+        "value": 16.0
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
+      },
+      {
+        "country": "Saudi Arabia",
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
+      },
+      {
+        "country": "Bahrain",
+        "value": 5.4
+      },
+      {
+        "country": "Qatar",
+        "value": 0.6
+      }
+    ],
+    "aiAdoption": [
+      {
+        "country": "UAE",
+        "rank": 1,
+        "score": 82
+      },
+      {
+        "country": "Saudi Arabia",
+        "rank": 2,
+        "score": 76
+      },
+      {
+        "country": "Qatar",
+        "rank": 3,
+        "score": 69
+      },
+      {
+        "country": "Turkey",
+        "rank": 4,
+        "score": 58
+      },
+      {
+        "country": "Egypt",
+        "rank": 5,
+        "score": 47
+      }
+    ],
+    "techJobs": {
+      "trend": "up",
+      "change": 14,
+      "context": "Data-centre, AI and fund-management announcements in Abu Dhabi and Riyadh are expected to keep Gulf demand for engineering and AI talent growing faster than regional hiring overall."
+    }
+  },
+  "risks": [
+    {
+      "level": "CRITICAL",
+      "title": "US-Iran escalation risk rises as US forces move and warnings spread",
+      "description": "Since last week: US embassies across the Middle East have warned citizens of a possible sudden escalation and told them to prepare for flight cancellations. The USS Theodore Roosevelt is heading to the region while Trump weighs new strikes on Iran after a security meeting. Four countries condemned a Houthi missile attempt on Medina, and most Gulf bourses fell. Qatar and others continue to mediate, with Iran's foreign minister speaking to 12 counterparts in 48 hours. Brent has fallen to $107.03 from $123.10, so oil prices do not yet reflect the risk of a breakdown.",
+      "countries": [
+        "Iran",
+        "Saudi Arabia",
+        "UAE",
+        "Qatar"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "title": "Importer relief from cheaper oil may not last",
+      "description": "Since last week: the Egyptian pound firmed to 53.88 per dollar from 55.29 as Brent fell to $107.03 from $123.10. Egypt still has 14.1% inflation and a current-account deficit of 3.8% of GDP, and Turkey has 34.9% inflation. A new spike in crude from US-Iran escalation could quickly reverse the pound's recovery and strain both economies.",
+      "countries": [
+        "Egypt",
+        "Turkey"
+      ]
+    },
+    {
+      "level": "LOW",
+      "title": "Saudi external balance and outbound deal commitments",
+      "description": "Saudi Arabia ran a current-account deficit of 2.6% of GDP in 2025, while the UAE and Qatar posted surpluses of 15.7% and 14.8%. With Brent down about 13% in a week, lower export receipts could meet a run of large overseas commitments, including reported $21.5 billion talks over Unity and $403 million in loans to Syria. The pressure is modest for now given PIF's scale and growth of 4.5%.",
+      "countries": [
+        "Saudi Arabia",
+        "Oman"
+      ]
+    }
+  ]
+}
