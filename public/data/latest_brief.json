@@ -1,19 +1,19 @@
 {
   "issue": {
-    "number": "032",
-    "weekOf": "November 16, 2026"
+    "number": "033",
+    "weekOf": "November 23, 2026"
   },
-  "headline": "Gulf lenders and producers gear up for postwar boom as oil output nears pre-war levels",
+  "headline": "Strike on Saudi wealth fund tower and Iranian raids on Bahrain jolt Gulf's postwar mood",
   "ticker": [
     {
       "label": "EGP/USD",
-      "value": "53.63",
-      "change": 0.3
+      "value": "54.19",
+      "change": 1.5
     },
     {
       "label": "Brent Crude",
-      "value": "$92.14",
-      "change": 2.2
+      "value": "$92.94",
+      "change": 0.0
     },
     {
       "label": "SAR/USD",
@@ -21,36 +21,36 @@
       "change": 0
     },
     {
-      "label": "Egypt Inflation",
-      "value": "14.1%",
+      "label": "Saudi GDP Growth (2025)",
+      "value": "4.5%",
       "change": null
     },
     {
-      "label": "Morocco GDP Growth",
-      "value": "4.6%",
+      "label": "Turkey Inflation (2025)",
+      "value": "34.9%",
       "change": null
     },
     {
-      "label": "Qatar Current Account",
-      "value": "14.8%",
+      "label": "Qatar Current Account (2025)",
+      "value": "14.8% of GDP",
       "change": null
     }
   ],
-  "bottomLine": "Gulf finance is positioning for a postwar upswing: a First Abu Dhabi bank has raised 15 billion dirhams (about $4.1 billion), and OPEC says oil production is nearing pre-war levels, with Brent at $92.14. The mood is less settled in markets, where Gulf sovereign wealth funds are reported to be among those hit by the AI sell-off, a test for the technology push that dominated last week's brief. Macro dispersion remains wide: Egypt's inflation of 14.1% contrasts with 0.7% in Morocco and -0.1% in Bahrain, and Qatar's current-account surplus of 14.8% of GDP contrasts with Jordan's 5.3% deficit (2024). Washington says the Iran war is 'effectively over' militarily, but no imminent deal is seen and it says it is ready to resume strikes if needed.",
+  "bottomLine": "A suspected Houthi missile strike that damaged the Riyadh tower housing the Public Investment Fund, Iran's third round of strikes on Bahrain and a tanker attack in the Strait of Hormuz reverse last week's 'effectively over' narrative and bring the war to the doorstep of a sovereign wealth fund. Markets have so far looked through it, with Brent roughly flat at $92.94 and the riyal pinned near 3.75, but a 1.5% slide in the Egyptian pound to 54.19 per dollar shows where risk premia are starting to surface. Buffers are uneven: Qatar's current-account surplus of 14.8% of GDP and Saudi growth of 4.5% contrast with inflation of 14.1% in Egypt and 34.9% in Turkey, and a 5.3% of GDP deficit in Jordan (2024), leaving importers most exposed if Hormuz or Red Sea disruption persists.",
   "macroPulse": [
     {
       "country": "Saudi Arabia",
       "flag": "🇸🇦",
-      "metric": "Real GDP Growth",
+      "metric": "GDP Growth",
       "value": 4.5,
       "unit": "%",
-      "change": 0.9,
+      "change": 1.1,
       "sparkline": [
-        3.8,
-        3.2,
-        2.0,
-        2.8,
-        3.6,
+        5.1,
+        7.5,
+        0.5,
+        2.7,
+        3.4,
         4.5
       ]
     },
@@ -60,30 +60,46 @@
       "metric": "Inflation",
       "value": 2.0,
       "unit": "%",
-      "change": -0.1,
+      "change": 0.1,
       "sparkline": [
+        3.1,
         2.5,
         2.3,
         1.7,
-        1.7,
-        2.1,
+        1.9,
         2.0
       ]
     },
     {
-      "country": "Egypt",
-      "flag": "🇪🇬",
-      "metric": "Real GDP Growth",
-      "value": 4.4,
-      "unit": "%",
-      "change": 0.4,
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "Current Account Balance (2024)",
+      "value": 15.7,
+      "unit": "% GDP",
+      "change": 1.5,
       "sparkline": [
-        3.8,
-        2.4,
-        2.9,
-        3.5,
-        4.0,
-        4.4
+        7.0,
+        9.1,
+        8.0,
+        12.5,
+        14.2,
+        15.7
+      ]
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "metric": "Non-Oil PMI (est.)",
+      "value": 54.1,
+      "unit": "",
+      "change": -0.3,
+      "sparkline": [
+        54.2,
+        53.4,
+        54.0,
+        53.6,
+        54.4,
+        54.1
       ]
     },
     {
@@ -92,30 +108,30 @@
       "metric": "Inflation",
       "value": 14.1,
       "unit": "%",
-      "change": -2.4,
+      "change": -6.4,
       "sparkline": [
+        8.5,
+        13.9,
         33.9,
-        28.5,
-        25.0,
-        21.5,
-        16.5,
+        28.3,
+        20.5,
         14.1
       ]
     },
     {
-      "country": "Qatar",
-      "flag": "🇶🇦",
-      "metric": "Real GDP Growth",
-      "value": 2.9,
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "metric": "GDP Growth",
+      "value": 4.4,
       "unit": "%",
-      "change": 0.3,
+      "change": 0.8,
       "sparkline": [
-        1.5,
-        2.0,
+        3.3,
+        6.6,
+        3.8,
         2.4,
-        2.0,
-        2.6,
-        2.9
+        3.6,
+        4.4
       ]
     },
     {
@@ -124,94 +140,30 @@
       "metric": "Current Account Balance",
       "value": 14.8,
       "unit": "% GDP",
-      "change": -0.7,
+      "change": -0.2,
       "sparkline": [
         26.7,
-        18.0,
+        22.0,
         17.5,
-        16.0,
-        15.5,
+        15.2,
+        15.0,
         14.8
       ]
     },
     {
-      "country": "Morocco",
-      "flag": "🇲🇦",
-      "metric": "Real GDP Growth",
-      "value": 4.6,
-      "unit": "%",
-      "change": 0.5,
-      "sparkline": [
-        3.4,
-        1.5,
-        3.0,
-        3.8,
-        4.1,
-        4.6
-      ]
-    },
-    {
-      "country": "Morocco",
-      "flag": "🇲🇦",
-      "metric": "Inflation",
-      "value": 0.7,
-      "unit": "%",
-      "change": -0.1,
-      "sparkline": [
-        6.1,
-        3.5,
-        1.1,
-        0.9,
-        0.8,
-        0.7
-      ]
-    },
-    {
-      "country": "Jordan",
-      "flag": "🇯🇴",
-      "metric": "Real GDP Growth",
-      "value": 2.8,
-      "unit": "%",
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "metric": "LNG Export Revenue (monthly, est.)",
+      "value": 4.4,
+      "unit": "$B",
       "change": 0.1,
       "sparkline": [
-        2.0,
-        2.4,
-        2.6,
-        2.5,
-        2.7,
-        2.8
-      ]
-    },
-    {
-      "country": "Jordan",
-      "flag": "🇯🇴",
-      "metric": "Current Account Balance",
-      "value": -5.3,
-      "unit": "% GDP",
-      "change": 0.6,
-      "sparkline": [
-        -7.0,
-        -8.5,
-        -6.8,
-        -6.0,
-        -5.9,
-        -5.3
-      ]
-    },
-    {
-      "country": "Bahrain",
-      "flag": "🇧🇭",
-      "metric": "Real GDP Growth",
-      "value": 3.5,
-      "unit": "%",
-      "change": 0.4,
-      "sparkline": [
-        2.7,
-        3.0,
-        2.8,
-        2.6,
-        3.1,
-        3.5
+        5.6,
+        5.1,
+        4.7,
+        4.5,
+        4.3,
+        4.4
       ]
     },
     {
@@ -220,132 +172,188 @@
       "metric": "Current Account Balance",
       "value": 5.8,
       "unit": "% GDP",
-      "change": -0.2,
+      "change": 0.6,
       "sparkline": [
+        -2.1,
+        15.4,
+        6.6,
         4.1,
         5.2,
-        4.9,
-        6.2,
-        6.0,
         5.8
+      ]
+    },
+    {
+      "country": "Bahrain",
+      "flag": "🇧🇭",
+      "metric": "GDP Growth",
+      "value": 3.5,
+      "unit": "%",
+      "change": 0.5,
+      "sparkline": [
+        2.7,
+        5.4,
+        3.9,
+        2.6,
+        3.0,
+        3.5
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "Inflation",
+      "value": 34.9,
+      "unit": "%",
+      "change": -3.3,
+      "sparkline": [
+        72.3,
+        53.9,
+        58.5,
+        44.0,
+        38.2,
+        34.9
+      ]
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "metric": "GDP Growth",
+      "value": 3.6,
+      "unit": "%",
+      "change": 0.6,
+      "sparkline": [
+        11.4,
+        5.5,
+        5.1,
+        3.2,
+        3.0,
+        3.6
       ]
     }
   ],
   "notableFlows": [
-    "A First Abu Dhabi bank has raised 15 billion dirhams (about $4.1 billion) to fund what the market is calling the postwar boom, a sign that UAE lenders expect credit demand to rebuild as the regional conflict fades. The reported size makes it one of the larger local-currency fundraisings of the week.",
-    "Gulf sovereign wealth funds are reported to be among the investors hit by the AI sell-off, after a run of large technology commitments. Mark-to-market losses on AI-linked holdings could slow the pace of new overseas tech deals, though the funds' long horizons and scale cushion the impact.",
-    "Trump said he was unaware of a reported $500 million deal between World Liberty Financial and a UAE counterparty, drawing attention to the political exposure of Gulf-linked crypto and finance ties. Details of the transaction remain thin, and its terms have not been independently confirmed.",
-    "OPEC says oil production is nearing pre-Iran-war levels, indicating that Gulf export capacity is largely restored. With Brent at $92.14, producers are recovering volumes while importers such as Egypt and Jordan get some relief on their energy bills."
+    "The Abu Dhabi Investment Council, a Mubadala unit, reportedly exited 19 stocks in its latest filing while keeping every share of BlackRock's IBIT bitcoin ETF, which now makes up about 54% of its reported book. The concentration marks a striking shift in Gulf sovereign portfolio strategy, though the figures come from a filing-based secondary report and have not been confirmed by the fund.",
+    "An Abu Dhabi wealth fund is among the anchor investors, alongside India's LIC, in the Mahanadi Coalfields IPO. The participation shows Gulf sovereign capital still seeking South Asian energy-linked assets even as regional security deteriorates, although the size of its allocation was not disclosed.",
+    "Shipping risk is rising on both of the Gulf's maritime arteries: a tanker was attacked in the Strait of Hormuz, according to UKMTO, and Yemeni forces' retreat has left the Houthis in control of a key Red Sea waterway. With Brent flat at $92.94, the market is not yet pricing a supply disruption, but freight and insurance costs are the first channel through which Egypt and Jordan would feel it.",
+    "The missile strike that damaged the PIF's Riyadh tower raises operational and insurance questions for the kingdom's main investment vehicle, and BBC reports that AI-generated fakes about the attack have spread widely. There is no evidence so far that the strike has affected PIF's deal-making, but it makes the fund's headquarters a symbol of Gulf financial exposure to the war."
   ],
   "dealsToWatch": [
     {
-      "name": "First Abu Dhabi Bank Postwar Fundraising",
-      "parties": "First Abu Dhabi bank · UAE market",
-      "value": "$4.1B",
+      "name": "Mahanadi Coalfields IPO Anchor Book",
+      "parties": "Abu Dhabi wealth fund · LIC · Mahanadi Coalfields",
+      "value": "Undisclosed",
       "status": "Active"
     },
     {
-      "name": "World Liberty Financial UAE Deal",
-      "parties": "World Liberty Financial · UAE counterparty",
-      "value": "$0.5B",
+      "name": "Abu Dhabi Investment Council IBIT Position",
+      "parties": "Abu Dhabi Investment Council · Mubadala · BlackRock",
+      "value": "Undisclosed",
       "status": "Under Review"
     },
     {
-      "name": "Qatar-Turkey Defence Agreement",
-      "parties": "Qatar · Turkey",
+      "name": "US-Gulf AI Security Framework",
+      "parties": "United States · UAE · Saudi Arabia",
       "value": "Undisclosed",
-      "status": "Active"
+      "status": "In Progress"
     }
   ],
   "laborSignals": {
     "youthUnemployment": [
       {
         "country": "Jordan",
-        "value": 40.0
+        "value": 38.9
       },
       {
         "country": "Morocco",
-        "value": 35.8
+        "value": 21.9
       },
       {
         "country": "Egypt",
-        "value": 17.5
+        "value": 18.3
+      },
+      {
+        "country": "Turkey",
+        "value": 16.0
+      },
+      {
+        "country": "Oman",
+        "value": 13.9
       },
       {
         "country": "Saudi Arabia",
-        "value": 13.5
+        "value": 10.0
+      },
+      {
+        "country": "UAE",
+        "value": 6.5
       },
       {
         "country": "Bahrain",
-        "value": 7.5
+        "value": 5.4
       },
       {
         "country": "Qatar",
-        "value": 4.5
+        "value": 0.6
       }
     ],
     "aiAdoption": [
       {
         "country": "UAE",
         "rank": 1,
-        "score": 82
+        "score": 84
       },
       {
         "country": "Saudi Arabia",
         "rank": 2,
-        "score": 74
+        "score": 78
       },
       {
         "country": "Qatar",
         "rank": 3,
-        "score": 66
+        "score": 71
       },
       {
         "country": "Bahrain",
         "rank": 4,
-        "score": 58
+        "score": 63
       },
       {
-        "country": "Morocco",
+        "country": "Turkey",
         "rank": 5,
-        "score": 47
+        "score": 55
       }
     ],
     "techJobs": {
       "trend": "up",
       "change": 11,
-      "context": "AI-estimated: Gulf hiring in data-centre, cloud and AI roles continues to grow, though the AI-equity sell-off could slow new postings; note that the youth unemployment figures are also approximate AI estimates, as no WDI youth data was available this week."
+      "context": "Gulf demand for AI, data-centre and cybersecurity roles is still growing, although security shocks and weaker AI valuations could slow hiring."
     }
   },
   "risks": [
     {
-      "level": "HIGH",
-      "title": "Iran settlement unresolved despite military de-escalation",
-      "description": "Since last week: Trump has said the Iran war is 'effectively over' militarily and further strikes are unlikely, and OPEC says oil output is nearing pre-war levels. But no imminent deal is seen before Trump meets mediator Qatar, Washington says it is ready to resume strikes if necessary, and fighting grips Yemen while Qatar and Turkey have signed a defence deal. Brent at $92.14 (up 2.2%) shows the market prices in calm, leaving it exposed if talks stall.",
+      "level": "CRITICAL",
+      "title": "Gulf war re-escalates against financial and military targets",
+      "description": "Since last week: Washington's 'effectively over' assessment has been undercut by Iran's third round of strikes on Bahrain, home of the US Navy's 5th Fleet, reported Iranian attacks on US bases in Gulf countries, a tanker attack in the Strait of Hormuz and a suspected Houthi missile strike that damaged the PIF tower in Riyadh. The war is now nine months old and has reached the Saudi capital's financial district. Brent at $92.94 is flat, so the market is pricing contained disruption and remains exposed if Hormuz traffic is hit.",
       "countries": [
-        "Iran",
-        "Qatar",
         "Saudi Arabia",
-        "Yemen"
+        "Bahrain"
       ]
     },
     {
       "level": "MEDIUM",
-      "title": "AI sell-off tests Gulf sovereign tech strategy",
-      "description": "Gulf sovereign wealth funds are reported to be among those hit by the AI sell-off, following the large technology deals covered last week, including reported PIF talks over Unity. Further falls in AI-linked valuations would lower paper returns on overseas tech stakes and could make funds more selective on new commitments.",
+      "title": "Red Sea control and external pressure on Egypt and Jordan",
+      "description": "Since last week: Yemeni forces' retreat has left the Houthis in control of a key Red Sea waterway, and the Egyptian pound has weakened 1.5% to 54.19 per dollar. Egypt combines 14.1% inflation with a 3.8% of GDP current-account deficit, while Jordan's deficit was 5.3% of GDP in 2024. Both would feel any rise in freight, insurance or energy costs quickly.",
       "countries": [
-        "Saudi Arabia",
-        "UAE",
-        "Qatar"
+        "Egypt",
+        "Jordan"
       ]
     },
     {
       "level": "LOW",
-      "title": "External financing gaps at oil importers",
-      "description": "Jordan ran a current-account deficit of 5.3% of GDP in 2024 with growth of 2.8% in 2025, and Egypt combines 14.1% inflation with a 3.8% deficit. Brent at $92.14 is a manageable import bill, but both economies would feel any renewed energy price jump quickly.",
+      "title": "COP31 deadlock over fossil fuels",
+      "description": "COP31 is reported to be on the brink of collapse after the EU rejected a UN climate deal amid a row with Saudi Arabia over fossil fuels. A failed outcome would prolong uncertainty over long-run demand and carbon-policy assumptions in Gulf hydrocarbon planning, though it has no immediate effect on output or prices.",
       "countries": [
-        "Jordan",
-        "Egypt"
+        "Saudi Arabia"
       ]
     }
   ]
